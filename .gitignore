@@ -1,0 +1,9 @@
+# directories
+logs
+build
+database
+node_modules
+
+# files
+.DS_Store
+src/config.ts
