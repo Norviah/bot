@@ -181,7 +181,7 @@ export class Command extends Base {
   public information(guild: Guild | null): { usage: string[]; permissions: string[] } {
     // To get the usage array of this command, we'll have to initialize a copy
     // of the array, as if we don't, the changes we make will be permanent. As
-    // commands may have subcommands, we'll replace every hypen with a space,
+    // commands may have subcommands, we'll replace every hyphen with a space,
     // however, we take into account to not remove hypens for flags.
     const usage: string[] = [...this.usage].map((usage: string) => usage.replace(/(?<![\[-])-/g, ' '));
 
@@ -199,7 +199,7 @@ export class Command extends Base {
     const commands: Command[] = (subcommands?.map((id: string) => this.handler.modules.get(id)).filter(ensure) as Command[]) ?? [];
 
     for (const command of commands) {
-      for (const string of command.usage) usage.push(string.replace(/-/g, ' '));
+      for (const string of command.usage) usage.push(string.replace(/(?<![\[-])-/g, ' '));
     }
 
     // Represents the permissions needed for the base command.
