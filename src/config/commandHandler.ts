@@ -55,7 +55,7 @@ export const commandHandlerOptions: CommandHandlerOptions = {
        * @param data    Information about the input from the message's author.
        */
       modifyRetry: (message: Message, text: string, data: ArgumentPromptData): string => {
-        return `${message.author}, **${data.phrase}** isn't a valid argument, ${punctuate(text)} ${data.infinite ? infinitePrompt : ''}To cancel, enter \`cancel\`.`;
+        return `${message.author}, **${data.phrase}** isn't a valid argument, ${punctuate(text)} To cancel, enter \`cancel\`.`;
       },
 
       /**
