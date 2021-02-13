@@ -47,6 +47,7 @@
     "discord-akairo": "^8.1.0",
     "discord.js": "^12.3.1",
     "enmap": "^5.8.0",
+    "pretty-ms": "^7.0.1",
     "spacetime": "^6.6.4"
   }
 }

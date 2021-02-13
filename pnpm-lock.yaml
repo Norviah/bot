@@ -5,6 +5,7 @@ dependencies:
   discord-akairo: 8.1.0
   discord.js: 12.3.1
   enmap: 5.8.0
+  pretty-ms: 7.0.1
   spacetime: 6.6.4
 devDependencies:
   '@types/app-root-path': 1.2.4
@@ -2075,6 +2076,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-+mi/lmVVNKFNVyLXV31ERiy2CY5E1/F6QtJFEzoChPRwwngMNXRDQ9GJ5WdE2Z2P4AujsOi0/+2qHID68KwfIQ==
+  /parse-ms/2.1.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-kHt7kzLoS9VBZfUsiKjv43mr91ea+U05EyKkEtqp7vNbHxmaVuEqN7XxeEVnGrMtYOAxGrDElSi96K7EgO1zCA==
   /path-exists/2.1.0:
     dependencies:
       pinkie-promise: 2.0.1
@@ -2211,6 +2218,14 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
+  /pretty-ms/7.0.1:
+    dependencies:
+      parse-ms: 2.1.0
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-973driJZvxiGOQ5ONsFhOF/DtzPMOMtgC11kCpUrPGMTgqp2q/1gwzCquocrN33is0VZ5GFHXZYMM9l6h67v2Q==
   /prism-media/1.2.2:
     dev: false
     peerDependencies:
@@ -3070,6 +3085,7 @@ specifiers:
   eslint-config-prettier: ^6.12.0
   eslint-plugin-prettier: ^3.1.4
   prettier: ^2.1.2
+  pretty-ms: ^7.0.1
   spacetime: ^6.6.4
   standard-version: ^9.0.0
   typescript: ^4.0.3
