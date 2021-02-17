@@ -26,7 +26,7 @@ export interface GuildSettings {
   /**
    * Represents the channel where users can react for roles.
    */
-  reactChannel: Snowflake | null;
+  reactionChannel: Snowflake | null;
 
   /**
    * The client's welcome message, if this value is assigned and a guild has

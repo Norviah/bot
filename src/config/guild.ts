@@ -37,7 +37,7 @@ export const defaultGuildSettings: GuildSettings = {
   /**
    * Represents the channel where users can react for roles.
    */
-  reactChannel: null,
+  reactionChannel: null,
 };
 
 /**
