@@ -1,3 +1,5 @@
+import emojiRegex from 'emoji-regex';
+
 /**
  * Represents an expression used to match links.
  */
@@ -17,6 +19,14 @@ export const snowflake: RegExp = /^[0-9]{18}$/;
  * Matches a user's tag.
  */
 export const tag: RegExp = /(.*#[0-9]{4})/g;
+
+/**
+ * Matches default emojis. A new regular expression has to be initialized over
+ * the generated expression as the one generated uses a global flag, which can
+ * cause wierd things like every other test resulting in false with the same
+ * input.
+ */
+export const emoji: RegExp = new RegExp(emojiRegex(), '');
 
 /**
  * Expressions used for command names.

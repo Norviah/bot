@@ -12,6 +12,7 @@ import { prompt } from '../util/prompt';
 
 import { isPermission, permissions } from '../util/types/permission';
 import { isSnowflake } from '../util/types/snowflake';
+import { isDefaultEmoji } from '../util/types/emoji';
 
 import { Config } from '../types/config';
 import { LoggedEvents } from '../types/typescript/events';
@@ -310,6 +311,10 @@ export class Client extends AkairoClient {
     // Implements a custom argument type 'snowflake' for arguments, this
     // argument matches a valid 18 digit number.
     this.commandHandler.resolver.addType('snowflake', isSnowflake);
+
+    // Implements a custom argument type 'emoji' for arguments, this argument
+    // matches any default emoji.
+    this.commandHandler.resolver.addType('defaultEmoji', isDefaultEmoji);
 
     // Read and load all modules.
     this.commandHandler.loadAll();

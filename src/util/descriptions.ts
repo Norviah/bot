@@ -82,5 +82,5 @@ export const keys: { [key in keyof GuildSettings]: string } = {
   /**
    * Represents the ID for the reaction channel.
    */
-  reactChannel: 'This key represents the channel of where you would like users to react with a specific emote for a role.',
+  reactionChannel: 'This key represents the channel of where you would like users to react with a specific emote for a role.',
 };

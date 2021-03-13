@@ -56,6 +56,7 @@ export default class extends Command {
     const role: Role | null = config.settings.role ? message.guild!.roles.resolve(config.settings.role) : null;
     const channel: GuildChannel | null = config.settings.channel ? message.guild!.channels.resolve(config.settings.channel) : null;
     const logChannel: GuildChannel | null = config.settings.logChannel ? message.guild!.channels.resolve(config.settings.logChannel) : null;
+    const reactionChannel: GuildChannel | null = config.settings.reactionChannel ? message.guild!.channels.resolve(config.settings.reactionChannel) : null;
 
     const field: { [key: string]: any } = {
       /**
@@ -79,6 +80,11 @@ export default class extends Command {
        * Represents the channel where the client will log events to.
        */
       'Logging Channel': logChannel ?? '[not set]',
+
+      /**
+       * Represents the channel where users can react to gain certain roles.
+       */
+      'Reaction Channel': reactionChannel ?? '[not set]',
 
       /**
        * Represents how many tags the guild has set.
