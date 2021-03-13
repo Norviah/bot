@@ -8,9 +8,10 @@
     "build": "./node_modules/typescript/bin/tsc",
     "start": "node ./build/index.js",
     "lint": "./node_modules/prettier/bin-prettier.js -c src -w",
-    "publish:patch": "./node_modules/standard-version/bin/cli.js --release-as patch",
-    "publish:minor": "./node_modules/standard-version/bin/cli.js --release-as minor",
-    "publish:major": "./node_modules/standard-version/bin/cli.js --release-as major"
+    "publish:patch": "./node_modules/standard-version/bin/cli.js --release-as patch && npm run push",
+    "publish:minor": "./node_modules/standard-version/bin/cli.js --release-as minor && npm run push",
+    "publish:major": "./node_modules/standard-version/bin/cli.js --release-as major && npm run push",
+    "push": "git push --follow-tags origin master"
   },
   "repository": {
     "type": "git",
