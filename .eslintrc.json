@@ -11,7 +11,7 @@
   ],
   "rules": {
     "@typescript-eslint/no-inferrable-types": "off",
-    "max-len": [ "error", { "comments": 80, "code": 200 }],
+    "max-len": [ "error", { "comments": 80, "code": 200, "ignoreStrings": true }],
     "capitalized-comments": [
       "error",
       "always",
