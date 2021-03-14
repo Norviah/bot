@@ -1,4 +1,5 @@
-import { Message, Permissions, PermissionString } from 'discord.js';
+import { Message, Permissions, PermissionString, Role } from 'discord.js';
+import { Argument } from 'discord-akairo';
 import { basename } from 'path';
 
 import { Command } from '../../structs/command';
@@ -47,9 +48,9 @@ const options: CommandOptions = {
 
     {
       id: 'permissions',
-      type: ['none', ...permissions],
+      type: Argument.union('role', ['none', ...permissions]),
       match: 'separate',
-      prompt: { start: 'what permissions do you want users to have?', retry: 'please provide a valid permission, or, `none`' },
+      prompt: { start: 'what permission(s) or role(s) do you want to restrict this command behind?', retry: 'please provide a valid permission, role, or, `none`' },
     },
   ],
 
@@ -77,26 +78,41 @@ export default class extends Command {
    * @param  args.command     The command to change permissions for this guild.
    * @param  args.permissions The new permissions to set.
    */
-  public async exec(message: Message, args: { command: Command; permissions: (PermissionString | 'none')[] }): Promise<any> {
+  public async exec(message: Message, args: { command: Command; permissions: (Role | PermissionString | 'none')[] }): Promise<any> {
     // As users can provide multiple permissions, it's possible that a
     // permission may be entered more than once, so we'll filter out the array
     // to only contain unique elements.
-    args.permissions = args.permissions.filter((permission: PermissionString | 'none', i: number): boolean => args.permissions.indexOf(permission) === i);
+    args.permissions = args.permissions.filter((permission: Role | PermissionString | 'none', i: number): boolean => args.permissions.indexOf(permission) === i);
 
-    // We'll initialize an array to reference the permissions that the user
-    // wants to use and overwrite the existing permissions for the given
-    // command. If 'none' is given, we'll instead use an empty array.
-    const permissions: PermissionString[] = args.permissions.includes('none') ? [] : (args.permissions as PermissionString[]);
+    // As a command can be restricted behind either roles and/or permissions,
+    // we'll initialize two arrays to represent both options.
+    const roles: Role[] = args.permissions.filter((permission: Role | PermissionString | 'none') => permission instanceof Role) as Role[];
 
-    this.client.database.put(message.guild!, 'permissions', args.command.id, permissions);
+    // Next, we'll create an array to represent the given permissions.
+    const perms: PermissionString[] = args.permissions.filter((permission: Role | PermissionString | 'none') => permissions.includes(permission as any)) as PermissionString[];
 
-    // Represents the new set of permissions as a string.
-    const string: string = permissions.length ? this.client.join(permissions) : 'none';
+    // Determines if the author wants to allow anyone to execute the cocommand.
+    const none: boolean = args.permissions.includes('none');
+
+    // Represents the required permissions for this command. If the author
+    // allows everyone to execute the command, we'll set the 'none' property to
+    // represent this, otherwise, we'll set the other properties.
+
+    // Additionally, how permission works is that a user must have either the
+    // given permission, or, the role to execute the command. Due to this
+    // either/or system, if no permission/role is given, we won't assign it.
+    const required = none ? { permissions: null, roles: null, none } : { permissions: perms.length ? perms : null, roles: roles.length ? roles.map((role: Role) => role.id) : null, none };
+
+    this.client.database.put(message.guild!, 'permissions', args.command.id, required);
+
+    // Now we can call that command to get the custom permissions for the guild,
+    // we'll use this to get the string representing of the set permissions.
+    const { string } = args.command.getPermissions(message.guild!)!;
 
     // Better represents who is available to execute the given command regarding
     // the new set of permissions given to consider.
-    const who: string = `${permissions.length ? 'only users with the set permission(s)' : 'anyone'} can execute this command`;
+    const who: string = `${none ? 'Anyone' : 'Only users with the set role(s) and/or permission(s)'} can execute this command`;
 
-    await this.client.confirm(message, `Successfully set the permissions for the command **${args.command.id}** to \`${string}\`, ${who}.`);
+    await this.client.confirm(message, `Successfully set the permissions for the command **${args.command.id}** to ${string}. ${who} can execute this command.`);
   }
 }

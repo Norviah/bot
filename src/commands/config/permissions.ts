@@ -57,9 +57,9 @@ export default class extends Command {
     // For each command, we'll push a string consisting of every permission that
     // one needs in order to execute within this guild.
     for (const command in permissions) {
-      field[command] = this.client.join(permissions[command].map((permission: string): string => `**${permission}**`));
+      field[command] = (this.client.commandHandler.modules.get(command) as Command).getPermissions(message.guild)?.string ?? '[none]';
     }
 
-    await this.client.inform(message, undefined, { field, description: `Here are the list of permissions with overridden permissions.` });
+    await this.client.inform(message, undefined, { field, description: `Here are the list of commands with overridden permissions.` });
   }
 }

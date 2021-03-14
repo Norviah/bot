@@ -1,4 +1,4 @@
-import { PermissionString, Message, User } from 'discord.js';
+import { Message, User } from 'discord.js';
 
 import { Command } from '../../structs/command';
 import { Listener } from '../../structs/listener';
@@ -22,16 +22,12 @@ export default class extends Listener {
    * @param  type    Represents who is missing permissions: 'client' or 'user'.
    * @param  missing Represents the missing permissions.
    */
-  public async exec(message: Message, command: Command, type: string, missing: PermissionString | PermissionString[]): Promise<void> {
-    // If the user is missing more than one permission, we'll initialize an
-    // array to represent the missing permissions.
-    const permissions: string = Array.isArray(missing) ? this.client.join(missing) : missing;
-
+  public async exec(message: Message, command: Command, type: string, missing: Permissions & { string: string }): Promise<void> {
     const user: User | null = type === 'client' ? this.client.user : message.author;
 
     // As this event is emitted whenever a user is missing permissions for a
     // specific command, we'll set the description to reflect this.
-    const description: string = `${type === 'client' ? 'I' : 'You'} need the permission(s) \`${permissions}\` to execute **${command.id}**.`;
+    const description: string = `${type === 'client' ? 'I' : 'You'} need the permission(s) ${missing.string} to execute **${command.id}**.`;
 
     await this.client.error(message, description, { entity: user });
 
@@ -42,7 +38,7 @@ export default class extends Listener {
       return;
     }
 
-    const log: string = `${this.author(message)} tried to execute '${command.id}' in ${this.location(message)} while missing the permission(s): ${permissions}`;
+    const log: string = `${this.author(message)} tried to execute '${command.id}' in ${this.location(message)} while missing the permission(s): ${missing.string}`;
 
     this.logger.log(log, { title: 'MISSING PERMISSIONS', subDir: 'missing permissions' });
   }

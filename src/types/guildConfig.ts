@@ -6,9 +6,12 @@ import { LoggedEvents } from '../types/typescript/events';
 export interface GuildConfig {
   /**
    * Allows a guild to override a permission for a specific command to allow, or
-   * restrict, users from executing a specific command.
+   * restrict, users from executing a specific command. A mod can restrict a
+   * command behind a certain permission and/or role.
    */
-  permissions: { [key: string]: PermissionString[] };
+  permissions: {
+    [key: string]: { permissions: PermissionString[] | null; roles: Snowflake[] | null; none: boolean };
+  };
 
   /**
    * A list of custom tags for a guild.

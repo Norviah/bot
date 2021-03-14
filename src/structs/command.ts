@@ -1,10 +1,12 @@
-import { Guild, Message, PermissionString } from 'discord.js';
+import { Guild, Message, Snowflake } from 'discord.js';
 import { Command as Base, Flag } from 'discord-akairo';
 
 import { Client } from '../structs/client';
-import { CommandOptions } from '../types/commandOptions';
 import { ArgumentOptions } from '../types/argumentOptions';
+import { CommandOptions } from '../types/commandOptions';
+import { Permissions } from '../types/permissions';
 
+import { join } from '../util/join';
 import { ensure } from '../util/ensure';
 import * as regex from '../util/regex';
 
@@ -37,11 +39,9 @@ export class Command extends Base {
   public readonly arguments!: boolean;
 
   /**
-   * Represents an array of permissions that a user needs in order to execute
-   * this command, if this value is undefined or empty, that represents that
-   * this command has no permissions and anyone can execute it.
+   * Represents the default permission for this command.
    */
-  public readonly permissions?: PermissionString[];
+  public readonly permissions?: Permissions;
 
   /**
    * If this command is a parent, this tuple will reference the subcommands
@@ -71,7 +71,13 @@ export class Command extends Base {
   public constructor(id: string, options: CommandOptions) {
     super(id, { ...options, aliases: [id, ...(options.aliases ?? [])] });
 
-    Object.assign(this, { examples: options.examples, permissions: options.permissions, arguments: !!options.args });
+    Object.assign(this, { examples: options.examples, arguments: !!options.args });
+
+    // The permission is set up as an object referencing three things: two
+    // properties representing either actual permissions or roles needed to
+    // execute the command, or, a property determining if the command has no
+    // permissions, allowing anyone to execute it.
+    this.permissions = options.permissions ? { permissions: options.permissions, roles: null, none: false } : undefined;
 
     // In this constructor, we'll only generate a usage array to represent how
     // to properly use this command. Ideally, we would also want to work on
@@ -151,7 +157,7 @@ export class Command extends Base {
 
     const options: Partial<ArgumentOptions> = {
       type: this.subcommands,
-      prompt: { retry: `please provide a valid subcommand, one of \`${this.client.join(names, 'or')}\``, optional: true },
+      prompt: { retry: `please provide a valid subcommand, one of \`${join(names, 'or')}\``, optional: true },
     };
 
     // Here's the powerful aspect of using a generator function for arguments,
@@ -202,16 +208,16 @@ export class Command extends Base {
       for (const string of command.usage) usage.push(string.replace(/(?<![\[-])-/g, ' '));
     }
 
-    // Represents the permissions needed for the base command.
-    const base: PermissionString[] | undefined = this.getPermissions(guild);
+    // Represents the base permissions needed for the base command.
+    const base: (Permissions & { string?: string }) | undefined = this.getPermissions(guild);
 
     // Now that we have an array representing the usage for each command, we'll
     // then initialize an object to represent the permissions for the base
     // command in addition to each subcommand.
-    const permissions: string[] = [`${this.id.replace(/-/g, ' ')}: \`${base?.length ? base : ['[none]']}\``];
+    const permissions: string[] = [`${this.id.replace(/-/g, ' ')}: ${base?.string ? base.string : `\`[none]\``}`];
 
     for (const command of commands) {
-      permissions.push(`${command.id.replace(/-/g, ' ')}: \`${this.client.join(command.getPermissions(guild) ?? ['[none]'])}\``);
+      permissions.push(`${command.id.replace(/-/g, ' ')}: ${command.getPermissions(guild)?.string ?? '`[none]`'}`);
     }
 
     return { usage, permissions };
@@ -224,8 +230,56 @@ export class Command extends Base {
    * @param  guild The guild to get permissions for.
    * @return       The permissions for this command for the given guild.
    */
-  public getPermissions(guild: Guild | null): PermissionString[] | undefined {
-    return this.client.database.getKey(guild, 'permissions', this.id) ?? this.permissions;
+  public getPermissions(guild: Guild | null): (Permissions & { string?: string }) | undefined {
+    // Here, we'll initialize a reference to the permissions for the given
+    // command within the guild.
+    const permissions: Permissions | undefined = this.client.database.getKey(guild, 'permissions', this.id) ?? this.permissions;
+
+    if (!permissions) {
+      return undefined;
+    }
+
+    // As roles are stored as their IDs, we'll ensure that the set roles
+    // exist. We'll remove any IDs that represents a non-existing role.
+    if (permissions.roles && guild) {
+      permissions.roles = permissions.roles.filter((id: Snowflake) => guild.roles.cache.has(id));
+    }
+
+    // Throughout this project, there's multiple times when the permissions of
+    // a command is shown. As permissions consists of either role permissions
+    // or roles itself, we'll initialize a string to represent this and return
+    // it to be consistently used throughout the project.
+
+    // First, we'll create an array consisting of the role permissions or role
+    // for this command within the given guild.
+
+    const total: (string[] | null)[] = [permissions.permissions, guild ? permissions.roles : null];
+
+    // As we know that the second element represents IDs for roles, and we
+    // also know that each role exists within the guild, we'll map each ID to\
+    // the string representation of its role.
+    total[1] = total[1] ? total[1].map((id: Snowflake) => guild!.roles.cache.get(id)!.toString()) : null;
+
+    // We also know that the first element represents permissions for the
+    // command, and so we'll wrap each permission around a code block.
+    total[0] = total[0] ? total[0].map((string: string) => `\`${string}\``) : null;
+
+    // Now, we filter out the array with any null/undefined values. What this
+    // does is that it will make sure that the array only consists of existing
+    // permissions. For example, if a command has roles for its permission but
+    // no actual permission, the array will now only consist of that specific
+    // role.
+
+    let valid: string[] | string[][] = total.filter(ensure);
+
+    // As of now, we have an array representing either the permissions and/or
+    // roles that is required for this command. Finally, we'll map each array
+    // into a string, using the join method for each array/
+    valid = valid.reduce((previous: string[], current: string[]) => {
+      return [...previous, this.client.join(current)];
+    }, []);
+
+    return { ...permissions, string: valid.length ? valid.join(' **or the role(s)** ') : undefined };
   }
 
   /**
@@ -233,21 +287,25 @@ export class Command extends Base {
    * @param  message The message that called this command.
    * @return         Represents permissions that the user is missing.
    */
-  public userPermissions = (message: Message): PermissionString[] | null => {
+  public userPermissions = (message: Message): (Permissions & { string?: string }) | null => {
     if (!message.guild) {
       return null;
     }
 
     // Get the permissions for this command for this specific guild.
-    const permissions: PermissionString[] | undefined = this.getPermissions(message.guild);
+    const permissions: Permissions | undefined = this.getPermissions(message.guild);
 
-    // If this command needs a user to have permissions, whether it's the
-    // default permissions or custom permissions overriden by the guild, we'll
-    // ensure that the given member has these permissions before continuing.
-    if (permissions && !message.member!.hasPermission(permissions)) {
-      return permissions;
+    if (!permissions || permissions.none) {
+      return null;
     }
 
-    return null;
+    // In order to execute a command, a user must either have the set
+    // permissions or the set roles, so we'll determine if they have both and
+    // return the permissions reference if the user is missing both.
+
+    const hasPermissions: boolean = permissions.permissions ? message.member!.permissions.has(permissions.permissions) : true;
+    const hasRoles: boolean = permissions.roles ? permissions.roles.every((id: Snowflake) => message.member!.roles.cache.has(id)) : true;
+
+    return !hasPermissions && !hasRoles ? permissions : null;
   };
 }
