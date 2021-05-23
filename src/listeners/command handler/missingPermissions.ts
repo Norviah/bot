@@ -27,7 +27,7 @@ export default class extends Listener {
 
     // As this event is emitted whenever a user is missing permissions for a
     // specific command, we'll set the description to reflect this.
-    const description: string = `${type === 'client' ? 'I' : 'You'} need the permission(s) ${missing.string} to execute **${command.id}**.`;
+    const description: string = `${type === 'client' ? 'I' : 'You'} need the permission(s) ${missing.string} to execute the command: **${command.id}**.`;
 
     await this.client.error(message, description, { entity: user });
 
