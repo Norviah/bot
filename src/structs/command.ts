@@ -303,9 +303,9 @@ export class Command extends Base {
     // permissions or the set roles, so we'll determine if they have both and
     // return the permissions reference if the user is missing both.
 
-    const hasPermissions: boolean = permissions.permissions ? message.member!.permissions.has(permissions.permissions) : true;
-    const hasRoles: boolean = permissions.roles ? permissions.roles.every((id: Snowflake) => message.member!.roles.cache.has(id)) : true;
+    const hasPermissions: boolean = permissions.permissions ? message.member!.permissions.has(permissions.permissions) : false;
+    const hasRoles: boolean = permissions.roles ? permissions.roles.every((id: Snowflake) => message.member!.roles.cache.has(id)) : false;
 
-    return !hasPermissions && !hasRoles ? permissions : null;
+    return hasPermissions || hasRoles ? null : permissions;
   };
 }
