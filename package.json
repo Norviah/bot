@@ -1,0 +1,49 @@
+{
+  "name": "name",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a template for creating discord bots",
+  "author": "norviah",
+  "main": "src/index.ts",
+  "scripts": {
+    "build:docs": "./node_modules/typedoc/bin/typedoc --options typedoc.json",
+    "build:src": "./node_modules/typescript/bin/tsc -p ./tsconfig.json",
+    "exec": "./node_modules/ts-node/dist/bin.js -r tsconfig-paths/register",
+    "lint:save": "node ./node_modules/prettier/bin/prettier.cjs --config .prettierrc.json --write ./src",
+    "lint:check": "./node_modules/eslint/bin/eslint.js ./src && ./node_modules/prettier/bin/prettier.cjs --config .prettierrc.json --list-different ./src",
+    "start": "pnpm run exec -- src/index.ts",
+    "start:watch": "./node_modules/nodemon/bin/nodemon.js"
+  },
+  "homepage": "https://github.com/norviah/bot#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norviah/bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/norviah/bot/issues"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^16.1.0",
+    "@types/app-root-path": "^1.2.5",
+    "@types/node": "^20.4.8",
+    "@types/ws": "^8.5.5",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "type-fest": "^4.1.0",
+    "typedoc": "^0.24.8",
+    "typedoc-plugin-markdown": "^3.15.4",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@norviah/logger": "^7.0.0",
+    "app-root-path": "^3.1.0"
+  }
+}

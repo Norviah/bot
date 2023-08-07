@@ -1,0 +1,10 @@
+{
+  "githubPages": false,
+  "out": "./docs",
+  "plugin": [
+    "typedoc-plugin-markdown"
+  ],
+  "entryPoints": [
+    "./src/index.ts"
+  ]
+}

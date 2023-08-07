@@ -1,0 +1,66 @@
+{
+  "tasks": {
+    "pre": [
+      {
+        "name": "ensure source code is formatted correctly",
+        "command": "pnpm run lint:check"
+      },
+      {
+        "name": "checking if project can be built",
+        "command": "pnpm run build:src"
+      }
+    ],
+    "post": []
+  },
+  "provider": {
+    "type": "json",
+    "path": "package.json",
+    "key": "version"
+  },
+  "types": [
+    {
+      "type": "feat",
+      "name": "Features"
+    },
+    {
+      "type": "fix",
+      "name": "Bug Fixes"
+    },
+    {
+      "type": "revert",
+      "name": "Reverted"
+    },
+    {
+      "type": "refactor",
+      "name": "Refactor"
+    },
+    {
+      "type": "build",
+      "name": "Build System"
+    },
+    {
+      "type": "init",
+      "name": "Init"
+    },
+    {
+      "type": "remove",
+      "name": "Removed Features"
+    },
+    {
+      "type": "chore",
+      "hidden": true
+    },
+    {
+      "type": "docs",
+      "hidden": true
+    }
+  ],
+  "prompt": false,
+  "unreleasedHeader": "Unreleased",
+  "breakingHeader": "⚠ Breaking Changes",
+  "includeBody": false,
+  "includeNonConventionalCommits": true,
+  "tag": "v{{after}}",
+  "releaseSubject": "chore(release): {{tag}}",
+  "changelogSubject": "docs(changelog): {{tag}}"
+}
