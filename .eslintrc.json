@@ -15,7 +15,7 @@
     "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/explicit-member-accessibility": "error",
     "@typescript-eslint/explicit-module-boundary-types": "warn",
-    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/ban-types": "warn",
     "@typescript-eslint/consistent-indexed-object-style": [ "error", "record" ],
     "max-len": [ "error", { "comments": 80, "code": 200, "ignoreStrings": true, "ignoreUrls": true }],
