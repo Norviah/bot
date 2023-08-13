@@ -12,10 +12,12 @@
     "moduleDetection": "force",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@config": ["config.ts"]
     }
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "config.ts"
   ]
 }
