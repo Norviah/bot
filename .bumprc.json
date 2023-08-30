@@ -64,7 +64,7 @@
       "hidden": true
     }
   ],
-  "prompt": false,
+  "prompt": true,
   "unreleasedHeader": "Unreleased",
   "breakingHeader": "⚠ Breaking Changes",
   "includeBody": false,
