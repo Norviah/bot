@@ -1,10 +1,6 @@
 {
-  "name": "name",
   "private": true,
   "version": "0.0.0",
-  "description": "a template for creating discord bots",
-  "author": "norviah",
-  "main": "src/index.ts",
   "scripts": {
     "build:docs": "./node_modules/typedoc/bin/typedoc --options typedoc.json",
     "build:src": "./node_modules/typescript/bin/tsc -p ./tsconfig.json",
