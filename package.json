@@ -9,8 +9,9 @@
     "build:docs": "./node_modules/typedoc/bin/typedoc --options typedoc.json",
     "build:src": "./node_modules/typescript/bin/tsc -p ./tsconfig.json",
     "exec": "./node_modules/ts-node/dist/bin.js -r tsconfig-paths/register",
-    "lint:save": "node ./node_modules/prettier/bin/prettier.cjs --config .prettierrc.json --write ./src",
-    "lint:check": "./node_modules/eslint/bin/eslint.js ./src && ./node_modules/prettier/bin/prettier.cjs --config .prettierrc.json --list-different ./src",
+    "prettier:check": "./node_modules/prettier/bin/prettier.cjs --config .prettierrc.json --list-different ./src",
+    "prettier:fix": "node ./node_modules/prettier/bin/prettier.cjs --config .prettierrc.json --write ./src",
+    "lint:check": "./node_modules/eslint/bin/eslint.js src",
     "start": "pnpm run exec -- src/index.ts",
     "start:watch": "./node_modules/nodemon/bin/nodemon.js"
   },
