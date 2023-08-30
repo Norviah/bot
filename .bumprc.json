@@ -2,15 +2,24 @@
   "tasks": {
     "pre": [
       {
-        "name": "ensure source code is formatted correctly",
+        "name": "checking formatting",
+        "command": "pnpm run prettier:check"
+      },
+      {
+        "name": "checking linting",
         "command": "pnpm run lint:check"
       },
       {
-        "name": "checking if project can be built",
+        "name": "building",
         "command": "pnpm run build:src"
       }
     ],
-    "post": []
+    "post": [
+      {
+        "name": "pushing to github",
+        "command": "git push --follow-tags"
+      }
+    ]
   },
   "provider": {
     "type": "json",
