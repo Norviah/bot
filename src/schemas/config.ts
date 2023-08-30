@@ -10,7 +10,7 @@ export const config = z.object({
    *
    * @see https://discord.com/developers/docs/topics/oauth2
    */
-  token: z.string({ invalid_type_error: 'hi' }),
+  token: z.string(),
 
   /**
    * The guild ID for your development server.
