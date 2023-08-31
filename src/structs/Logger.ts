@@ -1,3 +1,4 @@
+import { config } from '@/util/config';
 import { Logger as BaseLogger } from '@norviah/logger';
 
 import type { LoggingOptions } from '@norviah/logger';
@@ -22,6 +23,21 @@ export class Logger extends BaseLogger {
    */
   public error(content: string | string[], options?: Partial<LoggingOptions>): void {
     super.error(content, { subDir: 'errors', ...options });
+  }
+
+  /**
+   * Logs the provided content as debug information.
+   *
+   * Debug information are information that isn't necessarily important, but
+   * can be useful for debugging purposes.
+   *
+   * @param content The content to log.
+   * @param options Options for the log.
+   */
+  public debug(content: string | string[], options?: Partial<LoggingOptions>): void {
+    if (config.debug) {
+      this.info(content, { title: 'debug', ...options });
+    }
   }
 
   /**
