@@ -1,10 +1,11 @@
 {
   "githubPages": false,
+  "name": "Bot",
   "out": "./docs",
   "plugin": [
     "typedoc-plugin-markdown"
   ],
   "entryPoints": [
-    "./src/index.ts"
+    "./src/structs/**/*.ts"
   ]
 }
