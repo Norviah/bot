@@ -56,6 +56,10 @@
       "name": "Removed Features"
     },
     {
+      "type": "deps",
+      "name": "Dependencies"
+    },
+    {
       "type": "chore",
       "hidden": true
     },
