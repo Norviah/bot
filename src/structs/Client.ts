@@ -1,14 +1,11 @@
-import { config } from '@config';
+import { config } from '@/util/config';
 import { Client as BaseClient } from 'discord.js';
 
 import { logger } from '@/util/logger';
-import { fromZodError } from 'zod-validation-error';
 
+import type { Config } from '@/schemas';
 import type { ClientOptions } from 'discord.js';
 import type { ReadonlyDeep } from 'type-fest';
-import type { ZodError } from 'zod';
-
-import * as schemas from '@/schemas';
 
 export class Client extends BaseClient {
   /**
@@ -17,7 +14,7 @@ export class Client extends BaseClient {
    * This object references important information regarding the client, most
    * notably the token that is used to log in to Discord.
    */
-  private readonly config: ReadonlyDeep<schemas.Config>;
+  private readonly config: ReadonlyDeep<Config> = config;
 
   /**
    * Initializes a new `Client` instance.
@@ -26,12 +23,6 @@ export class Client extends BaseClient {
    */
   public constructor(options: ClientOptions) {
     super(options);
-
-    try {
-      this.config = schemas.config.parse(config);
-    } catch (error) {
-      logger.exit(fromZodError(error as ZodError).message, { title: 'invalid config' });
-    }
   }
 
   /**
