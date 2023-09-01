@@ -60,7 +60,7 @@ export const MessageGenerator = {
    * @returns The constructed error message.
    */
   INVALID_HANDLER: ({ module, handler }: { module: string; handler: string }): string => {
-    return `invalid handler, the module \`${module}\` is not compatible with the \`${handler}\` handler`;
+    return `the handler \`${handler}\` does not manage the module \`${module}\``;
   },
 
   /**

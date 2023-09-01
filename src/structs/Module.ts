@@ -1,3 +1,5 @@
+import { ClientError, ErrorCodes } from './ClientError';
+
 import { logger } from '@/util/logger';
 import { prisma } from '@/util/prisma';
 
@@ -65,6 +67,10 @@ export abstract class Module {
    * @param handler The handler that manages the module.
    */
   public constructor(handler: Handler<Module>) {
+    if (!(this.constructor.prototype instanceof handler.reference)) {
+      throw new ClientError(ErrorCodes.INVALID_HANDLER, { module: this.constructor.name, handler: handler.constructor.name });
+    }
+
     this.handler = handler as Handler<typeof this>;
   }
 
