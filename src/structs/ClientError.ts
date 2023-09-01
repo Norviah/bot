@@ -1,6 +1,80 @@
-export enum ErrorCodes {}
+export enum ErrorCodes {
+  /**
+   * The event where a specified directory was not found.
+   */
+  INVALID_DIRECTORY = 'INVALID_DIRECTORY',
 
-export const MessageGenerator = {};
+  /**
+   * The event where a handler attempts to import a module from a script that
+   * does not export a valid instance of the module.
+   */
+  INVALID_MODULE = 'INVALID_MODULE',
+
+  /**
+   * The event where a module is initialized with a handler that does not manage
+   * the module's respective type.
+   */
+  INVALID_HANDLER = 'INVALID_HANDLER',
+
+  /**
+   * The event where a handler attempts to register a module with a name that
+   * already exists within the handler's collection.
+   */
+  DUPLICATE_MODULE = 'DUPLICATE_MODULE',
+
+  /**
+   * The event where a handler is told to import a module from a non-typescript
+   * file.
+   */
+  NON_TS_FILE = 'NON_TS_FILE',
+}
+
+export const MessageGenerator = {
+  /**
+   * Generates the error message for the `INVALID_DIRECTORY` error code.
+   *
+   * @returns The constructed error message.
+   */
+  INVALID_DIRECTORY: (options: { path: string }): string => {
+    return `invalid directory path, \`${options.path}\` does not exist or is not a directory`;
+  },
+
+  /**
+   * Returns the error message for the `INVALID_MODULE` error code.
+   *
+   * @returns The constructed error message.
+   */
+  INVALID_MODULE: ({ path, module }: { path: string; module: string }): string => {
+    return `invalid module, the path \`${path}\` does not export a valid instance of \`${module}\``;
+  },
+
+  /**
+   * Returns the error message for the `INVALID_HANDLER` error code.
+   *
+   * @returns The constructed error message.
+   */
+  INVALID_HANDLER: ({ module, handler }: { module: string; handler: string }): string => {
+    return `invalid handler, the module \`${module}\` is not compatible with the \`${handler}\` handler`;
+  },
+
+  /**
+   * Returns the error message for the `DUPLICATE_MODULE` error code.
+   *
+   * @returns The constructed error message.
+   */
+  DUPLICATE_MODULE: ({ module, handler }: { module: string; handler: string }): string => {
+    return `the module \`${module}\` already exists within the \`${handler}\` handler`;
+  },
+
+  /**
+   * Generates the error message for the `NON_TS_FILE` error code.
+   *
+   * @returns The constructed error message.
+   */
+  NON_TS_FILE: ({ name, path }: { name: string; path: string }): string => {
+    return `unable to import module \`${name}\` from \`${path}\`, as the file is not a typescript file`;
+  },
+};
 
 export class ClientError<T extends keyof typeof ErrorCodes> extends Error {
   /**
