@@ -36,7 +36,7 @@ export class Logger extends BaseLogger {
    */
   public debug(content: string | string[], options?: Partial<LoggingOptions>): void {
     if (config.debug) {
-      this.info(content, { title: 'debug', ...options });
+      this.info(content, { ...options, title: options?.title ? `[debug] ${options.title}` : '[debug]' });
     }
   }
 
