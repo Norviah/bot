@@ -1,7 +1,7 @@
 import { config } from '@/util/config';
 import { Logger as BaseLogger } from '@norviah/logger';
 
-import type { LoggingOptions } from '@norviah/logger';
+import type { LoggingOptions, Options as LoggerOptions } from '@norviah/logger';
 
 import * as paths from '@/util/paths';
 
@@ -11,7 +11,7 @@ export class Logger extends BaseLogger {
    *
    * @param options Options for the logger.
    */
-  public constructor(options?: Partial<LoggingOptions>) {
+  public constructor(options?: Partial<LoggerOptions>) {
     super({ write: true, dir: paths.LOGS, both: true, format: { title: '%t ' }, ...options });
   }
 
