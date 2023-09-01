@@ -27,6 +27,12 @@ export enum ErrorCodes {
    * file.
    */
   NON_TS_FILE = 'NON_TS_FILE',
+
+  /**
+   * The event where a listener references an emitter that wasn't provided when
+   * initializing the listener handler.
+   */
+  UNKNOWN_EMITTER = 'UNKNOWN_EMITTER',
 }
 
 export const MessageGenerator = {
@@ -73,6 +79,15 @@ export const MessageGenerator = {
    */
   NON_TS_FILE: ({ name, path }: { name: string; path: string }): string => {
     return `unable to import module \`${name}\` from \`${path}\`, as the file is not a typescript file`;
+  },
+
+  /**
+   * Returns the error message for the `UNKNOWN_EMITTER` error code.
+   *
+   * @returns The constructed error message.
+   */
+  UNKNOWN_EMITTER: ({ emitter, listener }: { emitter: string; listener: string }): string => {
+    return `the emitter \`${emitter}\` referenced by the listener \`${listener}\` wasn't provided`;
   },
 };
 
