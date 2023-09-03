@@ -1,11 +1,8 @@
-import { ClientError, ErrorCodes } from './ClientError';
-
+import { ClientError, ErrorCodes } from '@/structs/ClientError';
 import { logger } from '@/util/logger';
-import { prisma } from '@/util/prisma';
 
 import type { Handler } from '@/structs/handlers/Handler';
 import type { Logger } from '@norviah/logger';
-import type { PrismaClient } from '@prisma/client';
 
 /**
  * The base structure for modules.
@@ -35,13 +32,6 @@ export abstract class Module {
    * purpose, such as administration commands or music commands.
    */
   public readonly category: string = 'default';
-
-  /**
-   * The database client.
-   *
-   * @see https://www.prisma.io/docs
-   */
-  public readonly prisma: PrismaClient = prisma;
 
   /**
    * The logging system.
