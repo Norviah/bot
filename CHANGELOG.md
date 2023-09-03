@@ -1,31 +1,65 @@
+## Unreleased
+
+### Bug Fixes
+
+- **structs**: do not add prisma to modules <code>[70a3446](https://github.com/Norviah/bot/commit/70a3446348fddacb0b7ec0e883dd7dba6d7d22a5)</code>
+
+	For some reason, when printing the Prisma client to console, the
+	terminal hangs indefinitely. As all modules have a reference to the
+	Prisma client, the terminal hangs when printing any module.
+	
+	Removing the client reference from modules fixes this issue.
+
+- **structs**: correctly type options for the logger class <code>[0bc8656](https://github.com/Norviah/bot/commit/0bc865668618d2d92d619e64a9fc3d9cd67e22df)</code>
+
+### Features
+
+- add base listeners <code>[abd01f8](https://github.com/Norviah/bot/commit/abd01f8b8920a1d6dc0c8f045ecab1c5b0ace06b)</code>
+
+- implement the base structure for listeners <code>[cb08218](https://github.com/Norviah/bot/commit/cb0821865a03506e0f03f0922563702acf93085f)</code>
+
+- implement the base structure for modules and handlers <code>[da06d65](https://github.com/Norviah/bot/commit/da06d6531f103568517999e48703dd2860730edc)</code>
+
+- implement a custom error class <code>[82d8d5f](https://github.com/Norviah/bot/commit/82d8d5f47694773987e3c758c37e72b906a1f009)</code>
+
+- **structs**: ensure a module has been passed a proper handler when initialized <code>[8a8cf3b](https://github.com/Norviah/bot/commit/8a8cf3bafef2d16cd358afc88ee72109c554b5db)</code>
+
+- **structs**: implement a default title when logging for debugging purposes <code>[1f225fb](https://github.com/Norviah/bot/commit/1f225fb6db1d17a8228df0d149e60cd5a9558244)</code>
+
+- **structs**: implement a method in `Logger` for debugging purposes <code>[aa4d3e4](https://github.com/Norviah/bot/commit/aa4d3e4bf51fbe4b7566411e56bf0e16e23364ba)</code>
+
+### Refactor
+
+- move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
+
 ## v0.1.0 (2023-08-31)
 
 ### Features
 
-- initialize prisma <code>[9e092b2](https://github.com/norviah/bot/commit/9e092b2c593509bd15b21148ee26fc939bbcaf93)</code>
+- initialize prisma <code>[9e092b2](https://github.com/Norviah/bot/commit/9e092b2c593509bd15b21148ee26fc939bbcaf93)</code>
 
-- implement the base structure for the client <code>[84ef08a](https://github.com/norviah/bot/commit/84ef08a1111ee2f261bd4a47e9b048a24b5893aa)</code>
+- implement the base structure for the client <code>[84ef08a](https://github.com/Norviah/bot/commit/84ef08a1111ee2f261bd4a47e9b048a24b5893aa)</code>
 
-- implement the structure for logging <code>[4ead554](https://github.com/norviah/bot/commit/4ead554a256db436aefa0ec49e48c9aa739fc719)</code>
+- implement the structure for logging <code>[4ead554](https://github.com/Norviah/bot/commit/4ead554a256db436aefa0ec49e48c9aa739fc719)</code>
 
 ### Build System
 
-- **bump**: define a title for the `deps` commit type <code>[babdcc1](https://github.com/norviah/bot/commit/babdcc186eee410aaf04e4c718b591b1d9510fa8)</code>
+- **bump**: define a title for the `deps` commit type <code>[babdcc1](https://github.com/Norviah/bot/commit/babdcc186eee410aaf04e4c718b591b1d9510fa8)</code>
 
-- **bump**: ask for confirmation before releasing a new version <code>[cd87ed5](https://github.com/norviah/bot/commit/cd87ed5b1d418acc82f1533b23ae17c37f5e2409)</code>
+- **bump**: ask for confirmation before releasing a new version <code>[cd87ed5](https://github.com/Norviah/bot/commit/cd87ed5b1d418acc82f1533b23ae17c37f5e2409)</code>
 
-- **bump**: implement scripts to run pre and post bump <code>[7af59db](https://github.com/norviah/bot/commit/7af59dbaacd91430ffc10f780e34487aa9925d7f)</code>
+- **bump**: implement scripts to run pre and post bump <code>[7af59db](https://github.com/Norviah/bot/commit/7af59dbaacd91430ffc10f780e34487aa9925d7f)</code>
 
-- **typedoc**: correctly point to the structs to document <code>[f751294](https://github.com/norviah/bot/commit/f7512946deae888eb2c7cd979f5e179344d4aadb)</code>
+- **typedoc**: correctly point to the structs to document <code>[f751294](https://github.com/Norviah/bot/commit/f7512946deae888eb2c7cd979f5e179344d4aadb)</code>
 
 ### Dependencies
 
-- add prisma for database management <code>[9173eb1](https://github.com/norviah/bot/commit/9173eb1146af1ab619180abab97fa8741f50e30f)</code>
+- add prisma for database management <code>[9173eb1](https://github.com/Norviah/bot/commit/9173eb1146af1ab619180abab97fa8741f50e30f)</code>
 
 ### Refactor
 
-- move error handling logic within the client structure <code>[b44165a](https://github.com/norviah/bot/commit/b44165a661544529abeee0294454b6116e9543fe)</code>
+- move error handling logic within the client structure <code>[b44165a](https://github.com/Norviah/bot/commit/b44165a661544529abeee0294454b6116e9543fe)</code>
 
 ### Init
 
-- initial commit <code>[7a2bc55](https://github.com/norviah/bot/commit/7a2bc559b4b1e46d0d4f5a5a8fbad7fc2c4e271c)</code>
+- initial commit <code>[7a2bc55](https://github.com/Norviah/bot/commit/7a2bc559b4b1e46d0d4f5a5a8fbad7fc2c4e271c)</code>
