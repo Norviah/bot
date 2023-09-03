@@ -2,7 +2,7 @@
 
 ### Bug Fixes
 
-- **structs**: do not add prisma to modules <code>[70a3446](https://github.com/Norviah/bot/commit/70a3446348fddacb0b7ec0e883dd7dba6d7d22a5)</code>
+- **structs**: remove the prisma reference from modules <code>[fcfedfb](https://github.com/Norviah/bot/commit/fcfedfb8df0c2d974b31ca6d0e6149dc4e12afae)</code>
 
 	For some reason, when printing the Prisma client to console, the
 	terminal hangs indefinitely. As all modules have a reference to the
