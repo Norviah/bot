@@ -78,7 +78,7 @@ export class ListenerHandler extends Handler<Listener> {
     // method to keep the listener's `this` context.
     emitter[listener.type](listener.event, listener.exec.bind(listener));
 
-    logger.debug(`binded listener \`${listener.name}\` to it's respective event`, { title: this.constructor.name });
+    logger.debug(`binded listener \`${listener.name}\``, { title: this.constructor.name });
 
     return listener;
   }
