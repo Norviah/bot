@@ -9,8 +9,9 @@
     "lint:check": "./node_modules/eslint/bin/eslint.js src",
     "prettier:check": "./node_modules/prettier/bin/prettier.cjs --config .prettierrc.json --list-different ./src",
     "prettier:fix": "node ./node_modules/prettier/bin/prettier.cjs --config .prettierrc.json --write ./src",
-    "prisma:migrate": "npx prisma migrate dev --schema ./prisma/schema.prisma",
     "prisma:generate": "npx prisma generate --schema ./prisma/schema.prisma",
+    "prisma:migrate": "npx prisma migrate dev --schema ./prisma/schema.prisma",
+    "prisma:studio": "pnpm prisma studio",
     "start": "pnpm run exec -- src/index.ts",
     "start:watch": "./node_modules/nodemon/bin/nodemon.js"
   },
