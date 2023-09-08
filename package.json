@@ -1,10 +1,14 @@
 {
+  "name": "bot",
   "private": true,
   "version": "0.1.0",
   "scripts": {
     "build:docs": "./node_modules/typedoc/bin/typedoc --options typedoc.json",
     "build:prisma": "pnpm run prisma:migrate && pnpm run prisma:generate",
     "build:src": "./node_modules/typescript/bin/tsc -p ./tsconfig.json",
+    "cli": "./bin/dev",
+    "cli:deploy": "./bin/dev commands deploy",
+    "cli:deploy-dev": "./bin/dev commands deploy --development",
     "exec": "./node_modules/ts-node/dist/bin.js -r tsconfig-paths/register",
     "lint:check": "./node_modules/eslint/bin/eslint.js src",
     "prettier:check": "./node_modules/prettier/bin/prettier.cjs --config .prettierrc.json --list-different ./src",
@@ -24,6 +28,21 @@
   "bugs": {
     "url": "https://github.com/norviah/bot/issues"
   },
+  "files": [],
+  "oclif": {
+    "bin": "cli",
+    "dirname": "cli",
+    "commands": "./cli/commands",
+    "plugins": [
+      "@oclif/plugin-help"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "commands": {
+        "description": "Commands for working with commands."
+      }
+    }
+  },
   "devDependencies": {
     "@tsconfig/node16": "^16.1.0",
     "@types/app-root-path": "^1.2.5",
@@ -35,6 +54,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "nodemon": "^3.0.1",
+    "oclif": "^3.14.0",
     "prettier": "^3.0.1",
     "prisma": "^5.2.0",
     "ts-node": "^10.9.1",
@@ -46,6 +66,8 @@
   },
   "dependencies": {
     "@norviah/logger": "^7.0.0",
+    "@oclif/core": "^2.15.0",
+    "@oclif/plugin-help": "^5.2.18",
     "@prisma/client": "^5.2.0",
     "app-root-path": "^3.1.0",
     "discord.js": "^14.12.1",
