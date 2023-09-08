@@ -1,8 +1,8 @@
-[Bot](../README.md) / [Exports](../modules.md) / [handlers/ListenerHandler](../modules/handlers_ListenerHandler.md) / ListenerHandler
+[Bot](../README.md) / [Exports](../modules.md) / [handlers/CommandHandler](../modules/handlers_CommandHandler.md) / CommandHandler
 
-# Class: ListenerHandler
+# Class: CommandHandler
 
-[handlers/ListenerHandler](../modules/handlers_ListenerHandler.md).ListenerHandler
+[handlers/CommandHandler](../modules/handlers_CommandHandler.md).CommandHandler
 
 The base structure for handlers.
 
@@ -13,45 +13,43 @@ reference.
 
 ## Hierarchy
 
-- [`Handler`](handlers_Handler.Handler.md)<[`Listener`](Listener.Listener.md)\>
+- [`Handler`](handlers_Handler.Handler.md)<[`BaseCommand`](commands_BaseCommand.BaseCommand.md)<`ApplicationCommandType`\>\>
 
-  ↳ **`ListenerHandler`**
+  ↳ **`CommandHandler`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](handlers_ListenerHandler.ListenerHandler.md#constructor)
+- [constructor](handlers_CommandHandler.CommandHandler.md#constructor)
 
 ### Properties
 
-- [client](handlers_ListenerHandler.ListenerHandler.md#client)
-- [directory](handlers_ListenerHandler.ListenerHandler.md#directory)
-- [emitters](handlers_ListenerHandler.ListenerHandler.md#emitters)
-- [modules](handlers_ListenerHandler.ListenerHandler.md#modules)
-- [reference](handlers_ListenerHandler.ListenerHandler.md#reference)
+- [client](handlers_CommandHandler.CommandHandler.md#client)
+- [directory](handlers_CommandHandler.CommandHandler.md#directory)
+- [modules](handlers_CommandHandler.CommandHandler.md#modules)
+- [reference](handlers_CommandHandler.CommandHandler.md#reference)
 
 ### Methods
 
-- [import](handlers_ListenerHandler.ListenerHandler.md#import)
-- [inherits](handlers_ListenerHandler.ListenerHandler.md#inherits)
-- [register](handlers_ListenerHandler.ListenerHandler.md#register)
-- [registerAll](handlers_ListenerHandler.ListenerHandler.md#registerall)
+- [import](handlers_CommandHandler.CommandHandler.md#import)
+- [inherits](handlers_CommandHandler.CommandHandler.md#inherits)
+- [register](handlers_CommandHandler.CommandHandler.md#register)
+- [registerAll](handlers_CommandHandler.CommandHandler.md#registerall)
 
 ## Constructors
 
 ### constructor
 
-• **new ListenerHandler**(`client`, `emitters`)
+• **new CommandHandler**(`client`)
 
-Initializes a new `ListenerHandler` instance.
+Initializes a new `Handler` instance.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `client` | [`Client`](Client.Client.md)<`boolean`\> | The client object. |
-| `emitters` | `Record`<`string`, `__module`\> | The collection of event emitters to bind listeners to. |
+| `client` | [`Client`](Client.Client.md)<`boolean`\> | The instantiated Discord client. |
 
 #### Overrides
 
@@ -59,7 +57,7 @@ Initializes a new `ListenerHandler` instance.
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:41](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/ListenerHandler.ts#L41)
+[src/structs/handlers/CommandHandler.ts:36](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/CommandHandler.ts#L36)
 
 ## Properties
 
@@ -83,12 +81,12 @@ ___
 
 ### directory
 
-• `Readonly` **directory**: `string` = `paths.LISTENERS`
+• `Readonly` **directory**: `string` = `paths.COMMANDS`
 
 The base directory that contains the desired modules.
 
-When importing listeners, the handler will look in this directory for
-listeners to import, recursively looking in subdirectories.
+When importing commands, the handler will look in this directory for
+commands to import, recursively looking in subdirectories.
 
 #### Overrides
 
@@ -96,48 +94,29 @@ listeners to import, recursively looking in subdirectories.
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:19](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/ListenerHandler.ts#L19)
-
-___
-
-### emitters
-
-• `Readonly` **emitters**: `Map`<`string`, `__module`\>
-
-The collection of event emitters to bind listeners to.
-
-When importing listeners, the handler will also bind the listener's to its
-respective event emitter. This property represents the collection of event
-emitters to look for.
-
-#### Defined in
-
-[src/structs/handlers/ListenerHandler.ts:33](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/ListenerHandler.ts#L33)
+[src/structs/handlers/CommandHandler.ts:19](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/CommandHandler.ts#L19)
 
 ___
 
 ### modules
 
-• `Readonly` **modules**: `Map`<`string`, [`Listener`](Listener.Listener.md)\>
+• **modules**: `Map`<`string`, [`SlashCommand`](commands_SlashCommand.SlashCommand.md) \| [`ContextCommand`](commands_ContextCommand.ContextCommand.md)<`User` \| `Message`\>\>
 
-The collection of modules that the handler manages.
+All initialized commands.
 
-References all modules that have been initialized by the handler, stored
-within a collection for future reference.
-
-#### Inherited from
+#### Overrides
 
 [Handler](handlers_Handler.Handler.md).[modules](handlers_Handler.Handler.md#modules)
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:53](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L53)
+[src/structs/handlers/CommandHandler.ts:29](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/CommandHandler.ts#L29)
 
 ___
 
 ### reference
 
-• `Readonly` **reference**: `AbstractClass`<[`Listener`](Listener.Listener.md), `any`[]\> = `Listener`
+• `Readonly` **reference**: `AbstractClass`<[`BaseCommand`](commands_BaseCommand.BaseCommand.md)<`ApplicationCommandType`\>, `any`[]\> = `BaseCommand`
 
 The reference to the abstract class that the handler manages.
 
@@ -147,13 +126,13 @@ The reference to the abstract class that the handler manages.
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:24](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/ListenerHandler.ts#L24)
+[src/structs/handlers/CommandHandler.ts:24](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/CommandHandler.ts#L24)
 
 ## Methods
 
 ### import
 
-▸ **import**(`path`): [`Listener`](Listener.Listener.md)
+▸ **import**(`path`): [`BaseCommand`](commands_BaseCommand.BaseCommand.md)<`ApplicationCommandType`\>
 
 Imports and initializes a module from a file.
 
@@ -172,7 +151,7 @@ default export.
 
 #### Returns
 
-[`Listener`](Listener.Listener.md)
+[`BaseCommand`](commands_BaseCommand.BaseCommand.md)<`ApplicationCommandType`\>
 
 The initialized module.
 
@@ -223,32 +202,32 @@ ___
 
 ### register
 
-▸ **register**(`path`): [`Listener`](Listener.Listener.md)
+▸ **register**(`path`): [`BaseCommand`](commands_BaseCommand.BaseCommand.md)<`ApplicationCommandType`\>
 
-Registers a listener from the specified path.
+Registers a module within the handler.
 
-This method extends the base handler's method by binding the listener to
-its respective event emitter once the listener has been initialized.
+This method will register a module from the specified path, initializing it
+and storing it within the handler's collection of modules.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `path` | `string` | The path to register the listener from. |
+| `path` | `string` | The path to register the module at. |
 
 #### Returns
 
-[`Listener`](Listener.Listener.md)
+[`BaseCommand`](commands_BaseCommand.BaseCommand.md)<`ApplicationCommandType`\>
 
-The registered listener.
+The registered module.
 
-#### Overrides
+#### Inherited from
 
 [Handler](handlers_Handler.Handler.md).[register](handlers_Handler.Handler.md#register)
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:60](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/ListenerHandler.ts#L60)
+[src/structs/handlers/Handler.ts:131](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L131)
 
 ___
 

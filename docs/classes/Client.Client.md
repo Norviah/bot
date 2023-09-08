@@ -1,12 +1,18 @@
 [Bot](../README.md) / [Exports](../modules.md) / [Client](../modules/Client.md) / Client
 
-# Class: Client
+# Class: Client<Ready\>
 
 [Client](../modules/Client.md).Client
 
+## Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Ready` | extends `boolean` = `boolean` |
+
 ## Hierarchy
 
-- `Client`
+- `Client`<`Ready`\>
 
   ↳ **`Client`**
 
@@ -87,9 +93,15 @@
 
 ### constructor
 
-• **new Client**(`options`)
+• **new Client**<`Ready`\>(`options`)
 
 Initializes a new `Client` instance.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Ready` | extends `boolean` = `boolean` |
 
 #### Parameters
 
@@ -99,17 +111,17 @@ Initializes a new `Client` instance.
 
 #### Overrides
 
-BaseClient.constructor
+BaseClient&lt;Ready\&gt;.constructor
 
 #### Defined in
 
-[src/structs/Client.ts:25](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Client.ts#L25)
+[src/structs/Client.ts:41](https://github.com/Norviah/bot/blob/d0af849/src/structs/Client.ts#L41)
 
 ## Properties
 
 ### application
 
-• **application**: ``null`` \| `ClientApplication`
+• **application**: `If`<`Ready`, `ClientApplication`, ``null``\>
 
 #### Inherited from
 
@@ -146,7 +158,7 @@ notably the token that is used to log in to Discord.
 
 #### Defined in
 
-[src/structs/Client.ts:18](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Client.ts#L18)
+[src/structs/Client.ts:19](https://github.com/Norviah/bot/blob/d0af849/src/structs/Client.ts#L19)
 
 ___
 
@@ -166,7 +178,7 @@ ___
 
 ### handlers
 
-• `Readonly` **handlers**: `Readonly`<{ `listeners`: [`ListenerHandler`](handlers_ListenerHandler.ListenerHandler.md)  }\>
+• `Readonly` **handlers**: `Readonly`<{ `commands`: [`CommandHandler`](handlers_CommandHandler.CommandHandler.md) ; `listeners`: [`ListenerHandler`](handlers_ListenerHandler.ListenerHandler.md)  }\>
 
 The various handlers for the client.
 
@@ -175,7 +187,7 @@ the client for various purposes.
 
 #### Defined in
 
-[src/structs/Client.ts:35](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Client.ts#L35)
+[src/structs/Client.ts:27](https://github.com/Norviah/bot/blob/d0af849/src/structs/Client.ts#L27)
 
 ___
 
@@ -195,7 +207,7 @@ ___
 
 ### readyTimestamp
 
-• **readyTimestamp**: ``null`` \| `number`
+• **readyTimestamp**: `If`<`Ready`, `number`, ``null``\>
 
 #### Inherited from
 
@@ -251,7 +263,7 @@ ___
 
 ### token
 
-• **token**: ``null`` \| `string`
+• **token**: `If`<`Ready`, `string`, ``null`` \| `string`\>
 
 #### Inherited from
 
@@ -265,7 +277,7 @@ ___
 
 ### user
 
-• **user**: ``null`` \| `ClientUser`
+• **user**: `If`<`Ready`, `ClientUser`, ``null``\>
 
 #### Inherited from
 
@@ -512,7 +524,7 @@ node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts
 
 ### addListener
 
-▸ **addListener**(`eventName`, `listener`): [`Client`](Client.Client.md)
+▸ **addListener**(`eventName`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
 
 Alias for `emitter.on(eventName, listener)`.
 
@@ -525,7 +537,7 @@ Alias for `emitter.on(eventName, listener)`.
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 **`Since`**
 
@@ -1002,7 +1014,7 @@ ___
 
 ### off
 
-▸ **off**<`K`\>(`event`, `listener`): [`Client`](Client.Client.md)
+▸ **off**<`K`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1019,7 +1031,7 @@ ___
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1029,7 +1041,7 @@ BaseClient.off
 
 node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts:998
 
-▸ **off**<`S`\>(`event`, `listener`): [`Client`](Client.Client.md)
+▸ **off**<`S`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1046,7 +1058,7 @@ node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1060,7 +1072,7 @@ ___
 
 ### on
 
-▸ **on**<`K`\>(`event`, `listener`): [`Client`](Client.Client.md)
+▸ **on**<`K`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1077,7 +1089,7 @@ ___
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1087,7 +1099,7 @@ BaseClient.on
 
 node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts:983
 
-▸ **on**<`S`\>(`event`, `listener`): [`Client`](Client.Client.md)
+▸ **on**<`S`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1104,7 +1116,7 @@ node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1118,7 +1130,7 @@ ___
 
 ### once
 
-▸ **once**<`K`\>(`event`, `listener`): [`Client`](Client.Client.md)
+▸ **once**<`K`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1135,7 +1147,7 @@ ___
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1145,7 +1157,7 @@ BaseClient.once
 
 node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts:989
 
-▸ **once**<`S`\>(`event`, `listener`): [`Client`](Client.Client.md)
+▸ **once**<`S`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1162,7 +1174,7 @@ node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1176,7 +1188,7 @@ ___
 
 ### prependListener
 
-▸ **prependListener**(`eventName`, `listener`): [`Client`](Client.Client.md)
+▸ **prependListener**(`eventName`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -1200,7 +1212,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 **`Since`**
 
@@ -1218,7 +1230,7 @@ ___
 
 ### prependOnceListener
 
-▸ **prependOnceListener**(`eventName`, `listener`): [`Client`](Client.Client.md)
+▸ **prependOnceListener**(`eventName`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -1240,7 +1252,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 **`Since`**
 
@@ -1314,7 +1326,7 @@ ___
 
 ### removeAllListeners
 
-▸ **removeAllListeners**<`K`\>(`event?`): [`Client`](Client.Client.md)
+▸ **removeAllListeners**<`K`\>(`event?`): [`Client`](Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1330,7 +1342,7 @@ ___
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1340,7 +1352,7 @@ BaseClient.removeAllListeners
 
 node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts:1004
 
-▸ **removeAllListeners**<`S`\>(`event?`): [`Client`](Client.Client.md)
+▸ **removeAllListeners**<`S`\>(`event?`): [`Client`](Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1356,7 +1368,7 @@ node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1370,7 +1382,7 @@ ___
 
 ### removeListener
 
-▸ **removeListener**(`eventName`, `listener`): [`Client`](Client.Client.md)
+▸ **removeListener**(`eventName`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
 
 Removes the specified `listener` from the listener array for the event named`eventName`.
 
@@ -1461,7 +1473,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 **`Since`**
 
@@ -1479,7 +1491,7 @@ ___
 
 ### setMaxListeners
 
-▸ **setMaxListeners**(`n`): [`Client`](Client.Client.md)
+▸ **setMaxListeners**(`n`): [`Client`](Client.Client.md)<`Ready`\>
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -1496,7 +1508,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`Client`](Client.Client.md)
+[`Client`](Client.Client.md)<`Ready`\>
 
 **`Since`**
 
@@ -1524,7 +1536,7 @@ Starts the client.
 
 #### Defined in
 
-[src/structs/Client.ts:42](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Client.ts#L42)
+[src/structs/Client.ts:48](https://github.com/Norviah/bot/blob/d0af849/src/structs/Client.ts#L48)
 
 ___
 

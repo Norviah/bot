@@ -16,6 +16,8 @@ responsible for importing and initializing modules from files.
 
   ↳ [`Listener`](Listener.Listener.md)
 
+  ↳ [`BaseCommand`](commands_BaseCommand.BaseCommand.md)
+
 ## Table of contents
 
 ### Constructors
@@ -28,7 +30,6 @@ responsible for importing and initializing modules from files.
 - [handler](Module.Module.md#handler)
 - [logger](Module.Module.md#logger)
 - [name](Module.Module.md#name)
-- [prisma](Module.Module.md#prisma)
 
 ### Methods
 
@@ -50,7 +51,7 @@ Initializes a new `Module` instance.
 
 #### Defined in
 
-[src/structs/Module.ts:69](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Module.ts#L69)
+[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L59)
 
 ## Properties
 
@@ -70,7 +71,7 @@ purpose, such as administration commands or music commands.
 
 #### Defined in
 
-[src/structs/Module.ts:37](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Module.ts#L37)
+[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L34)
 
 ___
 
@@ -85,7 +86,7 @@ module to access the Discord client and other modules within the handler.
 
 #### Defined in
 
-[src/structs/Module.ts:62](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Module.ts#L62)
+[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L52)
 
 ___
 
@@ -104,7 +105,7 @@ https://github.com/norviah/logger
 
 #### Defined in
 
-[src/structs/Module.ts:54](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Module.ts#L54)
+[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L44)
 
 ___
 
@@ -119,23 +120,7 @@ possible error messages.
 
 #### Defined in
 
-[src/structs/Module.ts:24](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Module.ts#L24)
-
-___
-
-### prisma
-
-• `Readonly` **prisma**: `PrismaClient`<`PrismaClientOptions`, `never`, `DefaultArgs`\> = `prisma`
-
-The database client.
-
-**`See`**
-
-https://www.prisma.io/docs
-
-#### Defined in
-
-[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Module.ts#L44)
+[src/structs/Module.ts:21](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L21)
 
 ## Methods
 
@@ -156,4 +141,4 @@ further initialize the module once imported.
 
 #### Defined in
 
-[src/structs/Module.ts:85](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/Module.ts#L85)
+[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L75)

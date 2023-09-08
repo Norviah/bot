@@ -26,7 +26,7 @@ already exists within the handler's collection.
 
 #### Defined in
 
-[src/structs/ClientError.ts:23](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/ClientError.ts#L23)
+[src/structs/ClientError.ts:23](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L23)
 
 ___
 
@@ -38,7 +38,7 @@ The event where a specified directory was not found.
 
 #### Defined in
 
-[src/structs/ClientError.ts:5](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/ClientError.ts#L5)
+[src/structs/ClientError.ts:5](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L5)
 
 ___
 
@@ -51,7 +51,7 @@ the module's respective type.
 
 #### Defined in
 
-[src/structs/ClientError.ts:17](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/ClientError.ts#L17)
+[src/structs/ClientError.ts:17](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L17)
 
 ___
 
@@ -64,7 +64,7 @@ does not export a valid instance of the module.
 
 #### Defined in
 
-[src/structs/ClientError.ts:11](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/ClientError.ts#L11)
+[src/structs/ClientError.ts:11](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L11)
 
 ___
 
@@ -77,7 +77,7 @@ file.
 
 #### Defined in
 
-[src/structs/ClientError.ts:29](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/ClientError.ts#L29)
+[src/structs/ClientError.ts:29](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L29)
 
 ___
 
@@ -90,4 +90,4 @@ initializing the listener handler.
 
 #### Defined in
 
-[src/structs/ClientError.ts:35](https://github.com/Norviah/bot/blob/8a8cf3b/src/structs/ClientError.ts#L35)
+[src/structs/ClientError.ts:35](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L35)
