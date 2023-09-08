@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Build System
+
+- **typedoc**: include types when generating documentation <code>[8ddfa0b](https://github.com/Norviah/bot/commit/8ddfa0b5b1bd821c9c87a6c8f3954d84d6221719)</code>
+
 ### Refactor
 
 - move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
