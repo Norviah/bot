@@ -1,5 +1,31 @@
 ## Unreleased
 
+### Features
+
+- implement a cli to help manage aspects of the client <code>[b7b76fe](https://github.com/Norviah/bot/commit/b7b76fe2ce89f87ad52dc1cc7939470d9c7f0e17)</code>
+
+- implement the base structure for commands <code>[02978e8](https://github.com/Norviah/bot/commit/02978e893b874897d1030b697905dbc4d46ad54a)</code>
+
+- add base listeners <code>[abd01f8](https://github.com/Norviah/bot/commit/abd01f8b8920a1d6dc0c8f045ecab1c5b0ace06b)</code>
+
+- implement the base structure for listeners <code>[cb08218](https://github.com/Norviah/bot/commit/cb0821865a03506e0f03f0922563702acf93085f)</code>
+
+- implement the base structure for modules and handlers <code>[da06d65](https://github.com/Norviah/bot/commit/da06d6531f103568517999e48703dd2860730edc)</code>
+
+- implement a custom error class <code>[82d8d5f](https://github.com/Norviah/bot/commit/82d8d5f47694773987e3c758c37e72b906a1f009)</code>
+
+- **prisma**: define initial schema <code>[aebb243](https://github.com/Norviah/bot/commit/aebb2431601ccbb175b82e2d6d30546ac7c63e9f)</code>
+
+- **structs**: ensure a module has been passed a proper handler when initialized <code>[8a8cf3b](https://github.com/Norviah/bot/commit/8a8cf3bafef2d16cd358afc88ee72109c554b5db)</code>
+
+- **structs**: implement a default title when logging for debugging purposes <code>[1f225fb](https://github.com/Norviah/bot/commit/1f225fb6db1d17a8228df0d149e60cd5a9558244)</code>
+
+- **structs**: implement a method in `Logger` for debugging purposes <code>[aa4d3e4](https://github.com/Norviah/bot/commit/aa4d3e4bf51fbe4b7566411e56bf0e16e23364ba)</code>
+
+### types
+
+- **ts**: implement a type to construct a type where all properties are explicitly required <code>[013a352](https://github.com/Norviah/bot/commit/013a3520cecc7b9a33710077e75ade7eb2c3bde7)</code>
+
 ### Bug Fixes
 
 - **structs**: remove the prisma reference from modules <code>[fcfedfb](https://github.com/Norviah/bot/commit/fcfedfb8df0c2d974b31ca6d0e6149dc4e12afae)</code>
@@ -12,21 +38,7 @@
 
 - **structs**: correctly type options for the logger class <code>[0bc8656](https://github.com/Norviah/bot/commit/0bc865668618d2d92d619e64a9fc3d9cd67e22df)</code>
 
-### Features
-
-- add base listeners <code>[abd01f8](https://github.com/Norviah/bot/commit/abd01f8b8920a1d6dc0c8f045ecab1c5b0ace06b)</code>
-
-- implement the base structure for listeners <code>[cb08218](https://github.com/Norviah/bot/commit/cb0821865a03506e0f03f0922563702acf93085f)</code>
-
-- implement the base structure for modules and handlers <code>[da06d65](https://github.com/Norviah/bot/commit/da06d6531f103568517999e48703dd2860730edc)</code>
-
-- implement a custom error class <code>[82d8d5f](https://github.com/Norviah/bot/commit/82d8d5f47694773987e3c758c37e72b906a1f009)</code>
-
-- **structs**: ensure a module has been passed a proper handler when initialized <code>[8a8cf3b](https://github.com/Norviah/bot/commit/8a8cf3bafef2d16cd358afc88ee72109c554b5db)</code>
-
-- **structs**: implement a default title when logging for debugging purposes <code>[1f225fb](https://github.com/Norviah/bot/commit/1f225fb6db1d17a8228df0d149e60cd5a9558244)</code>
-
-- **structs**: implement a method in `Logger` for debugging purposes <code>[aa4d3e4](https://github.com/Norviah/bot/commit/aa4d3e4bf51fbe4b7566411e56bf0e16e23364ba)</code>
+- **structs/Client**: ensure the client logs in before returning in `Client.start` <code>[25e3bda](https://github.com/Norviah/bot/commit/25e3bda329524877b9b09053952d1e9babe24299)</code>
 
 ### Refactor
 
