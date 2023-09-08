@@ -1,5 +1,13 @@
 ## Unreleased
 
+### Refactor
+
+- move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
+
+- **cli/structs**: move the `client` property to the base command class <code>[d0af849](https://github.com/Norviah/bot/commit/d0af849f439aa6970e485b0f156b9459820221b4)</code>
+
+- **structs/Client**: expose the `Ready` generic argument <code>[4a5c2c2](https://github.com/Norviah/bot/commit/4a5c2c23abfeb7b997cfa378982b67eea7bfd048)</code>
+
 ### Features
 
 - implement a cli to help manage aspects of the client <code>[b7b76fe](https://github.com/Norviah/bot/commit/b7b76fe2ce89f87ad52dc1cc7939470d9c7f0e17)</code>
@@ -39,10 +47,6 @@
 - **structs**: correctly type options for the logger class <code>[0bc8656](https://github.com/Norviah/bot/commit/0bc865668618d2d92d619e64a9fc3d9cd67e22df)</code>
 
 - **structs/Client**: ensure the client logs in before returning in `Client.start` <code>[25e3bda](https://github.com/Norviah/bot/commit/25e3bda329524877b9b09053952d1e9babe24299)</code>
-
-### Refactor
-
-- move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
 
 ## v0.1.0 (2023-08-31)
 
