@@ -1,14 +1,8 @@
 ## Unreleased
 
-### Build System
-
-- **typedoc**: delete the output directory before writing output <code>[520ef34](https://github.com/Norviah/bot/commit/520ef345bfe63679587020075131b64c85c9b244)</code>
-
-- **typedoc**: have the start page be the documentation <code>[867d656](https://github.com/Norviah/bot/commit/867d6562e563e7473ac5ad9f3e074145aedb641f)</code>
-
-- **typedoc**: include types when generating documentation <code>[8ddfa0b](https://github.com/Norviah/bot/commit/8ddfa0b5b1bd821c9c87a6c8f3954d84d6221719)</code>
-
 ### Refactor
+
+- move the config file to a json file <code>[5967fa1](https://github.com/Norviah/bot/commit/5967fa1ed473cf88642a312c2973aa8e904b2bf2)</code>
 
 - move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
 
@@ -32,11 +26,21 @@
 
 - **prisma**: define initial schema <code>[aebb243](https://github.com/Norviah/bot/commit/aebb2431601ccbb175b82e2d6d30546ac7c63e9f)</code>
 
+- **structs**: implement a structure to provide methods for reading system files <code>[b764a55](https://github.com/Norviah/bot/commit/b764a55892f1752266017bba5ea1ab0a452bb772)</code>
+
 - **structs**: ensure a module has been passed a proper handler when initialized <code>[8a8cf3b](https://github.com/Norviah/bot/commit/8a8cf3bafef2d16cd358afc88ee72109c554b5db)</code>
 
 - **structs**: implement a default title when logging for debugging purposes <code>[1f225fb](https://github.com/Norviah/bot/commit/1f225fb6db1d17a8228df0d149e60cd5a9558244)</code>
 
 - **structs**: implement a method in `Logger` for debugging purposes <code>[aa4d3e4](https://github.com/Norviah/bot/commit/aa4d3e4bf51fbe4b7566411e56bf0e16e23364ba)</code>
+
+### Build System
+
+- **typedoc**: delete the output directory before writing output <code>[520ef34](https://github.com/Norviah/bot/commit/520ef345bfe63679587020075131b64c85c9b244)</code>
+
+- **typedoc**: have the start page be the documentation <code>[867d656](https://github.com/Norviah/bot/commit/867d6562e563e7473ac5ad9f3e074145aedb641f)</code>
+
+- **typedoc**: include types when generating documentation <code>[8ddfa0b](https://github.com/Norviah/bot/commit/8ddfa0b5b1bd821c9c87a6c8f3954d84d6221719)</code>
 
 ### types
 
