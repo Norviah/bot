@@ -51,7 +51,7 @@ Initializes a new `Module` instance.
 
 #### Defined in
 
-[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L59)
+[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L59)
 
 ## Properties
 
@@ -71,7 +71,7 @@ purpose, such as administration commands or music commands.
 
 #### Defined in
 
-[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L34)
+[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L34)
 
 ___
 
@@ -86,7 +86,7 @@ module to access the Discord client and other modules within the handler.
 
 #### Defined in
 
-[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L52)
+[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L52)
 
 ___
 
@@ -105,7 +105,7 @@ https://github.com/norviah/logger
 
 #### Defined in
 
-[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L44)
+[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L44)
 
 ___
 
@@ -120,7 +120,7 @@ possible error messages.
 
 #### Defined in
 
-[src/structs/Module.ts:21](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L21)
+[src/structs/Module.ts:21](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L21)
 
 ## Methods
 
@@ -141,4 +141,4 @@ further initialize the module once imported.
 
 #### Defined in
 
-[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L75)
+[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L75)

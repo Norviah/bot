@@ -49,14 +49,14 @@ Initializes a new `ClientError` instance.
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends ``"INVALID_DIRECTORY"`` \| ``"INVALID_MODULE"`` \| ``"INVALID_HANDLER"`` \| ``"DUPLICATE_MODULE"`` \| ``"NON_TS_FILE"`` \| ``"UNKNOWN_EMITTER"`` |
+| `T` | extends ``"INVALID_DIRECTORY"`` \| ``"INVALID_MODULE"`` \| ``"INVALID_HANDLER"`` \| ``"DUPLICATE_MODULE"`` \| ``"NON_TS_FILE"`` \| ``"UNKNOWN_EMITTER"`` \| ``"MISSING_JSON_FILE"`` \| ``"NON_JSON_FILE"`` \| ``"INVALID_JSON"`` |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `code` | `T` | The string representation of the error. |
-| `...args` | `Parameters`<{ `DUPLICATE_MODULE`: (`__namedParameters`: { `handler`: `string` ; `module`: `string`  }) => `string` ; `INVALID_DIRECTORY`: (`options`: { `path`: `string`  }) => `string` ; `INVALID_HANDLER`: (`__namedParameters`: { `handler`: `string` ; `module`: `string`  }) => `string` ; `INVALID_MODULE`: (`__namedParameters`: { `module`: `string` ; `path`: `string`  }) => `string` ; `NON_TS_FILE`: (`__namedParameters`: { `name`: `string` ; `path`: `string`  }) => `string` ; `UNKNOWN_EMITTER`: (`__namedParameters`: { `emitter`: `string` ; `listener`: `string`  }) => `string`  }[`T`]\> | Any arguments used to construct the error message, if applicable. |
+| `...args` | `Parameters`<{ `DUPLICATE_MODULE`: (`__namedParameters`: { `handler`: `string` ; `module`: `string`  }) => `string` ; `INVALID_DIRECTORY`: (`options`: { `path`: `string`  }) => `string` ; `INVALID_HANDLER`: (`__namedParameters`: { `handler`: `string` ; `module`: `string`  }) => `string` ; `INVALID_JSON`: (`path`: `string`) => `string` ; `INVALID_MODULE`: (`__namedParameters`: { `module`: `string` ; `path`: `string`  }) => `string` ; `MISSING_JSON_FILE`: (`path`: `string`) => `string` ; `NON_JSON_FILE`: (`path`: `string`) => `string` ; `NON_TS_FILE`: (`__namedParameters`: { `name`: `string` ; `path`: `string`  }) => `string` ; `UNKNOWN_EMITTER`: (`__namedParameters`: { `emitter`: `string` ; `listener`: `string`  }) => `string`  }[`T`]\> | Any arguments used to construct the error message, if applicable. |
 
 #### Overrides
 
@@ -64,13 +64,13 @@ Error.constructor
 
 #### Defined in
 
-[src/structs/ClientError.ts:121](https://github.com/Norviah/bot/blob/520ef34/src/structs/ClientError.ts#L121)
+[src/structs/ClientError.ts:166](https://github.com/Norviah/bot/blob/3146ef8/src/structs/ClientError.ts#L166)
 
 ## Properties
 
 ### args
 
-• **args**: `Parameters`<{ `DUPLICATE_MODULE`: (`__namedParameters`: { `handler`: `string` ; `module`: `string`  }) => `string` ; `INVALID_DIRECTORY`: (`options`: { `path`: `string`  }) => `string` ; `INVALID_HANDLER`: (`__namedParameters`: { `handler`: `string` ; `module`: `string`  }) => `string` ; `INVALID_MODULE`: (`__namedParameters`: { `module`: `string` ; `path`: `string`  }) => `string` ; `NON_TS_FILE`: (`__namedParameters`: { `name`: `string` ; `path`: `string`  }) => `string` ; `UNKNOWN_EMITTER`: (`__namedParameters`: { `emitter`: `string` ; `listener`: `string`  }) => `string`  }[`T`]\>
+• **args**: `Parameters`<{ `DUPLICATE_MODULE`: (`__namedParameters`: { `handler`: `string` ; `module`: `string`  }) => `string` ; `INVALID_DIRECTORY`: (`options`: { `path`: `string`  }) => `string` ; `INVALID_HANDLER`: (`__namedParameters`: { `handler`: `string` ; `module`: `string`  }) => `string` ; `INVALID_JSON`: (`path`: `string`) => `string` ; `INVALID_MODULE`: (`__namedParameters`: { `module`: `string` ; `path`: `string`  }) => `string` ; `MISSING_JSON_FILE`: (`path`: `string`) => `string` ; `NON_JSON_FILE`: (`path`: `string`) => `string` ; `NON_TS_FILE`: (`__namedParameters`: { `name`: `string` ; `path`: `string`  }) => `string` ; `UNKNOWN_EMITTER`: (`__namedParameters`: { `emitter`: `string` ; `listener`: `string`  }) => `string`  }[`T`]\>
 
 Arguments that contain additional information about the error, if
 applicable.
@@ -82,7 +82,7 @@ the arguments passed to the message generator.
 
 #### Defined in
 
-[src/structs/ClientError.ts:112](https://github.com/Norviah/bot/blob/520ef34/src/structs/ClientError.ts#L112)
+[src/structs/ClientError.ts:157](https://github.com/Norviah/bot/blob/3146ef8/src/structs/ClientError.ts#L157)
 
 ___
 
@@ -97,7 +97,7 @@ which can be used to handle the error in a specific error if desired.
 
 #### Defined in
 
-[src/structs/ClientError.ts:101](https://github.com/Norviah/bot/blob/520ef34/src/structs/ClientError.ts#L101)
+[src/structs/ClientError.ts:146](https://github.com/Norviah/bot/blob/3146ef8/src/structs/ClientError.ts#L146)
 
 ___
 
@@ -241,7 +241,7 @@ try {
 
 #### Defined in
 
-[src/structs/ClientError.ts:157](https://github.com/Norviah/bot/blob/520ef34/src/structs/ClientError.ts#L157)
+[src/structs/ClientError.ts:202](https://github.com/Norviah/bot/blob/3146ef8/src/structs/ClientError.ts#L202)
 
 ___
 

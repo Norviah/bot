@@ -18,4 +18,4 @@ All types of command interactions.
 
 #### Defined in
 
-[src/types/discord/CommandInteraction.ts:6](https://github.com/Norviah/bot/blob/520ef34/src/types/discord/CommandInteraction.ts#L6)
+[src/types/discord/CommandInteraction.ts:6](https://github.com/Norviah/bot/blob/3146ef8/src/types/discord/CommandInteraction.ts#L6)

@@ -29,10 +29,13 @@
 | `DUPLICATE_MODULE` | (`__namedParameters`: { `handler`: `string` ; `module`: `string`  }) => `string` |
 | `INVALID_DIRECTORY` | (`options`: { `path`: `string`  }) => `string` |
 | `INVALID_HANDLER` | (`__namedParameters`: { `handler`: `string` ; `module`: `string`  }) => `string` |
+| `INVALID_JSON` | (`path`: `string`) => `string` |
 | `INVALID_MODULE` | (`__namedParameters`: { `module`: `string` ; `path`: `string`  }) => `string` |
+| `MISSING_JSON_FILE` | (`path`: `string`) => `string` |
+| `NON_JSON_FILE` | (`path`: `string`) => `string` |
 | `NON_TS_FILE` | (`__namedParameters`: { `name`: `string` ; `path`: `string`  }) => `string` |
 | `UNKNOWN_EMITTER` | (`__namedParameters`: { `emitter`: `string` ; `listener`: `string`  }) => `string` |
 
 #### Defined in
 
-[src/structs/ClientError.ts:38](https://github.com/Norviah/bot/blob/520ef34/src/structs/ClientError.ts#L38)
+[src/structs/ClientError.ts:53](https://github.com/Norviah/bot/blob/3146ef8/src/structs/ClientError.ts#L53)

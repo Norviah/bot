@@ -75,7 +75,7 @@ Initializes a new `Module` instance.
 
 #### Defined in
 
-[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L59)
+[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L59)
 
 ## Properties
 
@@ -99,7 +99,7 @@ purpose, such as administration commands or music commands.
 
 #### Defined in
 
-[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L34)
+[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L34)
 
 ___
 
@@ -122,7 +122,7 @@ not be executed.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:89](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/BaseCommand.ts#L89)
+[src/structs/commands/BaseCommand.ts:89](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/BaseCommand.ts#L89)
 
 ___
 
@@ -141,7 +141,7 @@ thorough description of the command and its functionality.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:39](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/BaseCommand.ts#L39)
+[src/structs/commands/BaseCommand.ts:39](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/BaseCommand.ts#L39)
 
 ___
 
@@ -161,7 +161,7 @@ https://discord.com/developers/docs/interactions/application-commands#localizati
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:32](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/SlashCommand.ts#L32)
+[src/structs/commands/SlashCommand.ts:32](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/SlashCommand.ts#L32)
 
 ___
 
@@ -180,7 +180,7 @@ for guild-specific commands.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:97](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/BaseCommand.ts#L97)
+[src/structs/commands/BaseCommand.ts:97](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/BaseCommand.ts#L97)
 
 ___
 
@@ -203,7 +203,7 @@ https://discord.com/developers/docs/interactions/slash-commands#registering-a-co
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:117](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/BaseCommand.ts#L117)
+[src/structs/commands/BaseCommand.ts:117](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/BaseCommand.ts#L117)
 
 ___
 
@@ -222,7 +222,7 @@ module to access the Discord client and other modules within the handler.
 
 #### Defined in
 
-[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L52)
+[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L52)
 
 ___
 
@@ -245,7 +245,7 @@ https://github.com/norviah/logger
 
 #### Defined in
 
-[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L44)
+[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L44)
 
 ___
 
@@ -264,7 +264,7 @@ possible error messages.
 
 #### Defined in
 
-[src/structs/Module.ts:21](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L21)
+[src/structs/Module.ts:21](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L21)
 
 ___
 
@@ -288,7 +288,7 @@ https://discord.com/developers/docs/interactions/application-commands#localizati
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:60](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/BaseCommand.ts#L60)
+[src/structs/commands/BaseCommand.ts:60](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/BaseCommand.ts#L60)
 
 ___
 
@@ -311,7 +311,7 @@ https://discord.com/developers/docs/interactions/application-commands#agerestric
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:107](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/BaseCommand.ts#L107)
+[src/structs/commands/BaseCommand.ts:107](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/BaseCommand.ts#L107)
 
 ___
 
@@ -335,7 +335,7 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:58](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/SlashCommand.ts#L58)
+[src/structs/commands/SlashCommand.ts:58](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/SlashCommand.ts#L58)
 
 ___
 
@@ -365,7 +365,7 @@ dev-only which use actions such as `eval`.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:77](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/BaseCommand.ts#L77)
+[src/structs/commands/BaseCommand.ts:77](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/BaseCommand.ts#L77)
 
 ___
 
@@ -389,7 +389,7 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:43](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/SlashCommand.ts#L43)
+[src/structs/commands/SlashCommand.ts:43](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/SlashCommand.ts#L43)
 
 ## Methods
 
@@ -420,7 +420,7 @@ The response to send to the interaction.
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:69](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/SlashCommand.ts#L69)
+[src/structs/commands/SlashCommand.ts:69](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/SlashCommand.ts#L69)
 
 ___
 
@@ -445,7 +445,7 @@ further initialize the module once imported.
 
 #### Defined in
 
-[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/520ef34/src/structs/Module.ts#L75)
+[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L75)
 
 ___
 
@@ -476,7 +476,7 @@ to the interaction.
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:81](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/SlashCommand.ts#L81)
+[src/structs/commands/SlashCommand.ts:81](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/SlashCommand.ts#L81)
 
 ___
 
@@ -506,4 +506,4 @@ https://discord.com/developers/docs/interactions/slash-commands#application-comm
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:95](https://github.com/Norviah/bot/blob/520ef34/src/structs/commands/SlashCommand.ts#L95)
+[src/structs/commands/SlashCommand.ts:95](https://github.com/Norviah/bot/blob/3146ef8/src/structs/commands/SlashCommand.ts#L95)
