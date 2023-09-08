@@ -3,6 +3,7 @@
   "name": "Bot",
   "out": "./docs",
   "readme": "none",
+  "cleanOutputDir": true,
   "plugin": [
     "typedoc-plugin-markdown"
   ],
