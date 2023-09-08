@@ -1,3 +1,4 @@
+import { CommandHandler } from '@/structs/handlers/CommandHandler';
 import { ListenerHandler } from '@/structs/handlers/ListenerHandler';
 import { Client as BaseClient } from 'discord.js';
 
@@ -18,6 +19,21 @@ export class Client extends BaseClient {
   private readonly config: ReadonlyDeep<Config> = config;
 
   /**
+   * The various handlers for the client.
+   *
+   * This property holds a reference to the various handlers that are used by
+   * the client for various purposes.
+   */
+  public readonly handlers: Readonly<{ listeners: ListenerHandler; commands: CommandHandler }> = {
+    listeners: new ListenerHandler(this, {
+      process,
+      client: this,
+    }),
+
+    commands: new CommandHandler(this),
+  };
+
+  /**
    * Initializes a new `Client` instance.
    *
    * @param options Options for the client.
@@ -25,16 +41,6 @@ export class Client extends BaseClient {
   public constructor(options: ClientOptions) {
     super(options);
   }
-
-  /**
-   * The various handlers for the client.
-   *
-   * This property holds a reference to the various handlers that are used by
-   * the client for various purposes.
-   */
-  public readonly handlers: Readonly<{ listeners: ListenerHandler }> = {
-    listeners: new ListenerHandler(this, { process, client: this }),
-  };
 
   /**
    * Starts the client.
