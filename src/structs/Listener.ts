@@ -73,7 +73,7 @@ export abstract class Listener extends Module {
    * representing whether the listener will be permanently bound to the event or
    * if it will be bound to only the next emitted event.
    *
-   * If `on`, the listeenr is invoked *every* time the event is emitted. If
+   * If `on`, the listener is invoked *every* time the event is emitted. If
    * `once`, once the event is emitted, the listener is unbound from the
    * event and then invoked.
    *
