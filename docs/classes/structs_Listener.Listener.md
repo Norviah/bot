@@ -1,8 +1,8 @@
-[Bot](../README.md) / [Exports](../modules.md) / [Listener](../modules/Listener.md) / Listener
+[Bot](../README.md) / [Modules](../modules.md) / [structs/Listener](../modules/structs_Listener.md) / Listener
 
 # Class: Listener
 
-[Listener](../modules/Listener.md).Listener
+[structs/Listener](../modules/structs_Listener.md).Listener
 
 The base structure for listeners.
 
@@ -21,7 +21,7 @@ https://nodejs.org/api/events.html#events_class_eventemitter
 
 ## Hierarchy
 
-- [`Module`](Module.Module.md)
+- [`Module`](structs_Module.Module.md)
 
   ↳ **`Listener`**
 
@@ -29,25 +29,25 @@ https://nodejs.org/api/events.html#events_class_eventemitter
 
 ### Constructors
 
-- [constructor](Listener.Listener.md#constructor)
+- [constructor](structs_Listener.Listener.md#constructor)
 
 ### Properties
 
-- [category](Listener.Listener.md#category)
-- [emitter](Listener.Listener.md#emitter)
-- [event](Listener.Listener.md#event)
-- [handler](Listener.Listener.md#handler)
-- [logger](Listener.Listener.md#logger)
-- [type](Listener.Listener.md#type)
+- [category](structs_Listener.Listener.md#category)
+- [emitter](structs_Listener.Listener.md#emitter)
+- [event](structs_Listener.Listener.md#event)
+- [handler](structs_Listener.Listener.md#handler)
+- [logger](structs_Listener.Listener.md#logger)
+- [type](structs_Listener.Listener.md#type)
 
 ### Accessors
 
-- [name](Listener.Listener.md#name)
+- [name](structs_Listener.Listener.md#name)
 
 ### Methods
 
-- [exec](Listener.Listener.md#exec)
-- [initialize](Listener.Listener.md#initialize)
+- [exec](structs_Listener.Listener.md#exec)
+- [initialize](structs_Listener.Listener.md#initialize)
 
 ## Constructors
 
@@ -61,15 +61,15 @@ Initializes a new `Module` instance.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `handler` | [`Handler`](handlers_Handler.Handler.md)<[`Module`](Module.Module.md)\> | The handler that manages the module. |
+| `handler` | [`Handler`](structs_handlers_Handler.Handler.md)<[`Module`](structs_Module.Module.md)\> | The handler that manages the module. |
 
 #### Inherited from
 
-[Module](Module.Module.md).[constructor](Module.Module.md#constructor)
+[Module](structs_Module.Module.md).[constructor](structs_Module.Module.md#constructor)
 
 #### Defined in
 
-[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L59)
+[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L59)
 
 ## Properties
 
@@ -89,11 +89,11 @@ purpose, such as administration commands or music commands.
 
 #### Inherited from
 
-[Module](Module.Module.md).[category](Module.Module.md#category)
+[Module](structs_Module.Module.md).[category](structs_Module.Module.md#category)
 
 #### Defined in
 
-[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L34)
+[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L34)
 
 ___
 
@@ -130,7 +130,7 @@ client is assigned to within the object.
 
 #### Defined in
 
-[src/structs/Listener.ts:45](https://github.com/Norviah/bot/blob/d0af849/src/structs/Listener.ts#L45)
+[src/structs/Listener.ts:45](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Listener.ts#L45)
 
 ___
 
@@ -145,13 +145,13 @@ and will be used to bind the listener to the event emitter.
 
 #### Defined in
 
-[src/structs/Listener.ts:53](https://github.com/Norviah/bot/blob/d0af849/src/structs/Listener.ts#L53)
+[src/structs/Listener.ts:53](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Listener.ts#L53)
 
 ___
 
 ### handler
 
-• `Readonly` **handler**: [`Handler`](handlers_Handler.Handler.md)<[`Listener`](Listener.Listener.md)\>
+• `Readonly` **handler**: [`Handler`](structs_handlers_Handler.Handler.md)<[`Listener`](structs_Listener.Listener.md)\>
 
 A reference to the handler that manages this module.
 
@@ -160,11 +160,11 @@ module to access the Discord client and other modules within the handler.
 
 #### Inherited from
 
-[Module](Module.Module.md).[handler](Module.Module.md#handler)
+[Module](structs_Module.Module.md).[handler](structs_Module.Module.md#handler)
 
 #### Defined in
 
-[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L52)
+[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L52)
 
 ___
 
@@ -183,11 +183,11 @@ https://github.com/norviah/logger
 
 #### Inherited from
 
-[Module](Module.Module.md).[logger](Module.Module.md#logger)
+[Module](structs_Module.Module.md).[logger](structs_Module.Module.md#logger)
 
 #### Defined in
 
-[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L44)
+[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L44)
 
 ___
 
@@ -211,7 +211,7 @@ https://nodejs.org/api/events.html#handling-events-only-once
 
 #### Defined in
 
-[src/structs/Listener.ts:82](https://github.com/Norviah/bot/blob/d0af849/src/structs/Listener.ts#L82)
+[src/structs/Listener.ts:82](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Listener.ts#L82)
 
 ## Accessors
 
@@ -238,7 +238,7 @@ Module.name
 
 #### Defined in
 
-[src/structs/Listener.ts:65](https://github.com/Norviah/bot/blob/d0af849/src/structs/Listener.ts#L65)
+[src/structs/Listener.ts:65](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Listener.ts#L65)
 
 ## Methods
 
@@ -263,7 +263,7 @@ parameters that the event also passes.
 
 #### Defined in
 
-[src/structs/Listener.ts:92](https://github.com/Norviah/bot/blob/d0af849/src/structs/Listener.ts#L92)
+[src/structs/Listener.ts:92](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Listener.ts#L92)
 
 ___
 
@@ -284,8 +284,8 @@ further initialize the module once imported.
 
 #### Inherited from
 
-[Module](Module.Module.md).[initialize](Module.Module.md#initialize)
+[Module](structs_Module.Module.md).[initialize](structs_Module.Module.md#initialize)
 
 #### Defined in
 
-[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L75)
+[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L75)

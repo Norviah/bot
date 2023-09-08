@@ -1,8 +1,8 @@
-[Bot](../README.md) / [Exports](../modules.md) / [Logger](../modules/Logger.md) / Logger
+[Bot](../README.md) / [Modules](../modules.md) / [structs/Logger](../modules/structs_Logger.md) / Logger
 
 # Class: Logger
 
-[Logger](../modules/Logger.md).Logger
+[structs/Logger](../modules/structs_Logger.md).Logger
 
 ## Hierarchy
 
@@ -14,25 +14,25 @@
 
 ### Constructors
 
-- [constructor](Logger.Logger.md#constructor)
+- [constructor](structs_Logger.Logger.md#constructor)
 
 ### Properties
 
-- [options](Logger.Logger.md#options)
+- [options](structs_Logger.Logger.md#options)
 
 ### Methods
 
-- [debug](Logger.Logger.md#debug)
-- [error](Logger.Logger.md#error)
-- [exit](Logger.Logger.md#exit)
-- [generate](Logger.Logger.md#generate)
-- [info](Logger.Logger.md#info)
-- [print](Logger.Logger.md#print)
-- [success](Logger.Logger.md#success)
-- [warn](Logger.Logger.md#warn)
-- [write](Logger.Logger.md#write)
-- [Colorize](Logger.Logger.md#colorize)
-- [Plain](Logger.Logger.md#plain)
+- [debug](structs_Logger.Logger.md#debug)
+- [error](structs_Logger.Logger.md#error)
+- [exit](structs_Logger.Logger.md#exit)
+- [generate](structs_Logger.Logger.md#generate)
+- [info](structs_Logger.Logger.md#info)
+- [print](structs_Logger.Logger.md#print)
+- [success](structs_Logger.Logger.md#success)
+- [warn](structs_Logger.Logger.md#warn)
+- [write](structs_Logger.Logger.md#write)
+- [Colorize](structs_Logger.Logger.md#colorize)
+- [Plain](structs_Logger.Logger.md#plain)
 
 ## Constructors
 
@@ -54,7 +54,7 @@ BaseLogger.constructor
 
 #### Defined in
 
-[src/structs/Logger.ts:14](https://github.com/Norviah/bot/blob/d0af849/src/structs/Logger.ts#L14)
+[src/structs/Logger.ts:14](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Logger.ts#L14)
 
 ## Properties
 
@@ -98,7 +98,7 @@ can be useful for debugging purposes.
 
 #### Defined in
 
-[src/structs/Logger.ts:37](https://github.com/Norviah/bot/blob/d0af849/src/structs/Logger.ts#L37)
+[src/structs/Logger.ts:37](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Logger.ts#L37)
 
 ___
 
@@ -125,7 +125,7 @@ BaseLogger.error
 
 #### Defined in
 
-[src/structs/Logger.ts:24](https://github.com/Norviah/bot/blob/d0af849/src/structs/Logger.ts#L24)
+[src/structs/Logger.ts:24](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Logger.ts#L24)
 
 ___
 
@@ -148,7 +148,7 @@ A utility method for logging an `error` event and exiting the process.
 
 #### Defined in
 
-[src/structs/Logger.ts:49](https://github.com/Norviah/bot/blob/d0af849/src/structs/Logger.ts#L49)
+[src/structs/Logger.ts:49](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Logger.ts#L49)
 
 ___
 

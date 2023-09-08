@@ -1,18 +1,15 @@
-[Bot](../README.md) / [Exports](../modules.md) / [commands/BaseCommand](../modules/commands_BaseCommand.md) / BaseCommand
+[Bot](../README.md) / [Modules](../modules.md) / [structs/commands/BaseCommand](../modules/structs_commands_BaseCommand.md) / BaseCommand
 
 # Class: BaseCommand<T\>
 
-[commands/BaseCommand](../modules/commands_BaseCommand.md).BaseCommand
+[structs/commands/BaseCommand](../modules/structs_commands_BaseCommand.md).BaseCommand
 
 The base structure for commands.
 
 Commands are an essential part of a Discord application, they allow users to
 interact with the application in variety of ways. Through commands, the
-applicatoin can receive input from users and execute actions based on that
+application can receive input from users and execute actions based on that
 input.
-
-In a Discord application, there are three types of commands: slash commands,
-user context menu commands, and message context menu commands.
 
 In a Discord application, there are three types of commands:
 
@@ -38,41 +35,41 @@ https://discord.com/developers/docs/interactions/application-commands
 
 ## Hierarchy
 
-- [`Module`](Module.Module.md)
+- [`Module`](structs_Module.Module.md)
 
   ↳ **`BaseCommand`**
 
-  ↳↳ [`ContextCommand`](commands_ContextCommand.ContextCommand.md)
+  ↳↳ [`ContextCommand`](structs_commands_ContextCommand.ContextCommand.md)
 
-  ↳↳ [`SlashCommand`](commands_SlashCommand.SlashCommand.md)
+  ↳↳ [`SlashCommand`](structs_commands_SlashCommand.SlashCommand.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](commands_BaseCommand.BaseCommand.md#constructor)
+- [constructor](structs_commands_BaseCommand.BaseCommand.md#constructor)
 
 ### Properties
 
-- [category](commands_BaseCommand.BaseCommand.md#category)
-- [clientPermissions](commands_BaseCommand.BaseCommand.md#clientpermissions)
-- [description](commands_BaseCommand.BaseCommand.md#description)
-- [dm](commands_BaseCommand.BaseCommand.md#dm)
-- [guilds](commands_BaseCommand.BaseCommand.md#guilds)
-- [handler](commands_BaseCommand.BaseCommand.md#handler)
-- [logger](commands_BaseCommand.BaseCommand.md#logger)
-- [name](commands_BaseCommand.BaseCommand.md#name)
-- [nameLocalizations](commands_BaseCommand.BaseCommand.md#namelocalizations)
-- [nsfw](commands_BaseCommand.BaseCommand.md#nsfw)
-- [permissions](commands_BaseCommand.BaseCommand.md#permissions)
-- [type](commands_BaseCommand.BaseCommand.md#type)
+- [category](structs_commands_BaseCommand.BaseCommand.md#category)
+- [clientPermissions](structs_commands_BaseCommand.BaseCommand.md#clientpermissions)
+- [description](structs_commands_BaseCommand.BaseCommand.md#description)
+- [dm](structs_commands_BaseCommand.BaseCommand.md#dm)
+- [guilds](structs_commands_BaseCommand.BaseCommand.md#guilds)
+- [handler](structs_commands_BaseCommand.BaseCommand.md#handler)
+- [logger](structs_commands_BaseCommand.BaseCommand.md#logger)
+- [name](structs_commands_BaseCommand.BaseCommand.md#name)
+- [nameLocalizations](structs_commands_BaseCommand.BaseCommand.md#namelocalizations)
+- [nsfw](structs_commands_BaseCommand.BaseCommand.md#nsfw)
+- [permissions](structs_commands_BaseCommand.BaseCommand.md#permissions)
+- [type](structs_commands_BaseCommand.BaseCommand.md#type)
 
 ### Methods
 
-- [exec](commands_BaseCommand.BaseCommand.md#exec)
-- [initialize](commands_BaseCommand.BaseCommand.md#initialize)
-- [onError](commands_BaseCommand.BaseCommand.md#onerror)
-- [toJSON](commands_BaseCommand.BaseCommand.md#tojson)
+- [exec](structs_commands_BaseCommand.BaseCommand.md#exec)
+- [initialize](structs_commands_BaseCommand.BaseCommand.md#initialize)
+- [onError](structs_commands_BaseCommand.BaseCommand.md#onerror)
+- [toJSON](structs_commands_BaseCommand.BaseCommand.md#tojson)
 
 ## Constructors
 
@@ -92,15 +89,15 @@ Initializes a new `Module` instance.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `handler` | [`Handler`](handlers_Handler.Handler.md)<[`Module`](Module.Module.md)\> | The handler that manages the module. |
+| `handler` | [`Handler`](structs_handlers_Handler.Handler.md)<[`Module`](structs_Module.Module.md)\> | The handler that manages the module. |
 
 #### Inherited from
 
-[Module](Module.Module.md).[constructor](Module.Module.md#constructor)
+[Module](structs_Module.Module.md).[constructor](structs_Module.Module.md#constructor)
 
 #### Defined in
 
-[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L59)
+[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L59)
 
 ## Properties
 
@@ -120,11 +117,11 @@ purpose, such as administration commands or music commands.
 
 #### Inherited from
 
-[Module](Module.Module.md).[category](Module.Module.md#category)
+[Module](structs_Module.Module.md).[category](structs_Module.Module.md#category)
 
 #### Defined in
 
-[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L34)
+[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L34)
 
 ___
 
@@ -143,7 +140,7 @@ not be executed.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:92](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L92)
+[src/structs/commands/BaseCommand.ts:89](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L89)
 
 ___
 
@@ -158,7 +155,7 @@ thorough description of the command and its functionality.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:42](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L42)
+[src/structs/commands/BaseCommand.ts:39](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L39)
 
 ___
 
@@ -173,7 +170,7 @@ for guild-specific commands.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:100](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L100)
+[src/structs/commands/BaseCommand.ts:97](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L97)
 
 ___
 
@@ -192,13 +189,13 @@ https://discord.com/developers/docs/interactions/slash-commands#registering-a-co
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:120](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L120)
+[src/structs/commands/BaseCommand.ts:117](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L117)
 
 ___
 
 ### handler
 
-• `Readonly` **handler**: [`Handler`](handlers_Handler.Handler.md)<[`BaseCommand`](commands_BaseCommand.BaseCommand.md)<`T`\>\>
+• `Readonly` **handler**: [`Handler`](structs_handlers_Handler.Handler.md)<[`BaseCommand`](structs_commands_BaseCommand.BaseCommand.md)<`T`\>\>
 
 A reference to the handler that manages this module.
 
@@ -207,11 +204,11 @@ module to access the Discord client and other modules within the handler.
 
 #### Inherited from
 
-[Module](Module.Module.md).[handler](Module.Module.md#handler)
+[Module](structs_Module.Module.md).[handler](structs_Module.Module.md#handler)
 
 #### Defined in
 
-[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L52)
+[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L52)
 
 ___
 
@@ -230,11 +227,11 @@ https://github.com/norviah/logger
 
 #### Inherited from
 
-[Module](Module.Module.md).[logger](Module.Module.md#logger)
+[Module](structs_Module.Module.md).[logger](structs_Module.Module.md#logger)
 
 #### Defined in
 
-[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L44)
+[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L44)
 
 ___
 
@@ -249,11 +246,11 @@ possible error messages.
 
 #### Inherited from
 
-[Module](Module.Module.md).[name](Module.Module.md#name)
+[Module](structs_Module.Module.md).[name](structs_Module.Module.md#name)
 
 #### Defined in
 
-[src/structs/Module.ts:21](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L21)
+[src/structs/Module.ts:21](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L21)
 
 ___
 
@@ -273,7 +270,7 @@ https://discord.com/developers/docs/interactions/application-commands#localizati
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:63](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L63)
+[src/structs/commands/BaseCommand.ts:60](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L60)
 
 ___
 
@@ -292,7 +289,7 @@ https://discord.com/developers/docs/interactions/application-commands#agerestric
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:110](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L110)
+[src/structs/commands/BaseCommand.ts:107](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L107)
 
 ___
 
@@ -318,7 +315,7 @@ dev-only which use actions such as `eval`.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:80](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L80)
+[src/structs/commands/BaseCommand.ts:77](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L77)
 
 ___
 
@@ -337,13 +334,13 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:52](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L52)
+[src/structs/commands/BaseCommand.ts:49](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L49)
 
 ## Methods
 
 ### exec
 
-▸ `Abstract` **exec**(`interaction`): `Promise`<`InteractionResponse`\>
+▸ `Abstract` **exec**(`interaction`): `Promise`<[`InteractionResponse`](../modules/types_discord_InteractionResponse.md#interactionresponse)\>
 
 The command's execution method.
 
@@ -361,11 +358,11 @@ indicating that the command has failed.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `interaction` | `CommandInteraction` | The interaction that invoked the command. |
+| `interaction` | [`CommandInteraction`](../modules/types_discord_CommandInteraction.md#commandinteraction) | The interaction that invoked the command. |
 
 #### Returns
 
-`Promise`<`InteractionResponse`\>
+`Promise`<[`InteractionResponse`](../modules/types_discord_InteractionResponse.md#interactionresponse)\>
 
 The response to the interaction.
 
@@ -376,7 +373,7 @@ The response to the interaction.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:141](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L141)
+[src/structs/commands/BaseCommand.ts:138](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L138)
 
 ___
 
@@ -397,11 +394,11 @@ further initialize the module once imported.
 
 #### Inherited from
 
-[Module](Module.Module.md).[initialize](Module.Module.md#initialize)
+[Module](structs_Module.Module.md).[initialize](structs_Module.Module.md#initialize)
 
 #### Defined in
 
-[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L75)
+[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L75)
 
 ___
 
@@ -419,7 +416,7 @@ to the interaction.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `interaction` | `CommandInteraction` | The interaction that invoked the command. |
+| `interaction` | [`CommandInteraction`](../modules/types_discord_CommandInteraction.md#commandinteraction) | The interaction that invoked the command. |
 | `error` | `Error` | The error that was thrown. |
 
 #### Returns
@@ -428,13 +425,13 @@ to the interaction.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:153](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L153)
+[src/structs/commands/BaseCommand.ts:150](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L150)
 
 ___
 
 ### toJSON
 
-▸ **toJSON**(): `Explicit`<`BaseApplicationCommandData`\>
+▸ **toJSON**(): [`Explicit`](../modules/types_ts_Explicit.md#explicit)<`BaseApplicationCommandData`\>
 
 The command serialized into a JSON object.
 
@@ -444,7 +441,7 @@ command into a JSON object.
 
 #### Returns
 
-`Explicit`<`BaseApplicationCommandData`\>
+[`Explicit`](../modules/types_ts_Explicit.md#explicit)<`BaseApplicationCommandData`\>
 
 The base information regarding the command serialized into a JSON
 
@@ -454,4 +451,4 @@ https://discord.com/developers/docs/interactions/slash-commands#application-comm
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:173](https://github.com/Norviah/bot/blob/d0af849/src/structs/commands/BaseCommand.ts#L173)
+[src/structs/commands/BaseCommand.ts:170](https://github.com/Norviah/bot/blob/fefba0e/src/structs/commands/BaseCommand.ts#L170)

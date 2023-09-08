@@ -1,8 +1,8 @@
-[Bot](../README.md) / [Exports](../modules.md) / [Module](../modules/Module.md) / Module
+[Bot](../README.md) / [Modules](../modules.md) / [structs/Module](../modules/structs_Module.md) / Module
 
 # Class: Module
 
-[Module](../modules/Module.md).Module
+[structs/Module](../modules/structs_Module.md).Module
 
 The base structure for modules.
 
@@ -14,26 +14,26 @@ responsible for importing and initializing modules from files.
 
 - **`Module`**
 
-  ↳ [`Listener`](Listener.Listener.md)
+  ↳ [`Listener`](structs_Listener.Listener.md)
 
-  ↳ [`BaseCommand`](commands_BaseCommand.BaseCommand.md)
+  ↳ [`BaseCommand`](structs_commands_BaseCommand.BaseCommand.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](Module.Module.md#constructor)
+- [constructor](structs_Module.Module.md#constructor)
 
 ### Properties
 
-- [category](Module.Module.md#category)
-- [handler](Module.Module.md#handler)
-- [logger](Module.Module.md#logger)
-- [name](Module.Module.md#name)
+- [category](structs_Module.Module.md#category)
+- [handler](structs_Module.Module.md#handler)
+- [logger](structs_Module.Module.md#logger)
+- [name](structs_Module.Module.md#name)
 
 ### Methods
 
-- [initialize](Module.Module.md#initialize)
+- [initialize](structs_Module.Module.md#initialize)
 
 ## Constructors
 
@@ -47,11 +47,11 @@ Initializes a new `Module` instance.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `handler` | [`Handler`](handlers_Handler.Handler.md)<[`Module`](Module.Module.md)\> | The handler that manages the module. |
+| `handler` | [`Handler`](structs_handlers_Handler.Handler.md)<[`Module`](structs_Module.Module.md)\> | The handler that manages the module. |
 
 #### Defined in
 
-[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L59)
+[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L59)
 
 ## Properties
 
@@ -71,13 +71,13 @@ purpose, such as administration commands or music commands.
 
 #### Defined in
 
-[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L34)
+[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L34)
 
 ___
 
 ### handler
 
-• `Readonly` **handler**: [`Handler`](handlers_Handler.Handler.md)<[`Module`](Module.Module.md)\>
+• `Readonly` **handler**: [`Handler`](structs_handlers_Handler.Handler.md)<[`Module`](structs_Module.Module.md)\>
 
 A reference to the handler that manages this module.
 
@@ -86,7 +86,7 @@ module to access the Discord client and other modules within the handler.
 
 #### Defined in
 
-[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L52)
+[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L52)
 
 ___
 
@@ -105,7 +105,7 @@ https://github.com/norviah/logger
 
 #### Defined in
 
-[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L44)
+[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L44)
 
 ___
 
@@ -120,7 +120,7 @@ possible error messages.
 
 #### Defined in
 
-[src/structs/Module.ts:21](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L21)
+[src/structs/Module.ts:21](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L21)
 
 ## Methods
 
@@ -141,4 +141,4 @@ further initialize the module once imported.
 
 #### Defined in
 
-[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/d0af849/src/structs/Module.ts#L75)
+[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Module.ts#L75)

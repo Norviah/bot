@@ -1,8 +1,8 @@
-[Bot](../README.md) / [Exports](../modules.md) / [handlers/ListenerHandler](../modules/handlers_ListenerHandler.md) / ListenerHandler
+[Bot](../README.md) / [Modules](../modules.md) / [structs/handlers/ListenerHandler](../modules/structs_handlers_ListenerHandler.md) / ListenerHandler
 
 # Class: ListenerHandler
 
-[handlers/ListenerHandler](../modules/handlers_ListenerHandler.md).ListenerHandler
+[structs/handlers/ListenerHandler](../modules/structs_handlers_ListenerHandler.md).ListenerHandler
 
 The base structure for handlers.
 
@@ -13,7 +13,7 @@ reference.
 
 ## Hierarchy
 
-- [`Handler`](handlers_Handler.Handler.md)<[`Listener`](Listener.Listener.md)\>
+- [`Handler`](structs_handlers_Handler.Handler.md)<[`Listener`](structs_Listener.Listener.md)\>
 
   ↳ **`ListenerHandler`**
 
@@ -21,22 +21,22 @@ reference.
 
 ### Constructors
 
-- [constructor](handlers_ListenerHandler.ListenerHandler.md#constructor)
+- [constructor](structs_handlers_ListenerHandler.ListenerHandler.md#constructor)
 
 ### Properties
 
-- [client](handlers_ListenerHandler.ListenerHandler.md#client)
-- [directory](handlers_ListenerHandler.ListenerHandler.md#directory)
-- [emitters](handlers_ListenerHandler.ListenerHandler.md#emitters)
-- [modules](handlers_ListenerHandler.ListenerHandler.md#modules)
-- [reference](handlers_ListenerHandler.ListenerHandler.md#reference)
+- [client](structs_handlers_ListenerHandler.ListenerHandler.md#client)
+- [directory](structs_handlers_ListenerHandler.ListenerHandler.md#directory)
+- [emitters](structs_handlers_ListenerHandler.ListenerHandler.md#emitters)
+- [modules](structs_handlers_ListenerHandler.ListenerHandler.md#modules)
+- [reference](structs_handlers_ListenerHandler.ListenerHandler.md#reference)
 
 ### Methods
 
-- [import](handlers_ListenerHandler.ListenerHandler.md#import)
-- [inherits](handlers_ListenerHandler.ListenerHandler.md#inherits)
-- [register](handlers_ListenerHandler.ListenerHandler.md#register)
-- [registerAll](handlers_ListenerHandler.ListenerHandler.md#registerall)
+- [import](structs_handlers_ListenerHandler.ListenerHandler.md#import)
+- [inherits](structs_handlers_ListenerHandler.ListenerHandler.md#inherits)
+- [register](structs_handlers_ListenerHandler.ListenerHandler.md#register)
+- [registerAll](structs_handlers_ListenerHandler.ListenerHandler.md#registerall)
 
 ## Constructors
 
@@ -50,22 +50,22 @@ Initializes a new `ListenerHandler` instance.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `client` | [`Client`](Client.Client.md)<`boolean`\> | The client object. |
+| `client` | [`Client`](structs_Client.Client.md)<`boolean`\> | The client object. |
 | `emitters` | `Record`<`string`, `__module`\> | The collection of event emitters to bind listeners to. |
 
 #### Overrides
 
-[Handler](handlers_Handler.Handler.md).[constructor](handlers_Handler.Handler.md#constructor)
+[Handler](structs_handlers_Handler.Handler.md).[constructor](structs_handlers_Handler.Handler.md#constructor)
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:41](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/ListenerHandler.ts#L41)
+[src/structs/handlers/ListenerHandler.ts:41](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/ListenerHandler.ts#L41)
 
 ## Properties
 
 ### client
 
-• `Readonly` **client**: [`Client`](Client.Client.md)<`boolean`\>
+• `Readonly` **client**: [`Client`](structs_Client.Client.md)<`boolean`\>
 
 The Discord client.
 
@@ -73,11 +73,11 @@ A reference to the instantiated Discord client.
 
 #### Inherited from
 
-[Handler](handlers_Handler.Handler.md).[client](handlers_Handler.Handler.md#client)
+[Handler](structs_handlers_Handler.Handler.md).[client](structs_handlers_Handler.Handler.md#client)
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:45](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L45)
+[src/structs/handlers/Handler.ts:45](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L45)
 
 ___
 
@@ -92,11 +92,11 @@ listeners to import, recursively looking in subdirectories.
 
 #### Overrides
 
-[Handler](handlers_Handler.Handler.md).[directory](handlers_Handler.Handler.md#directory)
+[Handler](structs_handlers_Handler.Handler.md).[directory](structs_handlers_Handler.Handler.md#directory)
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:19](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/ListenerHandler.ts#L19)
+[src/structs/handlers/ListenerHandler.ts:19](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/ListenerHandler.ts#L19)
 
 ___
 
@@ -112,13 +112,13 @@ emitters to look for.
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:33](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/ListenerHandler.ts#L33)
+[src/structs/handlers/ListenerHandler.ts:33](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/ListenerHandler.ts#L33)
 
 ___
 
 ### modules
 
-• `Readonly` **modules**: `Map`<`string`, [`Listener`](Listener.Listener.md)\>
+• `Readonly` **modules**: `Map`<`string`, [`Listener`](structs_Listener.Listener.md)\>
 
 The collection of modules that the handler manages.
 
@@ -127,33 +127,33 @@ within a collection for future reference.
 
 #### Inherited from
 
-[Handler](handlers_Handler.Handler.md).[modules](handlers_Handler.Handler.md#modules)
+[Handler](structs_handlers_Handler.Handler.md).[modules](structs_handlers_Handler.Handler.md#modules)
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:53](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L53)
+[src/structs/handlers/Handler.ts:53](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L53)
 
 ___
 
 ### reference
 
-• `Readonly` **reference**: `AbstractClass`<[`Listener`](Listener.Listener.md), `any`[]\> = `Listener`
+• `Readonly` **reference**: `AbstractClass`<[`Listener`](structs_Listener.Listener.md), `any`[]\> = `Listener`
 
 The reference to the abstract class that the handler manages.
 
 #### Overrides
 
-[Handler](handlers_Handler.Handler.md).[reference](handlers_Handler.Handler.md#reference)
+[Handler](structs_handlers_Handler.Handler.md).[reference](structs_handlers_Handler.Handler.md#reference)
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:24](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/ListenerHandler.ts#L24)
+[src/structs/handlers/ListenerHandler.ts:24](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/ListenerHandler.ts#L24)
 
 ## Methods
 
 ### import
 
-▸ **import**(`path`): [`Listener`](Listener.Listener.md)
+▸ **import**(`path`): [`Listener`](structs_Listener.Listener.md)
 
 Imports and initializes a module from a file.
 
@@ -172,17 +172,17 @@ default export.
 
 #### Returns
 
-[`Listener`](Listener.Listener.md)
+[`Listener`](structs_Listener.Listener.md)
 
 The initialized module.
 
 #### Inherited from
 
-[Handler](handlers_Handler.Handler.md).[import](handlers_Handler.Handler.md#import)
+[Handler](structs_handlers_Handler.Handler.md).[import](structs_handlers_Handler.Handler.md#import)
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:77](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L77)
+[src/structs/handlers/Handler.ts:77](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L77)
 
 ___
 
@@ -213,17 +213,17 @@ Whether if the object is a valid module.
 
 #### Inherited from
 
-[Handler](handlers_Handler.Handler.md).[inherits](handlers_Handler.Handler.md#inherits)
+[Handler](structs_handlers_Handler.Handler.md).[inherits](structs_handlers_Handler.Handler.md#inherits)
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:163](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L163)
+[src/structs/handlers/Handler.ts:163](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L163)
 
 ___
 
 ### register
 
-▸ **register**(`path`): [`Listener`](Listener.Listener.md)
+▸ **register**(`path`): [`Listener`](structs_Listener.Listener.md)
 
 Registers a listener from the specified path.
 
@@ -238,17 +238,17 @@ its respective event emitter once the listener has been initialized.
 
 #### Returns
 
-[`Listener`](Listener.Listener.md)
+[`Listener`](structs_Listener.Listener.md)
 
 The registered listener.
 
 #### Overrides
 
-[Handler](handlers_Handler.Handler.md).[register](handlers_Handler.Handler.md#register)
+[Handler](structs_handlers_Handler.Handler.md).[register](structs_handlers_Handler.Handler.md#register)
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:60](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/ListenerHandler.ts#L60)
+[src/structs/handlers/ListenerHandler.ts:60](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/ListenerHandler.ts#L60)
 
 ___
 
@@ -274,8 +274,8 @@ collection of modules.
 
 #### Inherited from
 
-[Handler](handlers_Handler.Handler.md).[registerAll](handlers_Handler.Handler.md#registerall)
+[Handler](structs_handlers_Handler.Handler.md).[registerAll](structs_handlers_Handler.Handler.md#registerall)
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:101](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L101)
+[src/structs/handlers/Handler.ts:101](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L101)

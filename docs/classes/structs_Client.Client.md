@@ -1,8 +1,8 @@
-[Bot](../README.md) / [Exports](../modules.md) / [Client](../modules/Client.md) / Client
+[Bot](../README.md) / [Modules](../modules.md) / [structs/Client](../modules/structs_Client.md) / Client
 
 # Class: Client<Ready\>
 
-[Client](../modules/Client.md).Client
+[structs/Client](../modules/structs_Client.md).Client
 
 ## Type parameters
 
@@ -20,74 +20,74 @@
 
 ### Constructors
 
-- [constructor](Client.Client.md#constructor)
+- [constructor](structs_Client.Client.md#constructor)
 
 ### Properties
 
-- [application](Client.Client.md#application)
-- [channels](Client.Client.md#channels)
-- [config](Client.Client.md#config)
-- [guilds](Client.Client.md#guilds)
-- [handlers](Client.Client.md#handlers)
-- [options](Client.Client.md#options)
-- [readyTimestamp](Client.Client.md#readytimestamp)
-- [rest](Client.Client.md#rest)
-- [shard](Client.Client.md#shard)
-- [sweepers](Client.Client.md#sweepers)
-- [token](Client.Client.md#token)
-- [user](Client.Client.md#user)
-- [users](Client.Client.md#users)
-- [voice](Client.Client.md#voice)
-- [ws](Client.Client.md#ws)
-- [captureRejectionSymbol](Client.Client.md#capturerejectionsymbol)
-- [captureRejections](Client.Client.md#capturerejections)
-- [defaultMaxListeners](Client.Client.md#defaultmaxlisteners)
-- [errorMonitor](Client.Client.md#errormonitor)
+- [application](structs_Client.Client.md#application)
+- [channels](structs_Client.Client.md#channels)
+- [config](structs_Client.Client.md#config)
+- [guilds](structs_Client.Client.md#guilds)
+- [handlers](structs_Client.Client.md#handlers)
+- [options](structs_Client.Client.md#options)
+- [readyTimestamp](structs_Client.Client.md#readytimestamp)
+- [rest](structs_Client.Client.md#rest)
+- [shard](structs_Client.Client.md#shard)
+- [sweepers](structs_Client.Client.md#sweepers)
+- [token](structs_Client.Client.md#token)
+- [user](structs_Client.Client.md#user)
+- [users](structs_Client.Client.md#users)
+- [voice](structs_Client.Client.md#voice)
+- [ws](structs_Client.Client.md#ws)
+- [captureRejectionSymbol](structs_Client.Client.md#capturerejectionsymbol)
+- [captureRejections](structs_Client.Client.md#capturerejections)
+- [defaultMaxListeners](structs_Client.Client.md#defaultmaxlisteners)
+- [errorMonitor](structs_Client.Client.md#errormonitor)
 
 ### Accessors
 
-- [\_censoredToken](Client.Client.md#_censoredtoken)
-- [emojis](Client.Client.md#emojis)
-- [readyAt](Client.Client.md#readyat)
-- [uptime](Client.Client.md#uptime)
+- [\_censoredToken](structs_Client.Client.md#_censoredtoken)
+- [emojis](structs_Client.Client.md#emojis)
+- [readyAt](structs_Client.Client.md#readyat)
+- [uptime](structs_Client.Client.md#uptime)
 
 ### Methods
 
-- [addListener](Client.Client.md#addlistener)
-- [destroy](Client.Client.md#destroy)
-- [emit](Client.Client.md#emit)
-- [eventNames](Client.Client.md#eventnames)
-- [fetchGuildPreview](Client.Client.md#fetchguildpreview)
-- [fetchGuildTemplate](Client.Client.md#fetchguildtemplate)
-- [fetchGuildWidget](Client.Client.md#fetchguildwidget)
-- [fetchInvite](Client.Client.md#fetchinvite)
-- [fetchPremiumStickerPacks](Client.Client.md#fetchpremiumstickerpacks)
-- [fetchSticker](Client.Client.md#fetchsticker)
-- [fetchVoiceRegions](Client.Client.md#fetchvoiceregions)
-- [fetchWebhook](Client.Client.md#fetchwebhook)
-- [generateInvite](Client.Client.md#generateinvite)
-- [getMaxListeners](Client.Client.md#getmaxlisteners)
-- [isReady](Client.Client.md#isready)
-- [listenerCount](Client.Client.md#listenercount)
-- [listeners](Client.Client.md#listeners)
-- [login](Client.Client.md#login)
-- [off](Client.Client.md#off)
-- [on](Client.Client.md#on)
-- [once](Client.Client.md#once)
-- [prependListener](Client.Client.md#prependlistener)
-- [prependOnceListener](Client.Client.md#prependoncelistener)
-- [rawListeners](Client.Client.md#rawlisteners)
-- [removeAllListeners](Client.Client.md#removealllisteners)
-- [removeListener](Client.Client.md#removelistener)
-- [setMaxListeners](Client.Client.md#setmaxlisteners)
-- [start](Client.Client.md#start)
-- [toJSON](Client.Client.md#tojson)
-- [getEventListeners](Client.Client.md#geteventlisteners)
-- [getMaxListeners](Client.Client.md#getmaxlisteners-1)
-- [listenerCount](Client.Client.md#listenercount-1)
-- [on](Client.Client.md#on-1)
-- [once](Client.Client.md#once-1)
-- [setMaxListeners](Client.Client.md#setmaxlisteners-1)
+- [addListener](structs_Client.Client.md#addlistener)
+- [destroy](structs_Client.Client.md#destroy)
+- [emit](structs_Client.Client.md#emit)
+- [eventNames](structs_Client.Client.md#eventnames)
+- [fetchGuildPreview](structs_Client.Client.md#fetchguildpreview)
+- [fetchGuildTemplate](structs_Client.Client.md#fetchguildtemplate)
+- [fetchGuildWidget](structs_Client.Client.md#fetchguildwidget)
+- [fetchInvite](structs_Client.Client.md#fetchinvite)
+- [fetchPremiumStickerPacks](structs_Client.Client.md#fetchpremiumstickerpacks)
+- [fetchSticker](structs_Client.Client.md#fetchsticker)
+- [fetchVoiceRegions](structs_Client.Client.md#fetchvoiceregions)
+- [fetchWebhook](structs_Client.Client.md#fetchwebhook)
+- [generateInvite](structs_Client.Client.md#generateinvite)
+- [getMaxListeners](structs_Client.Client.md#getmaxlisteners)
+- [isReady](structs_Client.Client.md#isready)
+- [listenerCount](structs_Client.Client.md#listenercount)
+- [listeners](structs_Client.Client.md#listeners)
+- [login](structs_Client.Client.md#login)
+- [off](structs_Client.Client.md#off)
+- [on](structs_Client.Client.md#on)
+- [once](structs_Client.Client.md#once)
+- [prependListener](structs_Client.Client.md#prependlistener)
+- [prependOnceListener](structs_Client.Client.md#prependoncelistener)
+- [rawListeners](structs_Client.Client.md#rawlisteners)
+- [removeAllListeners](structs_Client.Client.md#removealllisteners)
+- [removeListener](structs_Client.Client.md#removelistener)
+- [setMaxListeners](structs_Client.Client.md#setmaxlisteners)
+- [start](structs_Client.Client.md#start)
+- [toJSON](structs_Client.Client.md#tojson)
+- [getEventListeners](structs_Client.Client.md#geteventlisteners)
+- [getMaxListeners](structs_Client.Client.md#getmaxlisteners-1)
+- [listenerCount](structs_Client.Client.md#listenercount-1)
+- [on](structs_Client.Client.md#on-1)
+- [once](structs_Client.Client.md#once-1)
+- [setMaxListeners](structs_Client.Client.md#setmaxlisteners-1)
 
 ## Constructors
 
@@ -115,7 +115,7 @@ BaseClient&lt;Ready\&gt;.constructor
 
 #### Defined in
 
-[src/structs/Client.ts:41](https://github.com/Norviah/bot/blob/d0af849/src/structs/Client.ts#L41)
+[src/structs/Client.ts:41](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Client.ts#L41)
 
 ## Properties
 
@@ -158,7 +158,7 @@ notably the token that is used to log in to Discord.
 
 #### Defined in
 
-[src/structs/Client.ts:19](https://github.com/Norviah/bot/blob/d0af849/src/structs/Client.ts#L19)
+[src/structs/Client.ts:19](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Client.ts#L19)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 ### handlers
 
-• `Readonly` **handlers**: `Readonly`<{ `commands`: [`CommandHandler`](handlers_CommandHandler.CommandHandler.md) ; `listeners`: [`ListenerHandler`](handlers_ListenerHandler.ListenerHandler.md)  }\>
+• `Readonly` **handlers**: `Readonly`<{ `commands`: [`CommandHandler`](structs_handlers_CommandHandler.CommandHandler.md) ; `listeners`: [`ListenerHandler`](structs_handlers_ListenerHandler.ListenerHandler.md)  }\>
 
 The various handlers for the client.
 
@@ -187,7 +187,7 @@ the client for various purposes.
 
 #### Defined in
 
-[src/structs/Client.ts:27](https://github.com/Norviah/bot/blob/d0af849/src/structs/Client.ts#L27)
+[src/structs/Client.ts:27](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Client.ts#L27)
 
 ___
 
@@ -333,7 +333,7 @@ ___
 
 ### captureRejectionSymbol
 
-▪ `Static` `Readonly` **captureRejectionSymbol**: typeof [`captureRejectionSymbol`](Client.Client.md#capturerejectionsymbol)
+▪ `Static` `Readonly` **captureRejectionSymbol**: typeof [`captureRejectionSymbol`](structs_Client.Client.md#capturerejectionsymbol)
 
 Value: `Symbol.for('nodejs.rejection')`
 
@@ -429,7 +429,7 @@ ___
 
 ### errorMonitor
 
-▪ `Static` `Readonly` **errorMonitor**: typeof [`errorMonitor`](Client.Client.md#errormonitor)
+▪ `Static` `Readonly` **errorMonitor**: typeof [`errorMonitor`](structs_Client.Client.md#errormonitor)
 
 This symbol shall be used to install a listener for only monitoring `'error'`events. Listeners installed using this symbol are called before the regular`'error'` listeners are called.
 
@@ -524,7 +524,7 @@ node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts
 
 ### addListener
 
-▸ **addListener**(`eventName`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **addListener**(`eventName`, `listener`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 Alias for `emitter.on(eventName, listener)`.
 
@@ -537,7 +537,7 @@ Alias for `emitter.on(eventName, listener)`.
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 **`Since`**
 
@@ -879,7 +879,7 @@ ___
 ▸ **getMaxListeners**(): `number`
 
 Returns the current max listener value for the `EventEmitter` which is either
-set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](Client.Client.md#defaultmaxlisteners).
+set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](structs_Client.Client.md#defaultmaxlisteners).
 
 #### Returns
 
@@ -1014,7 +1014,7 @@ ___
 
 ### off
 
-▸ **off**<`K`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **off**<`K`\>(`event`, `listener`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1031,7 +1031,7 @@ ___
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1041,7 +1041,7 @@ BaseClient.off
 
 node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts:998
 
-▸ **off**<`S`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **off**<`S`\>(`event`, `listener`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1058,7 +1058,7 @@ node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1072,7 +1072,7 @@ ___
 
 ### on
 
-▸ **on**<`K`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **on**<`K`\>(`event`, `listener`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1089,7 +1089,7 @@ ___
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1099,7 +1099,7 @@ BaseClient.on
 
 node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts:983
 
-▸ **on**<`S`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **on**<`S`\>(`event`, `listener`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1116,7 +1116,7 @@ node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1130,7 +1130,7 @@ ___
 
 ### once
 
-▸ **once**<`K`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **once**<`K`\>(`event`, `listener`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1147,7 +1147,7 @@ ___
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1157,7 +1157,7 @@ BaseClient.once
 
 node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts:989
 
-▸ **once**<`S`\>(`event`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **once**<`S`\>(`event`, `listener`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1174,7 +1174,7 @@ node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1188,7 +1188,7 @@ ___
 
 ### prependListener
 
-▸ **prependListener**(`eventName`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **prependListener**(`eventName`, `listener`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -1212,7 +1212,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 **`Since`**
 
@@ -1230,7 +1230,7 @@ ___
 
 ### prependOnceListener
 
-▸ **prependOnceListener**(`eventName`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **prependOnceListener**(`eventName`, `listener`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -1252,7 +1252,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 **`Since`**
 
@@ -1326,7 +1326,7 @@ ___
 
 ### removeAllListeners
 
-▸ **removeAllListeners**<`K`\>(`event?`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **removeAllListeners**<`K`\>(`event?`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1342,7 +1342,7 @@ ___
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1352,7 +1352,7 @@ BaseClient.removeAllListeners
 
 node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts:1004
 
-▸ **removeAllListeners**<`S`\>(`event?`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **removeAllListeners**<`S`\>(`event?`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Type parameters
 
@@ -1368,7 +1368,7 @@ node_modules/.pnpm/discord.js@14.12.1/node_modules/discord.js/typings/index.d.ts
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 #### Inherited from
 
@@ -1382,7 +1382,7 @@ ___
 
 ### removeListener
 
-▸ **removeListener**(`eventName`, `listener`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **removeListener**(`eventName`, `listener`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 Removes the specified `listener` from the listener array for the event named`eventName`.
 
@@ -1473,7 +1473,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 **`Since`**
 
@@ -1491,7 +1491,7 @@ ___
 
 ### setMaxListeners
 
-▸ **setMaxListeners**(`n`): [`Client`](Client.Client.md)<`Ready`\>
+▸ **setMaxListeners**(`n`): [`Client`](structs_Client.Client.md)<`Ready`\>
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -1508,7 +1508,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`Client`](Client.Client.md)<`Ready`\>
+[`Client`](structs_Client.Client.md)<`Ready`\>
 
 **`Since`**
 
@@ -1536,7 +1536,7 @@ Starts the client.
 
 #### Defined in
 
-[src/structs/Client.ts:48](https://github.com/Norviah/bot/blob/d0af849/src/structs/Client.ts#L48)
+[src/structs/Client.ts:48](https://github.com/Norviah/bot/blob/fefba0e/src/structs/Client.ts#L48)
 
 ___
 

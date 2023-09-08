@@ -1,8 +1,8 @@
-[Bot](../README.md) / [Exports](../modules.md) / [handlers/Handler](../modules/handlers_Handler.md) / Handler
+[Bot](../README.md) / [Modules](../modules.md) / [structs/handlers/Handler](../modules/structs_handlers_Handler.md) / Handler
 
 # Class: Handler<T\>
 
-[handlers/Handler](../modules/handlers_Handler.md).Handler
+[structs/handlers/Handler](../modules/structs_handlers_Handler.md).Handler
 
 The base structure for handlers.
 
@@ -15,35 +15,35 @@ reference.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `T` | extends [`Module`](Module.Module.md) | The type of module that the handler manages. |
+| `T` | extends [`Module`](structs_Module.Module.md) | The type of module that the handler manages. |
 
 ## Hierarchy
 
 - **`Handler`**
 
-  ↳ [`CommandHandler`](handlers_CommandHandler.CommandHandler.md)
+  ↳ [`CommandHandler`](structs_handlers_CommandHandler.CommandHandler.md)
 
-  ↳ [`ListenerHandler`](handlers_ListenerHandler.ListenerHandler.md)
+  ↳ [`ListenerHandler`](structs_handlers_ListenerHandler.ListenerHandler.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](handlers_Handler.Handler.md#constructor)
+- [constructor](structs_handlers_Handler.Handler.md#constructor)
 
 ### Properties
 
-- [client](handlers_Handler.Handler.md#client)
-- [directory](handlers_Handler.Handler.md#directory)
-- [modules](handlers_Handler.Handler.md#modules)
-- [reference](handlers_Handler.Handler.md#reference)
+- [client](structs_handlers_Handler.Handler.md#client)
+- [directory](structs_handlers_Handler.Handler.md#directory)
+- [modules](structs_handlers_Handler.Handler.md#modules)
+- [reference](structs_handlers_Handler.Handler.md#reference)
 
 ### Methods
 
-- [import](handlers_Handler.Handler.md#import)
-- [inherits](handlers_Handler.Handler.md#inherits)
-- [register](handlers_Handler.Handler.md#register)
-- [registerAll](handlers_Handler.Handler.md#registerall)
+- [import](structs_handlers_Handler.Handler.md#import)
+- [inherits](structs_handlers_Handler.Handler.md#inherits)
+- [register](structs_handlers_Handler.Handler.md#register)
+- [registerAll](structs_handlers_Handler.Handler.md#registerall)
 
 ## Constructors
 
@@ -57,23 +57,23 @@ Initializes a new `Handler` instance.
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`Module`](Module.Module.md) |
+| `T` | extends [`Module`](structs_Module.Module.md) |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `client` | [`Client`](Client.Client.md)<`boolean`\> | The instantiated Discord client. |
+| `client` | [`Client`](structs_Client.Client.md)<`boolean`\> | The instantiated Discord client. |
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:60](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L60)
+[src/structs/handlers/Handler.ts:60](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L60)
 
 ## Properties
 
 ### client
 
-• `Readonly` **client**: [`Client`](Client.Client.md)<`boolean`\>
+• `Readonly` **client**: [`Client`](structs_Client.Client.md)<`boolean`\>
 
 The Discord client.
 
@@ -81,7 +81,7 @@ A reference to the instantiated Discord client.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:45](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L45)
+[src/structs/handlers/Handler.ts:45](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L45)
 
 ___
 
@@ -97,7 +97,7 @@ subdirectories.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:38](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L38)
+[src/structs/handlers/Handler.ts:38](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L38)
 
 ___
 
@@ -112,7 +112,7 @@ within a collection for future reference.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:53](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L53)
+[src/structs/handlers/Handler.ts:53](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L53)
 
 ___
 
@@ -128,7 +128,7 @@ instance of the expected class.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:29](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L29)
+[src/structs/handlers/Handler.ts:29](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L29)
 
 ## Methods
 
@@ -159,7 +159,7 @@ The initialized module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:77](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L77)
+[src/structs/handlers/Handler.ts:77](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L77)
 
 ___
 
@@ -190,7 +190,7 @@ Whether if the object is a valid module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:163](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L163)
+[src/structs/handlers/Handler.ts:163](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L163)
 
 ___
 
@@ -217,7 +217,7 @@ The registered module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:131](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L131)
+[src/structs/handlers/Handler.ts:131](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L131)
 
 ___
 
@@ -243,4 +243,4 @@ collection of modules.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:101](https://github.com/Norviah/bot/blob/d0af849/src/structs/handlers/Handler.ts#L101)
+[src/structs/handlers/Handler.ts:101](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L101)

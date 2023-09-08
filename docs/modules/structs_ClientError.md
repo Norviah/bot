@@ -1,20 +1,20 @@
-[Bot](../README.md) / [Exports](../modules.md) / ClientError
+[Bot](../README.md) / [Modules](../modules.md) / structs/ClientError
 
-# Module: ClientError
+# Module: structs/ClientError
 
 ## Table of contents
 
 ### Enumerations
 
-- [ErrorCodes](../enums/ClientError.ErrorCodes.md)
+- [ErrorCodes](../enums/structs_ClientError.ErrorCodes.md)
 
 ### Classes
 
-- [ClientError](../classes/ClientError.ClientError.md)
+- [ClientError](../classes/structs_ClientError.ClientError.md)
 
 ### Variables
 
-- [MessageGenerator](ClientError.md#messagegenerator)
+- [MessageGenerator](structs_ClientError.md#messagegenerator)
 
 ## Variables
 
@@ -35,4 +35,4 @@
 
 #### Defined in
 
-[src/structs/ClientError.ts:38](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L38)
+[src/structs/ClientError.ts:38](https://github.com/Norviah/bot/blob/fefba0e/src/structs/ClientError.ts#L38)

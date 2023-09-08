@@ -1,3 +1,3 @@
-Bot / [Exports](modules.md)
+Bot / [Modules](modules.md)
 
 ## bot

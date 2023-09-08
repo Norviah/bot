@@ -1,14 +1,14 @@
-[Bot](../README.md) / [Exports](../modules.md) / [ClientError](../modules/ClientError.md) / ClientError
+[Bot](../README.md) / [Modules](../modules.md) / [structs/ClientError](../modules/structs_ClientError.md) / ClientError
 
 # Class: ClientError<T\>
 
-[ClientError](../modules/ClientError.md).ClientError
+[structs/ClientError](../modules/structs_ClientError.md).ClientError
 
 ## Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends keyof typeof [`ErrorCodes`](../enums/ClientError.ErrorCodes.md) |
+| `T` | extends keyof typeof [`ErrorCodes`](../enums/structs_ClientError.ErrorCodes.md) |
 
 ## Hierarchy
 
@@ -20,22 +20,22 @@
 
 ### Constructors
 
-- [constructor](ClientError.ClientError.md#constructor)
+- [constructor](structs_ClientError.ClientError.md#constructor)
 
 ### Properties
 
-- [args](ClientError.ClientError.md#args)
-- [code](ClientError.ClientError.md#code)
-- [message](ClientError.ClientError.md#message)
-- [name](ClientError.ClientError.md#name)
-- [stack](ClientError.ClientError.md#stack)
-- [prepareStackTrace](ClientError.ClientError.md#preparestacktrace)
-- [stackTraceLimit](ClientError.ClientError.md#stacktracelimit)
+- [args](structs_ClientError.ClientError.md#args)
+- [code](structs_ClientError.ClientError.md#code)
+- [message](structs_ClientError.ClientError.md#message)
+- [name](structs_ClientError.ClientError.md#name)
+- [stack](structs_ClientError.ClientError.md#stack)
+- [prepareStackTrace](structs_ClientError.ClientError.md#preparestacktrace)
+- [stackTraceLimit](structs_ClientError.ClientError.md#stacktracelimit)
 
 ### Methods
 
-- [is](ClientError.ClientError.md#is)
-- [captureStackTrace](ClientError.ClientError.md#capturestacktrace)
+- [is](structs_ClientError.ClientError.md#is)
+- [captureStackTrace](structs_ClientError.ClientError.md#capturestacktrace)
 
 ## Constructors
 
@@ -64,7 +64,7 @@ Error.constructor
 
 #### Defined in
 
-[src/structs/ClientError.ts:121](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L121)
+[src/structs/ClientError.ts:121](https://github.com/Norviah/bot/blob/fefba0e/src/structs/ClientError.ts#L121)
 
 ## Properties
 
@@ -82,7 +82,7 @@ the arguments passed to the message generator.
 
 #### Defined in
 
-[src/structs/ClientError.ts:112](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L112)
+[src/structs/ClientError.ts:112](https://github.com/Norviah/bot/blob/fefba0e/src/structs/ClientError.ts#L112)
 
 ___
 
@@ -97,7 +97,7 @@ which can be used to handle the error in a specific error if desired.
 
 #### Defined in
 
-[src/structs/ClientError.ts:101](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L101)
+[src/structs/ClientError.ts:101](https://github.com/Norviah/bot/blob/fefba0e/src/structs/ClientError.ts#L101)
 
 ___
 
@@ -207,7 +207,7 @@ specific way.
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`ErrorCodes`](../enums/ClientError.ErrorCodes.md) |
+| `T` | extends [`ErrorCodes`](../enums/structs_ClientError.ErrorCodes.md) |
 
 #### Parameters
 
@@ -241,7 +241,7 @@ try {
 
 #### Defined in
 
-[src/structs/ClientError.ts:157](https://github.com/Norviah/bot/blob/d0af849/src/structs/ClientError.ts#L157)
+[src/structs/ClientError.ts:157](https://github.com/Norviah/bot/blob/fefba0e/src/structs/ClientError.ts#L157)
 
 ___
 
