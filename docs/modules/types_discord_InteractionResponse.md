@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / types/discord/InteractionResponse
+[Bot](../README.md) / types/discord/InteractionResponse
 
 # Module: types/discord/InteractionResponse
 
@@ -18,4 +18,4 @@ Valid types for responding to an interaction.
 
 #### Defined in
 
-[src/types/discord/InteractionResponse.ts:6](https://github.com/Norviah/bot/blob/fefba0e/src/types/discord/InteractionResponse.ts#L6)
+[src/types/discord/InteractionResponse.ts:6](https://github.com/Norviah/bot/blob/520ef34/src/types/discord/InteractionResponse.ts#L6)

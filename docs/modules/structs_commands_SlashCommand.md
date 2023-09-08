@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / structs/commands/SlashCommand
+[Bot](../README.md) / structs/commands/SlashCommand
 
 # Module: structs/commands/SlashCommand
 

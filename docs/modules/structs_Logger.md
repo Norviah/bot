@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / structs/Logger
+[Bot](../README.md) / structs/Logger
 
 # Module: structs/Logger
 

@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / structs/commands/ContextCommand
+[Bot](../README.md) / structs/commands/ContextCommand
 
 # Module: structs/commands/ContextCommand
 

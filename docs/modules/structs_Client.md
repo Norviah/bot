@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / structs/Client
+[Bot](../README.md) / structs/Client
 
 # Module: structs/Client
 

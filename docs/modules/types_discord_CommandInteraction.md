@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / types/discord/CommandInteraction
+[Bot](../README.md) / types/discord/CommandInteraction
 
 # Module: types/discord/CommandInteraction
 
@@ -18,4 +18,4 @@ All types of command interactions.
 
 #### Defined in
 
-[src/types/discord/CommandInteraction.ts:6](https://github.com/Norviah/bot/blob/fefba0e/src/types/discord/CommandInteraction.ts#L6)
+[src/types/discord/CommandInteraction.ts:6](https://github.com/Norviah/bot/blob/520ef34/src/types/discord/CommandInteraction.ts#L6)

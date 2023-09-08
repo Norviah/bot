@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / structs/handlers/Handler
+[Bot](../README.md) / structs/handlers/Handler
 
 # Module: structs/handlers/Handler
 

@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / types/ts/Explicit
+[Bot](../README.md) / types/ts/Explicit
 
 # Module: types/ts/Explicit
 
@@ -60,4 +60,4 @@ const person: Explicit<Person> = {
 
 #### Defined in
 
-[src/types/ts/Explicit.ts:41](https://github.com/Norviah/bot/blob/fefba0e/src/types/ts/Explicit.ts#L41)
+[src/types/ts/Explicit.ts:41](https://github.com/Norviah/bot/blob/520ef34/src/types/ts/Explicit.ts#L41)

@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / structs/Listener
+[Bot](../README.md) / structs/Listener
 
 # Module: structs/Listener
 

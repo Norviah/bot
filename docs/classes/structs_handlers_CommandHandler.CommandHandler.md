@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / [structs/handlers/CommandHandler](../modules/structs_handlers_CommandHandler.md) / CommandHandler
+[Bot](../README.md) / [structs/handlers/CommandHandler](../modules/structs_handlers_CommandHandler.md) / CommandHandler
 
 # Class: CommandHandler
 
@@ -57,7 +57,7 @@ Initializes a new `Handler` instance.
 
 #### Defined in
 
-[src/structs/handlers/CommandHandler.ts:36](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/CommandHandler.ts#L36)
+[src/structs/handlers/CommandHandler.ts:36](https://github.com/Norviah/bot/blob/520ef34/src/structs/handlers/CommandHandler.ts#L36)
 
 ## Properties
 
@@ -75,7 +75,7 @@ A reference to the instantiated Discord client.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:45](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L45)
+[src/structs/handlers/Handler.ts:45](https://github.com/Norviah/bot/blob/520ef34/src/structs/handlers/Handler.ts#L45)
 
 ___
 
@@ -94,7 +94,7 @@ commands to import, recursively looking in subdirectories.
 
 #### Defined in
 
-[src/structs/handlers/CommandHandler.ts:19](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/CommandHandler.ts#L19)
+[src/structs/handlers/CommandHandler.ts:19](https://github.com/Norviah/bot/blob/520ef34/src/structs/handlers/CommandHandler.ts#L19)
 
 ___
 
@@ -110,7 +110,7 @@ All initialized commands.
 
 #### Defined in
 
-[src/structs/handlers/CommandHandler.ts:29](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/CommandHandler.ts#L29)
+[src/structs/handlers/CommandHandler.ts:29](https://github.com/Norviah/bot/blob/520ef34/src/structs/handlers/CommandHandler.ts#L29)
 
 ___
 
@@ -126,7 +126,7 @@ The reference to the abstract class that the handler manages.
 
 #### Defined in
 
-[src/structs/handlers/CommandHandler.ts:24](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/CommandHandler.ts#L24)
+[src/structs/handlers/CommandHandler.ts:24](https://github.com/Norviah/bot/blob/520ef34/src/structs/handlers/CommandHandler.ts#L24)
 
 ## Methods
 
@@ -161,7 +161,7 @@ The initialized module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:77](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L77)
+[src/structs/handlers/Handler.ts:77](https://github.com/Norviah/bot/blob/520ef34/src/structs/handlers/Handler.ts#L77)
 
 ___
 
@@ -196,7 +196,7 @@ Whether if the object is a valid module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:163](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L163)
+[src/structs/handlers/Handler.ts:163](https://github.com/Norviah/bot/blob/520ef34/src/structs/handlers/Handler.ts#L163)
 
 ___
 
@@ -227,7 +227,7 @@ The registered module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:131](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L131)
+[src/structs/handlers/Handler.ts:131](https://github.com/Norviah/bot/blob/520ef34/src/structs/handlers/Handler.ts#L131)
 
 ___
 
@@ -257,4 +257,4 @@ collection of modules.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:101](https://github.com/Norviah/bot/blob/fefba0e/src/structs/handlers/Handler.ts#L101)
+[src/structs/handlers/Handler.ts:101](https://github.com/Norviah/bot/blob/520ef34/src/structs/handlers/Handler.ts#L101)

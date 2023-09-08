@@ -1,4 +1,4 @@
-[Bot](../README.md) / [Modules](../modules.md) / structs/ClientError
+[Bot](../README.md) / structs/ClientError
 
 # Module: structs/ClientError
 
@@ -35,4 +35,4 @@
 
 #### Defined in
 
-[src/structs/ClientError.ts:38](https://github.com/Norviah/bot/blob/fefba0e/src/structs/ClientError.ts#L38)
+[src/structs/ClientError.ts:38](https://github.com/Norviah/bot/blob/520ef34/src/structs/ClientError.ts#L38)
