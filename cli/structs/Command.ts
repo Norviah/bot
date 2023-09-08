@@ -1,3 +1,4 @@
+import { Client } from '@/structs/Client';
 import { Logger } from '@/structs/Logger';
 import { Command as BaseCommand } from '@oclif/core';
 
@@ -19,6 +20,19 @@ export abstract class Command<T extends typeof BaseCommand> extends BaseCommand 
    * Parsed arguments from the command-line.
    */
   public args!: Args<T>;
+
+  /**
+   * The Discord client.
+   *
+   * As the command-line interface is used to help manage aspects of the bot,
+   * we'll have the commands access to the client, which will allow us to
+   * interact with the Discord API.
+   *
+   * We aren't necessarily using intents here, as we don't need to listen to
+   * events, we just need to be able to login and access the various api
+   * managers.
+   */
+  public client: Client<true> = new Client<true>({ intents: [] });
 
   /**
    * The logging system.
@@ -56,6 +70,10 @@ export abstract class Command<T extends typeof BaseCommand> extends BaseCommand 
 
     this.flags = flags as Flags<T>;
     this.args = args as Args<T>;
+
+    // Next, we'll want to ensure the client is logged and and ready before we
+    // do anything else, as we'll need to access to the client's various apis.
+    await this.client.start();
   }
 
   /**

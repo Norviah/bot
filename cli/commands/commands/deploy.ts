@@ -1,4 +1,3 @@
-import { Client } from '@/structs/Client';
 import { Command } from '@cli/structs/Command';
 import { Flags } from '@oclif/core';
 
@@ -37,15 +36,6 @@ export default class Deploy extends Command<typeof Deploy> {
   ⠀  1. Deploy all commands to Discord,
   ⠀  2. Save deployed commands to the database,
   ⠀  3. Delete all commands that no longer exist.`;
-
-  /**
-   * The Discord client.
-   *
-   * When working with the client within the command-line interface, we don't
-   * necessarily need intentions, as all we need is to be able to login and
-   * access the various api managers.
-   */
-  public client: Client = new Client({ intents: [] });
 
   /**
    * Examples for the command.
@@ -239,7 +229,7 @@ export default class Deploy extends Command<typeof Deploy> {
     // Here we'll attempt to deploy the command to Discord's API. If the command
     // was deployed successfully, then Discord will respond with information
     // regarding the command.
-    const response = await this.client.application!.commands.create(payload, guild!);
+    const response = await this.client.application.commands.create(payload, guild!);
 
     const where: string = guild ? `to guild \`${guild}\`` : 'globally';
 
@@ -275,7 +265,7 @@ export default class Deploy extends Command<typeof Deploy> {
     // deleting the command from Discord, we're ensured that the command still
     // exists within the database.
     for (const guildCommand of command.guilds) {
-      await this.client.application!.commands.delete(guildCommand.id, guildCommand.guildId).catch(this.deleteErrorHandler);
+      await this.client.application.commands.delete(guildCommand.id, guildCommand.guildId).catch(this.deleteErrorHandler);
 
       await prisma.guildCommand.delete({
         where: { id: guildCommand.id },
@@ -286,7 +276,7 @@ export default class Deploy extends Command<typeof Deploy> {
     // delete the global instance for the command. Commands may not be deployed
     // globally, so we'll first want to ensure this.
     if (command.id) {
-      await this.client.application!.commands.delete(command.id).catch(this.deleteErrorHandler);
+      await this.client.application.commands.delete(command.id).catch(this.deleteErrorHandler);
     }
 
     // Finally, we'll delete the command from the database.
@@ -330,11 +320,6 @@ export default class Deploy extends Command<typeof Deploy> {
    *      delete them from the database and Discord.
    */
   public async run(): Promise<void> {
-    // Before we do anything, we'll need to login to Discord, as this will
-    // ensure the `application` property is set, which is the manager we'll use
-    // to work with the client's application command.
-    await this.client.start();
-
     // A container for the payload response from Discord after deploying a
     // command. The response sent is important as we'll use this information to
     // compare against the database to delete any removed commands.
