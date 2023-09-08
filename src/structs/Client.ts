@@ -9,7 +9,7 @@ import type { Config } from '@/schemas';
 import type { ClientOptions } from 'discord.js';
 import type { ReadonlyDeep } from 'type-fest';
 
-export class Client extends BaseClient {
+export class Client<Ready extends boolean = boolean> extends BaseClient<Ready> {
   /**
    * The client's configuration object.
    *
