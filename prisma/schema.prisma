@@ -6,3 +6,68 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+///
+/// Represents a guild.
+model Guild {
+  /// The id of the guild.
+  id String @unique @id
+
+  /// References all commands that were specifically deployed to this guild.
+  commands GuildCommand[]
+}
+
+///
+/// Represents a deployed command.
+///
+/// When a command is deployed to Discord, Discord has no method of knowing if a
+/// deployed command has been removed from local files, which can result in
+/// inconsistent data between the database and Discord's API.
+///
+/// In order to prevent this, we'll store information regarding deployed
+/// commands within this model, allowing us to keep Discord in sync with 
+/// whatever commands we have in our local files.
+///
+/// Commands may be deployed to two different scopes: globally or within a 
+/// specific guild. This model acts as a parent to both of these scopes, with
+/// it having a reference to `GuildCommand` models for the same command.
+model Command {
+  /// The name of the command.
+  ///
+  /// As commands may not be deployed globally, we can't use its id as the
+  // primary key for this model.
+  name String @unique @id
+
+  /// The id of the command.
+  ///
+  /// Note that this property ***only*** references the command's ***global***
+  /// id.
+  id String? @unique
+
+  /// References all guilds that have this command deployed.
+  ///
+  /// Each element within this array represents an instance of the deployed 
+  /// command to a specific guild.
+  guilds GuildCommand[]
+}
+
+///
+/// Represents a command that has been deployed to a guild.
+///
+/// This model is used to keep track of commands that have been deployed to a
+/// specific guild.
+model GuildCommand {
+  /// The id of the command.
+  ///
+  /// Note that this property references the command's id for the guild it's
+  /// deployed in.
+  id String @id
+
+  /// The name of the command.
+  name String
+  command Command @relation(fields: [name], references: [name])
+
+  /// The id of the guild the command is deployed in.
+  guildId String
+  guild Guild @relation(fields: [guildId], references: [id])
+}
