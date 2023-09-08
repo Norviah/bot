@@ -2,6 +2,10 @@
 
 ### Build System
 
+- **typedoc**: delete the output directory before writing output <code>[520ef34](https://github.com/Norviah/bot/commit/520ef345bfe63679587020075131b64c85c9b244)</code>
+
+- **typedoc**: have the start page be the documentation <code>[867d656](https://github.com/Norviah/bot/commit/867d6562e563e7473ac5ad9f3e074145aedb641f)</code>
+
 - **typedoc**: include types when generating documentation <code>[8ddfa0b](https://github.com/Norviah/bot/commit/8ddfa0b5b1bd821c9c87a6c8f3954d84d6221719)</code>
 
 ### Refactor
