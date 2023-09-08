@@ -11,11 +11,8 @@ import type { BaseApplicationCommandData, LocalizationMap, PermissionFlags, Snow
  *
  * Commands are an essential part of a Discord application, they allow users to
  * interact with the application in variety of ways. Through commands, the
- * applicatoin can receive input from users and execute actions based on that
+ * application can receive input from users and execute actions based on that
  * input.
- *
- * In a Discord application, there are three types of commands: slash commands,
- * user context menu commands, and message context menu commands.
  *
  * In a Discord application, there are three types of commands:
  *
