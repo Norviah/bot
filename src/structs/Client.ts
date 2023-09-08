@@ -41,7 +41,7 @@ export class Client extends BaseClient {
    */
   public async start(): Promise<void> {
     try {
-      this.login(this.config.token);
+      await this.login(this.config.token);
     } catch (error) {
       if (error instanceof Error) {
         logger.exit(error.stack ? error.stack : error.message, { title: 'bubbled error', subDir: 'errors/bubbles' });
