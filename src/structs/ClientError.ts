@@ -33,6 +33,21 @@ export enum ErrorCodes {
    * initializing the listener handler.
    */
   UNKNOWN_EMITTER = 'UNKNOWN_EMITTER',
+
+  /**
+   * The event where a JSON file was not found.
+   */
+  MISSING_JSON_FILE = 'MISSING_JSON_FILE',
+
+  /**
+   * The event where a non-JSON file was provided.
+   */
+  NON_JSON_FILE = 'NON_JSON_FILE',
+
+  /**
+   * The event where an invalid JSON file was provided.
+   */
+  INVALID_JSON = 'INVALID_JSON',
 }
 
 export const MessageGenerator = {
@@ -88,6 +103,36 @@ export const MessageGenerator = {
    */
   UNKNOWN_EMITTER: ({ emitter, listener }: { emitter: string; listener: string }): string => {
     return `the emitter \`${emitter}\` referenced by the listener \`${listener}\` wasn't provided`;
+  },
+
+  /**
+   * Generates the error message for the `MISSING_JSON_FILE` error code.
+   *
+   * @param path The path to the JSON file.
+   * @returns The generated error message.
+   */
+  MISSING_JSON_FILE: (path: string): string => {
+    return `the JSON file at \`${path}\` does not exist`;
+  },
+
+  /**
+   * Generates the error message for the `NON_JSON_FILE` error code.
+   *
+   * @param path The path to the JSON file.
+   * @returns The generated error message.
+   */
+  NON_JSON_FILE: (path: string): string => {
+    return `the path \`${path}\` is not a JSON file`;
+  },
+
+  /**
+   * Generates the error message for the `INVALID_JSON` error code.
+   *
+   * @param path The path to the JSON file.
+   * @returns The generated error message.
+   */
+  INVALID_JSON: (path: string): string => {
+    return `the JSON file at \`${path}\` is invalid`;
   },
 };
 

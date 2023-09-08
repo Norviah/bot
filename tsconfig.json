@@ -13,13 +13,11 @@
     "baseUrl": ".",
     "paths": {
       "@cli/*": ["cli/*"],
-      "@/*": ["src/*"],
-      "@config": ["config.ts"]
+      "@/*": ["src/*"]
     }
   },
   "include": [
     "src/**/*",
-    "cli/**/*",
-    "config.ts"
+    "cli/**/*"
   ]
 }

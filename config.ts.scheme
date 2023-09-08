@@ -1,9 +1,0 @@
-import type { Config } from '@/schemas/config';
-import type { ReadonlyDeep } from 'type-fest';
-
-export const config: ReadonlyDeep<Config> = {
-  token: 'string',
-  devServer: 'snowflake',
-  debug: false,
-};
-

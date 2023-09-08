@@ -7,6 +7,11 @@ import { join } from 'path';
 export const ROOT: string = path;
 
 /**
+ * The absolute path for the config file.
+ */
+export const CONFIG: string = join(ROOT, 'config.json');
+
+/**
  * The absolute path for logs.
  */
 export const LOGS: string = join(ROOT, 'logs');
