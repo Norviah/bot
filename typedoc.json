@@ -6,6 +6,7 @@
     "typedoc-plugin-markdown"
   ],
   "entryPoints": [
-    "./src/structs/**/*.ts"
+    "./src/structs/**/*.ts",
+    "./src/types/**/*.ts"
   ]
 }
