@@ -1,4 +1,6 @@
 import { ClientError, ErrorCodes } from '@/structs/ClientError';
+import { ModuleUtil } from '@/structs/ModuleUtil';
+
 import { logger } from '@/util/logger';
 
 import type { Handler } from '@/structs/handlers/Handler';
@@ -42,6 +44,14 @@ export abstract class Module {
    * @see https://github.com/norviah/logger
    */
   public readonly logger: Logger = logger;
+
+  /**
+   * A collection of helpful methods for the module.
+   *
+   * This property references a collection of helpful methods that can be used
+   * by the module.
+   */
+  public readonly util: ModuleUtil = new ModuleUtil(this);
 
   /**
    * A reference to the handler that manages this module.
