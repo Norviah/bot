@@ -41,6 +41,11 @@
       "commands": {
         "description": "Commands for working with commands."
       }
+    },
+    "hooks": {
+      "postrun": [
+        "./cli/hooks/postrun"
+      ]
     }
   },
   "devDependencies": {
