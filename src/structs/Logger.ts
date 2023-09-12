@@ -1,7 +1,9 @@
-import { config } from '@/util/config';
 import { Logger as BaseLogger } from '@norviah/logger';
 
-import type { LoggingOptions, Options as LoggerOptions } from '@norviah/logger';
+import { config } from '@/util/config';
+import { join } from 'path';
+
+import type { Options as LoggerOptions, LoggingOptions } from '@norviah/logger';
 
 import * as paths from '@/util/paths';
 
@@ -22,7 +24,7 @@ export class Logger extends BaseLogger {
    * @param options Options for the log.
    */
   public error(content: string | string[], options?: Partial<LoggingOptions>): void {
-    super.error(content, { subDir: 'errors', ...options });
+    super.error(content, { ...options, subDir: options?.subDir ? join('errors', options.subDir) : 'errors' });
   }
 
   /**
