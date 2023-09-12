@@ -64,7 +64,7 @@ Error.constructor
 
 #### Defined in
 
-[src/structs/ClientError.ts:166](https://github.com/Norviah/bot/blob/3146ef8/src/structs/ClientError.ts#L166)
+[src/structs/ClientError.ts:166](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L166)
 
 ## Properties
 
@@ -82,7 +82,7 @@ the arguments passed to the message generator.
 
 #### Defined in
 
-[src/structs/ClientError.ts:157](https://github.com/Norviah/bot/blob/3146ef8/src/structs/ClientError.ts#L157)
+[src/structs/ClientError.ts:157](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L157)
 
 ___
 
@@ -97,7 +97,7 @@ which can be used to handle the error in a specific error if desired.
 
 #### Defined in
 
-[src/structs/ClientError.ts:146](https://github.com/Norviah/bot/blob/3146ef8/src/structs/ClientError.ts#L146)
+[src/structs/ClientError.ts:146](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L146)
 
 ___
 
@@ -241,7 +241,7 @@ try {
 
 #### Defined in
 
-[src/structs/ClientError.ts:202](https://github.com/Norviah/bot/blob/3146ef8/src/structs/ClientError.ts#L202)
+[src/structs/ClientError.ts:202](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L202)
 
 ___
 

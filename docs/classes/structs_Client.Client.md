@@ -115,7 +115,7 @@ BaseClient&lt;Ready\&gt;.constructor
 
 #### Defined in
 
-[src/structs/Client.ts:41](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Client.ts#L41)
+[src/structs/Client.ts:41](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Client.ts#L41)
 
 ## Properties
 
@@ -158,7 +158,7 @@ notably the token that is used to log in to Discord.
 
 #### Defined in
 
-[src/structs/Client.ts:19](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Client.ts#L19)
+[src/structs/Client.ts:19](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Client.ts#L19)
 
 ___
 
@@ -187,7 +187,7 @@ the client for various purposes.
 
 #### Defined in
 
-[src/structs/Client.ts:27](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Client.ts#L27)
+[src/structs/Client.ts:27](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Client.ts#L27)
 
 ___
 
@@ -1536,7 +1536,7 @@ Starts the client.
 
 #### Defined in
 
-[src/structs/Client.ts:48](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Client.ts#L48)
+[src/structs/Client.ts:48](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Client.ts#L48)
 
 ___
 

@@ -39,6 +39,7 @@ https://nodejs.org/api/events.html#events_class_eventemitter
 - [handler](structs_Listener.Listener.md#handler)
 - [logger](structs_Listener.Listener.md#logger)
 - [type](structs_Listener.Listener.md#type)
+- [util](structs_Listener.Listener.md#util)
 
 ### Accessors
 
@@ -69,7 +70,7 @@ Initializes a new `Module` instance.
 
 #### Defined in
 
-[src/structs/Module.ts:59](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L59)
+[src/structs/Module.ts:69](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Module.ts#L69)
 
 ## Properties
 
@@ -93,7 +94,7 @@ purpose, such as administration commands or music commands.
 
 #### Defined in
 
-[src/structs/Module.ts:34](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L34)
+[src/structs/Module.ts:36](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Module.ts#L36)
 
 ___
 
@@ -130,7 +131,7 @@ client is assigned to within the object.
 
 #### Defined in
 
-[src/structs/Listener.ts:45](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Listener.ts#L45)
+[src/structs/Listener.ts:45](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Listener.ts#L45)
 
 ___
 
@@ -145,7 +146,7 @@ and will be used to bind the listener to the event emitter.
 
 #### Defined in
 
-[src/structs/Listener.ts:53](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Listener.ts#L53)
+[src/structs/Listener.ts:53](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Listener.ts#L53)
 
 ___
 
@@ -164,7 +165,7 @@ module to access the Discord client and other modules within the handler.
 
 #### Defined in
 
-[src/structs/Module.ts:52](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L52)
+[src/structs/Module.ts:62](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Module.ts#L62)
 
 ___
 
@@ -187,7 +188,7 @@ https://github.com/norviah/logger
 
 #### Defined in
 
-[src/structs/Module.ts:44](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L44)
+[src/structs/Module.ts:46](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Module.ts#L46)
 
 ___
 
@@ -211,7 +212,26 @@ https://nodejs.org/api/events.html#handling-events-only-once
 
 #### Defined in
 
-[src/structs/Listener.ts:82](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Listener.ts#L82)
+[src/structs/Listener.ts:82](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Listener.ts#L82)
+
+___
+
+### util
+
+• `Readonly` **util**: [`ModuleUtil`](structs_ModuleUtil.ModuleUtil.md)
+
+A collection of helpful methods for the module.
+
+This property references a collection of helpful methods that can be used
+by the module.
+
+#### Inherited from
+
+[Module](structs_Module.Module.md).[util](structs_Module.Module.md#util)
+
+#### Defined in
+
+[src/structs/Module.ts:54](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Module.ts#L54)
 
 ## Accessors
 
@@ -238,7 +258,7 @@ Module.name
 
 #### Defined in
 
-[src/structs/Listener.ts:65](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Listener.ts#L65)
+[src/structs/Listener.ts:65](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Listener.ts#L65)
 
 ## Methods
 
@@ -263,7 +283,7 @@ parameters that the event also passes.
 
 #### Defined in
 
-[src/structs/Listener.ts:92](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Listener.ts#L92)
+[src/structs/Listener.ts:92](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Listener.ts#L92)
 
 ___
 
@@ -288,4 +308,4 @@ further initialize the module once imported.
 
 #### Defined in
 
-[src/structs/Module.ts:75](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Module.ts#L75)
+[src/structs/Module.ts:85](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Module.ts#L85)

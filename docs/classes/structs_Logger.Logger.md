@@ -54,7 +54,7 @@ BaseLogger.constructor
 
 #### Defined in
 
-[src/structs/Logger.ts:14](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Logger.ts#L14)
+[src/structs/Logger.ts:14](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Logger.ts#L14)
 
 ## Properties
 
@@ -98,7 +98,7 @@ can be useful for debugging purposes.
 
 #### Defined in
 
-[src/structs/Logger.ts:37](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Logger.ts#L37)
+[src/structs/Logger.ts:37](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Logger.ts#L37)
 
 ___
 
@@ -125,7 +125,7 @@ BaseLogger.error
 
 #### Defined in
 
-[src/structs/Logger.ts:24](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Logger.ts#L24)
+[src/structs/Logger.ts:24](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Logger.ts#L24)
 
 ___
 
@@ -148,7 +148,7 @@ A utility method for logging an `error` event and exiting the process.
 
 #### Defined in
 
-[src/structs/Logger.ts:49](https://github.com/Norviah/bot/blob/3146ef8/src/structs/Logger.ts#L49)
+[src/structs/Logger.ts:49](https://github.com/Norviah/bot/blob/a024a5d/src/structs/Logger.ts#L49)
 
 ___
 
