@@ -1,15 +1,5 @@
 ## Unreleased
 
-### Refactor
-
-- move the config file to a json file <code>[5967fa1](https://github.com/Norviah/bot/commit/5967fa1ed473cf88642a312c2973aa8e904b2bf2)</code>
-
-- move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
-
-- **cli/structs**: move the `client` property to the base command class <code>[d0af849](https://github.com/Norviah/bot/commit/d0af849f439aa6970e485b0f156b9459820221b4)</code>
-
-- **structs/Client**: expose the `Ready` generic argument <code>[4a5c2c2](https://github.com/Norviah/bot/commit/4a5c2c23abfeb7b997cfa378982b67eea7bfd048)</code>
-
 ### Features
 
 - implement a cli to help manage aspects of the client <code>[b7b76fe](https://github.com/Norviah/bot/commit/b7b76fe2ce89f87ad52dc1cc7939470d9c7f0e17)</code>
@@ -24,6 +14,8 @@
 
 - implement a custom error class <code>[82d8d5f](https://github.com/Norviah/bot/commit/82d8d5f47694773987e3c758c37e72b906a1f009)</code>
 
+- **cli**: ensure the client is logged out after executing a command <code>[5d37387](https://github.com/Norviah/bot/commit/5d37387ce86f19d5cd88c4732561c8988d507d36)</code>
+
 - **prisma**: define initial schema <code>[aebb243](https://github.com/Norviah/bot/commit/aebb2431601ccbb175b82e2d6d30546ac7c63e9f)</code>
 
 - **structs**: implement a structure to provide methods for reading system files <code>[b764a55](https://github.com/Norviah/bot/commit/b764a55892f1752266017bba5ea1ab0a452bb772)</code>
@@ -33,6 +25,18 @@
 - **structs**: implement a default title when logging for debugging purposes <code>[1f225fb](https://github.com/Norviah/bot/commit/1f225fb6db1d17a8228df0d149e60cd5a9558244)</code>
 
 - **structs**: implement a method in `Logger` for debugging purposes <code>[aa4d3e4](https://github.com/Norviah/bot/commit/aa4d3e4bf51fbe4b7566411e56bf0e16e23364ba)</code>
+
+### Refactor
+
+- move the config file to a json file <code>[5967fa1](https://github.com/Norviah/bot/commit/5967fa1ed473cf88642a312c2973aa8e904b2bf2)</code>
+
+- move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
+
+- **cli**: set the client reference as an export <code>[513a15b](https://github.com/Norviah/bot/commit/513a15b0e3148e5ca428c27cc1b1efaba89d398c)</code>
+
+- **cli/structs**: move the `client` property to the base command class <code>[d0af849](https://github.com/Norviah/bot/commit/d0af849f439aa6970e485b0f156b9459820221b4)</code>
+
+- **structs/Client**: expose the `Ready` generic argument <code>[4a5c2c2](https://github.com/Norviah/bot/commit/4a5c2c23abfeb7b997cfa378982b67eea7bfd048)</code>
 
 ### Build System
 
