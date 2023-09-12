@@ -151,7 +151,7 @@ export abstract class BaseCommand<T extends ApplicationCommandType> extends Modu
     const content: string = 'An error occurred while running the command, please try again in a bit.';
 
     if (interaction.replied) {
-      await interaction.followUp(content);
+      await interaction.followUp({ content, ephemeral: true });
     } else {
       await interaction[interaction.deferred ? 'editReply' : 'reply']({ content, ephemeral: true });
     }
