@@ -148,12 +148,12 @@ export abstract class BaseCommand<T extends ApplicationCommandType> extends Modu
    * @param error The error that was thrown.
    */
   public async onError(interaction: CommandInteraction, error: Error): Promise<void> {
-    const message: string = 'An error occurred while running the command, please try again in a bit.';
+    const content: string = 'An error occurred while running the command, please try again in a bit.';
 
     if (interaction.replied) {
-      await interaction.followUp(message);
+      await interaction.followUp(content);
     } else {
-      await interaction[interaction.deferred ? 'editReply' : 'reply'](message);
+      await interaction[interaction.deferred ? 'editReply' : 'reply']({ content, ephemeral: true });
     }
   }
 
