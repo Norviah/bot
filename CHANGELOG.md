@@ -2,6 +2,8 @@
 
 ### Features
 
+- implement the client's command handler <code>[6f6efba](https://github.com/Norviah/bot/commit/6f6efba23e62e4fa0794c90b2f77d4960f70fa55)</code>
+
 - implement a structure to contain useful methods for modules <code>[a024a5d](https://github.com/Norviah/bot/commit/a024a5dc59fa24e9a802dc6c67dc889f6720c574)</code>
 
 - implement a cli to help manage aspects of the client <code>[b7b76fe](https://github.com/Norviah/bot/commit/b7b76fe2ce89f87ad52dc1cc7939470d9c7f0e17)</code>
@@ -43,6 +45,10 @@
 	Removing the client reference from modules fixes this issue.
 
 - **structs**: correctly type options for the logger class <code>[0bc8656](https://github.com/Norviah/bot/commit/0bc865668618d2d92d619e64a9fc3d9cd67e22df)</code>
+
+- **structs/BaseCommand**: ensure all messages sent when an error occurs is an ephemeral message <code>[8327ed9](https://github.com/Norviah/bot/commit/8327ed9b9b265ae96256501844da8564b73c90bc)</code>
+
+- **structs/BaseCommand**: ensure the response when an error occurs is ephemeral <code>[6d6be26](https://github.com/Norviah/bot/commit/6d6be26a5942cac932bd8f85cb8e3fb47f6811e9)</code>
 
 - **structs/Client**: ensure the client logs in before returning in `Client.start` <code>[25e3bda](https://github.com/Norviah/bot/commit/25e3bda329524877b9b09053952d1e9babe24299)</code>
 
