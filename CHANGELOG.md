@@ -2,6 +2,8 @@
 
 ### Features
 
+- implement a structure to contain useful methods for modules <code>[a024a5d](https://github.com/Norviah/bot/commit/a024a5dc59fa24e9a802dc6c67dc889f6720c574)</code>
+
 - implement a cli to help manage aspects of the client <code>[b7b76fe](https://github.com/Norviah/bot/commit/b7b76fe2ce89f87ad52dc1cc7939470d9c7f0e17)</code>
 
 - implement the base structure for commands <code>[02978e8](https://github.com/Norviah/bot/commit/02978e893b874897d1030b697905dbc4d46ad54a)</code>
@@ -26,6 +28,26 @@
 
 - **structs**: implement a method in `Logger` for debugging purposes <code>[aa4d3e4](https://github.com/Norviah/bot/commit/aa4d3e4bf51fbe4b7566411e56bf0e16e23364ba)</code>
 
+- **structs/ModuleUtil**: implement a method to determine who sent an interaction <code>[8294586](https://github.com/Norviah/bot/commit/8294586180c343cb6ffe5095ae6a323ab2ad6a25)</code>
+
+- **structs/ModuleUtil**: implement a method to join strings separated by a word <code>[f337663](https://github.com/Norviah/bot/commit/f337663d8fb5ceb4faf690cd2a46cb9418b69c3a)</code>
+
+### Bug Fixes
+
+- **structs**: remove the prisma reference from modules <code>[fcfedfb](https://github.com/Norviah/bot/commit/fcfedfb8df0c2d974b31ca6d0e6149dc4e12afae)</code>
+
+	For some reason, when printing the Prisma client to console, the
+	terminal hangs indefinitely. As all modules have a reference to the
+	Prisma client, the terminal hangs when printing any module.
+	
+	Removing the client reference from modules fixes this issue.
+
+- **structs**: correctly type options for the logger class <code>[0bc8656](https://github.com/Norviah/bot/commit/0bc865668618d2d92d619e64a9fc3d9cd67e22df)</code>
+
+- **structs/Client**: ensure the client logs in before returning in `Client.start` <code>[25e3bda](https://github.com/Norviah/bot/commit/25e3bda329524877b9b09053952d1e9babe24299)</code>
+
+- **structs/Logger**: ensure that errors are saved in the `errors` root directory <code>[f8bd85a](https://github.com/Norviah/bot/commit/f8bd85adc327fc7e67a123d5c0e74e249dc68d00)</code>
+
 ### Refactor
 
 - move the config file to a json file <code>[5967fa1](https://github.com/Norviah/bot/commit/5967fa1ed473cf88642a312c2973aa8e904b2bf2)</code>
@@ -49,20 +71,6 @@
 ### types
 
 - **ts**: implement a type to construct a type where all properties are explicitly required <code>[013a352](https://github.com/Norviah/bot/commit/013a3520cecc7b9a33710077e75ade7eb2c3bde7)</code>
-
-### Bug Fixes
-
-- **structs**: remove the prisma reference from modules <code>[fcfedfb](https://github.com/Norviah/bot/commit/fcfedfb8df0c2d974b31ca6d0e6149dc4e12afae)</code>
-
-	For some reason, when printing the Prisma client to console, the
-	terminal hangs indefinitely. As all modules have a reference to the
-	Prisma client, the terminal hangs when printing any module.
-	
-	Removing the client reference from modules fixes this issue.
-
-- **structs**: correctly type options for the logger class <code>[0bc8656](https://github.com/Norviah/bot/commit/0bc865668618d2d92d619e64a9fc3d9cd67e22df)</code>
-
-- **structs/Client**: ensure the client logs in before returning in `Client.start` <code>[25e3bda](https://github.com/Norviah/bot/commit/25e3bda329524877b9b09053952d1e9babe24299)</code>
 
 ## v0.1.0 (2023-08-31)
 
