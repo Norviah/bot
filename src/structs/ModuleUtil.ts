@@ -19,6 +19,16 @@ export class ModuleUtil {
   }
 
   /**
+   * Generates a string representing who sent the provided interaction.
+   *
+   * @param interaction The interaction to look at.
+   * @returns A string representing who sent the interaction.
+   */
+  public who(interaction: Interaction): string {
+    return `${interaction.user.tag} [${interaction.user.id}]`;
+  }
+
+  /**
    * Generates a string representing where the provided interaction was sent.
    *
    * Command interactions can occur either within a guild or the client's DMs,
