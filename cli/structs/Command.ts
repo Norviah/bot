@@ -1,16 +1,18 @@
-import { Client } from '@/structs/Client';
 import { Logger } from '@/structs/Logger';
 import { Command as BaseCommand } from '@oclif/core';
 
+import { client } from '@cli/util/client';
 import { join } from 'path';
 
 import * as paths from '@/util/paths';
 
 import type { Config as CommandConfig, Interfaces } from '@oclif/core';
+import type { Client } from '@/structs/Client';
+
 export type Flags<T extends typeof BaseCommand> = Interfaces.InferredFlags<(typeof Command)['baseFlags'] & T['flags']>;
 export type Args<T extends typeof BaseCommand> = Interfaces.InferredArgs<T['args']>;
 
-export abstract class Command<T extends typeof BaseCommand> extends BaseCommand {
+export abstract class Command<T extends typeof BaseCommand, ClientApplication extends boolean = false> extends BaseCommand {
   /**
    * Parsed flags from the command-line.
    */
@@ -22,19 +24,6 @@ export abstract class Command<T extends typeof BaseCommand> extends BaseCommand 
   public args!: Args<T>;
 
   /**
-   * The Discord client.
-   *
-   * As the command-line interface is used to help manage aspects of the bot,
-   * we'll have the commands access to the client, which will allow us to
-   * interact with the Discord API.
-   *
-   * We aren't necessarily using intents here, as we don't need to listen to
-   * events, we just need to be able to login and access the various api
-   * managers.
-   */
-  public client: Client<true> = new Client<true>({ intents: [] });
-
-  /**
    * The logging system.
    *
    * This logging system allows for logging to the console and to files,
@@ -43,6 +32,24 @@ export abstract class Command<T extends typeof BaseCommand> extends BaseCommand 
    * @see https://github.com/norviah/logger#readme
    */
   public logger: Logger = new Logger({ dir: join(paths.LOGS, 'cli') });
+
+  /**
+   * Whether if the command requires the client to be logged in.
+   */
+  public abstract requiresClient: ClientApplication;
+
+  /**
+   * The Discord client.
+   *
+   * This property holds a reference to the Discord client, which is used to
+   * interact with the Discord API.
+   *
+   * Depending on the value of `requiresClient`, if true, the client will be
+   * ensured to be logged in and ready before the command is executed.
+   */
+  public get client(): Client<ClientApplication> {
+    return client as Client<boolean>;
+  }
 
   /**
    * Initializes a new `Command` instance.
@@ -71,9 +78,11 @@ export abstract class Command<T extends typeof BaseCommand> extends BaseCommand 
     this.flags = flags as Flags<T>;
     this.args = args as Args<T>;
 
-    // Next, we'll want to ensure the client is logged and and ready before we
-    // do anything else, as we'll need to access to the client's various apis.
-    await this.client.start();
+    // Finally, after the comamnd's properties have been initialized, we'll want
+    // to ensure that the client is logged in, only if the command requires it.
+    if (this.requiresClient) {
+      await client.start();
+    }
   }
 
   /**

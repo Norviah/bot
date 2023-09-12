@@ -7,7 +7,7 @@ import { prisma } from '@/util/prisma';
 import type { Command as CommandModel, GuildCommand as GuildCommandModel } from '@prisma/client';
 import type { ApplicationCommand, ApplicationCommandData as PayloadData } from 'discord.js';
 
-export default class Deploy extends Command<typeof Deploy> {
+export default class Deploy extends Command<typeof Deploy, true> {
   /**
    * The command's summary.
    *
@@ -58,6 +58,11 @@ export default class Deploy extends Command<typeof Deploy> {
      */
     development: Flags.boolean({ description: 'Whether if commands should be deployed only to the development server.', default: false, char: 'd' }),
   };
+
+  /**
+   * Whether if the command requires the client to be logged in.
+   */
+  public requiresClient = true as const;
 
   /**
    * Generates the payload used to deploy commands to Discord.
@@ -362,8 +367,5 @@ export default class Deploy extends Command<typeof Deploy> {
     for (const command of deleted) {
       await this.delete(command);
     }
-
-    // Onde we're finished, we can close the client.
-    await this.client.destroy();
   }
 }
