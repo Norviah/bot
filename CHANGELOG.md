@@ -1,5 +1,32 @@
 ## Unreleased
 
+### Bug Fixes
+
+- **structs**: remove the prisma reference from modules <code>[fcfedfb](https://github.com/Norviah/bot/commit/fcfedfb8df0c2d974b31ca6d0e6149dc4e12afae)</code>
+
+	For some reason, when printing the Prisma client to console, the
+	terminal hangs indefinitely. As all modules have a reference to the
+	Prisma client, the terminal hangs when printing any module.
+	
+	Removing the client reference from modules fixes this issue.
+
+- **structs**: correctly type options for the logger class <code>[0bc8656](https://github.com/Norviah/bot/commit/0bc865668618d2d92d619e64a9fc3d9cd67e22df)</code>
+
+- **structs/BaseCommand**: ensure default permissions for commands are everyone by passing `null` than `undefined` <code>[daec95e](https://github.com/Norviah/bot/commit/daec95ec4f4449e7153b7468b8ec96a9a158f9ff)</code>
+
+	When generating a payload for a command, if no default permissions are
+	set, `undefined` will instead set the default permissions to
+	`Administrator`. By instead passing \`null\` when a command has no default permissions,
+	Discord then correctly infer default permissions as everyone.
+
+- **structs/BaseCommand**: ensure all messages sent when an error occurs is an ephemeral message <code>[8327ed9](https://github.com/Norviah/bot/commit/8327ed9b9b265ae96256501844da8564b73c90bc)</code>
+
+- **structs/BaseCommand**: ensure the response when an error occurs is ephemeral <code>[6d6be26](https://github.com/Norviah/bot/commit/6d6be26a5942cac932bd8f85cb8e3fb47f6811e9)</code>
+
+- **structs/Client**: ensure the client logs in before returning in `Client.start` <code>[25e3bda](https://github.com/Norviah/bot/commit/25e3bda329524877b9b09053952d1e9babe24299)</code>
+
+- **structs/Logger**: ensure that errors are saved in the `errors` root directory <code>[f8bd85a](https://github.com/Norviah/bot/commit/f8bd85adc327fc7e67a123d5c0e74e249dc68d00)</code>
+
 ### Features
 
 - implement the client's command handler <code>[6f6efba](https://github.com/Norviah/bot/commit/6f6efba23e62e4fa0794c90b2f77d4960f70fa55)</code>
@@ -33,26 +60,6 @@
 - **structs/ModuleUtil**: implement a method to determine who sent an interaction <code>[8294586](https://github.com/Norviah/bot/commit/8294586180c343cb6ffe5095ae6a323ab2ad6a25)</code>
 
 - **structs/ModuleUtil**: implement a method to join strings separated by a word <code>[f337663](https://github.com/Norviah/bot/commit/f337663d8fb5ceb4faf690cd2a46cb9418b69c3a)</code>
-
-### Bug Fixes
-
-- **structs**: remove the prisma reference from modules <code>[fcfedfb](https://github.com/Norviah/bot/commit/fcfedfb8df0c2d974b31ca6d0e6149dc4e12afae)</code>
-
-	For some reason, when printing the Prisma client to console, the
-	terminal hangs indefinitely. As all modules have a reference to the
-	Prisma client, the terminal hangs when printing any module.
-	
-	Removing the client reference from modules fixes this issue.
-
-- **structs**: correctly type options for the logger class <code>[0bc8656](https://github.com/Norviah/bot/commit/0bc865668618d2d92d619e64a9fc3d9cd67e22df)</code>
-
-- **structs/BaseCommand**: ensure all messages sent when an error occurs is an ephemeral message <code>[8327ed9](https://github.com/Norviah/bot/commit/8327ed9b9b265ae96256501844da8564b73c90bc)</code>
-
-- **structs/BaseCommand**: ensure the response when an error occurs is ephemeral <code>[6d6be26](https://github.com/Norviah/bot/commit/6d6be26a5942cac932bd8f85cb8e3fb47f6811e9)</code>
-
-- **structs/Client**: ensure the client logs in before returning in `Client.start` <code>[25e3bda](https://github.com/Norviah/bot/commit/25e3bda329524877b9b09053952d1e9babe24299)</code>
-
-- **structs/Logger**: ensure that errors are saved in the `errors` root directory <code>[f8bd85a](https://github.com/Norviah/bot/commit/f8bd85adc327fc7e67a123d5c0e74e249dc68d00)</code>
 
 ### Refactor
 
