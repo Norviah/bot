@@ -171,7 +171,7 @@ export abstract class BaseCommand<T extends ApplicationCommandType> extends Modu
     const payload: Explicit<BaseApplicationCommandData> = {
       name: this.name,
       nameLocalizations: this.nameLocalizations,
-      defaultMemberPermissions: this.permissions?.length ? new PermissionsBitField(this.permissions) : undefined,
+      defaultMemberPermissions: this.permissions?.length ? new PermissionsBitField(this.permissions) : null,
       dmPermission: this.dm,
       nsfw: this.nsfw,
     };
