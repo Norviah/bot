@@ -29,7 +29,7 @@ already exists within the handler's collection.
 
 #### Defined in
 
-[src/structs/ClientError.ts:23](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L23)
+[src/structs/ClientError.ts:23](https://github.com/Norviah/bot/blob/20927fc/src/structs/ClientError.ts#L23)
 
 ___
 
@@ -41,7 +41,7 @@ The event where a specified directory was not found.
 
 #### Defined in
 
-[src/structs/ClientError.ts:5](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L5)
+[src/structs/ClientError.ts:5](https://github.com/Norviah/bot/blob/20927fc/src/structs/ClientError.ts#L5)
 
 ___
 
@@ -54,7 +54,7 @@ the module's respective type.
 
 #### Defined in
 
-[src/structs/ClientError.ts:17](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L17)
+[src/structs/ClientError.ts:17](https://github.com/Norviah/bot/blob/20927fc/src/structs/ClientError.ts#L17)
 
 ___
 
@@ -66,7 +66,7 @@ The event where an invalid JSON file was provided.
 
 #### Defined in
 
-[src/structs/ClientError.ts:50](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L50)
+[src/structs/ClientError.ts:50](https://github.com/Norviah/bot/blob/20927fc/src/structs/ClientError.ts#L50)
 
 ___
 
@@ -79,7 +79,7 @@ does not export a valid instance of the module.
 
 #### Defined in
 
-[src/structs/ClientError.ts:11](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L11)
+[src/structs/ClientError.ts:11](https://github.com/Norviah/bot/blob/20927fc/src/structs/ClientError.ts#L11)
 
 ___
 
@@ -91,7 +91,7 @@ The event where a JSON file was not found.
 
 #### Defined in
 
-[src/structs/ClientError.ts:40](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L40)
+[src/structs/ClientError.ts:40](https://github.com/Norviah/bot/blob/20927fc/src/structs/ClientError.ts#L40)
 
 ___
 
@@ -103,7 +103,7 @@ The event where a non-JSON file was provided.
 
 #### Defined in
 
-[src/structs/ClientError.ts:45](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L45)
+[src/structs/ClientError.ts:45](https://github.com/Norviah/bot/blob/20927fc/src/structs/ClientError.ts#L45)
 
 ___
 
@@ -116,7 +116,7 @@ file.
 
 #### Defined in
 
-[src/structs/ClientError.ts:29](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L29)
+[src/structs/ClientError.ts:29](https://github.com/Norviah/bot/blob/20927fc/src/structs/ClientError.ts#L29)
 
 ___
 
@@ -129,4 +129,4 @@ initializing the listener handler.
 
 #### Defined in
 
-[src/structs/ClientError.ts:35](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ClientError.ts#L35)
+[src/structs/ClientError.ts:35](https://github.com/Norviah/bot/blob/20927fc/src/structs/ClientError.ts#L35)

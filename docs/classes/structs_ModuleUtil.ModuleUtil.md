@@ -16,7 +16,9 @@
 
 ### Methods
 
+- [join](structs_ModuleUtil.ModuleUtil.md#join)
 - [where](structs_ModuleUtil.ModuleUtil.md#where)
+- [who](structs_ModuleUtil.ModuleUtil.md#who)
 
 ## Constructors
 
@@ -34,7 +36,7 @@ Initializes a new `ModuleUtil` instance.
 
 #### Defined in
 
-[src/structs/ModuleUtil.ts:17](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ModuleUtil.ts#L17)
+[src/structs/ModuleUtil.ts:17](https://github.com/Norviah/bot/blob/20927fc/src/structs/ModuleUtil.ts#L17)
 
 ## Properties
 
@@ -46,9 +48,52 @@ A reference to the module that owns this util.
 
 #### Defined in
 
-[src/structs/ModuleUtil.ts:10](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ModuleUtil.ts#L10)
+[src/structs/ModuleUtil.ts:10](https://github.com/Norviah/bot/blob/20927fc/src/structs/ModuleUtil.ts#L10)
 
 ## Methods
+
+### join
+
+▸ **join**(`array`, `word`): `string`
+
+Converts the provided array into a string, with the last item separated by
+the specified word.
+
+If we want to convert an array to a string, we use the `join` method,
+however, this will join all items in the array with the specified
+separator. It isn't possible to separate the last item with a different
+separator using the built-in `join` method.
+
+This method will convert the array to a string, with the last item
+separated by the specified word to simplify the process of converting an
+array to a string.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `array` | `unknown`[] | The array to convert to a string. |
+| `word` | `string` | The word to separate the last item with. |
+
+#### Returns
+
+`string`
+
+**`Example`**
+
+```ts
+util.join(['a', 'b', 'c'], 'and');
+// => a, b and c
+
+util.join(['a'], 'or');
+// => a
+```
+
+#### Defined in
+
+[src/structs/ModuleUtil.ts:81](https://github.com/Norviah/bot/blob/20927fc/src/structs/ModuleUtil.ts#L81)
+
+___
 
 ### where
 
@@ -64,7 +109,7 @@ was sent.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `interaction` | `Interaction` | The interaction to look at. |
+| `interaction` | `BaseInteraction`<`CacheType`\> | The interaction to look at. |
 
 #### Returns
 
@@ -84,4 +129,28 @@ util.where(interaction);
 
 #### Defined in
 
-[src/structs/ModuleUtil.ts:39](https://github.com/Norviah/bot/blob/a024a5d/src/structs/ModuleUtil.ts#L39)
+[src/structs/ModuleUtil.ts:49](https://github.com/Norviah/bot/blob/20927fc/src/structs/ModuleUtil.ts#L49)
+
+___
+
+### who
+
+▸ **who**(`interaction`): `string`
+
+Generates a string representing who sent the provided interaction.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `interaction` | `BaseInteraction`<`CacheType`\> | The interaction to look at. |
+
+#### Returns
+
+`string`
+
+A string representing who sent the interaction.
+
+#### Defined in
+
+[src/structs/ModuleUtil.ts:27](https://github.com/Norviah/bot/blob/20927fc/src/structs/ModuleUtil.ts#L27)
