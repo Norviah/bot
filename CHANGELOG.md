@@ -1,5 +1,19 @@
 ## Unreleased
 
+### Refactor
+
+- use discord.js' built in type for referring valid command interactions <code>[20927fc](https://github.com/Norviah/bot/commit/20927fccb74fc7b08e4deaa82c0de39625c2f091)</code>
+
+- move the config file to a json file <code>[5967fa1](https://github.com/Norviah/bot/commit/5967fa1ed473cf88642a312c2973aa8e904b2bf2)</code>
+
+- move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
+
+- **cli**: set the client reference as an export <code>[513a15b](https://github.com/Norviah/bot/commit/513a15b0e3148e5ca428c27cc1b1efaba89d398c)</code>
+
+- **cli/structs**: move the `client` property to the base command class <code>[d0af849](https://github.com/Norviah/bot/commit/d0af849f439aa6970e485b0f156b9459820221b4)</code>
+
+- **structs/Client**: expose the `Ready` generic argument <code>[4a5c2c2](https://github.com/Norviah/bot/commit/4a5c2c23abfeb7b997cfa378982b67eea7bfd048)</code>
+
 ### Bug Fixes
 
 - **structs**: remove the prisma reference from modules <code>[fcfedfb](https://github.com/Norviah/bot/commit/fcfedfb8df0c2d974b31ca6d0e6149dc4e12afae)</code>
@@ -60,18 +74,6 @@
 - **structs/ModuleUtil**: implement a method to determine who sent an interaction <code>[8294586](https://github.com/Norviah/bot/commit/8294586180c343cb6ffe5095ae6a323ab2ad6a25)</code>
 
 - **structs/ModuleUtil**: implement a method to join strings separated by a word <code>[f337663](https://github.com/Norviah/bot/commit/f337663d8fb5ceb4faf690cd2a46cb9418b69c3a)</code>
-
-### Refactor
-
-- move the config file to a json file <code>[5967fa1](https://github.com/Norviah/bot/commit/5967fa1ed473cf88642a312c2973aa8e904b2bf2)</code>
-
-- move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
-
-- **cli**: set the client reference as an export <code>[513a15b](https://github.com/Norviah/bot/commit/513a15b0e3148e5ca428c27cc1b1efaba89d398c)</code>
-
-- **cli/structs**: move the `client` property to the base command class <code>[d0af849](https://github.com/Norviah/bot/commit/d0af849f439aa6970e485b0f156b9459820221b4)</code>
-
-- **structs/Client**: expose the `Ready` generic argument <code>[4a5c2c2](https://github.com/Norviah/bot/commit/4a5c2c23abfeb7b997cfa378982b67eea7bfd048)</code>
 
 ### Build System
 
