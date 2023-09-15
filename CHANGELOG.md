@@ -2,90 +2,88 @@
 
 ### Refactor
 
-- use discord.js' built in type for referring valid command interactions <code>[20927fc](https://github.com/Norviah/bot/commit/20927fccb74fc7b08e4deaa82c0de39625c2f091)</code>
+- use discord.js' built in type for referring valid command interactions <code>[0b78497](https://github.com/Norviah/bot/commit/0b78497651ee91c9cec6927b3a6b5b5b5adbc286)</code>
 
-- move the config file to a json file <code>[5967fa1](https://github.com/Norviah/bot/commit/5967fa1ed473cf88642a312c2973aa8e904b2bf2)</code>
+- move the config file to a json file <code>[9da4a9c](https://github.com/Norviah/bot/commit/9da4a9c1d07eb5a64b8a5ae7a5f990c92c235ce3)</code>
 
 - move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
 
-- **cli**: set the client reference as an export <code>[513a15b](https://github.com/Norviah/bot/commit/513a15b0e3148e5ca428c27cc1b1efaba89d398c)</code>
+- **cli**: set the client reference as an export <code>[238befe](https://github.com/Norviah/bot/commit/238befe0116ae78d70540e3423874b48249baa3f)</code>
 
-- **cli/structs**: move the `client` property to the base command class <code>[d0af849](https://github.com/Norviah/bot/commit/d0af849f439aa6970e485b0f156b9459820221b4)</code>
+- **cli/structs**: move the `client` property to the base command class <code>[bcf8d88](https://github.com/Norviah/bot/commit/bcf8d88a210cb26f1fc415c694d5b627f7634006)</code>
 
-- **structs/Client**: expose the `Ready` generic argument <code>[4a5c2c2](https://github.com/Norviah/bot/commit/4a5c2c23abfeb7b997cfa378982b67eea7bfd048)</code>
+- **structs/Client**: expose the `Ready` generic argument <code>[9a8a64e](https://github.com/Norviah/bot/commit/9a8a64e42ae9a704851eded16b943f2d9994b9d5)</code>
+
+- **structs/Logger**: implement a default title when logging for debugging purposes <code>[0cf7f97](https://github.com/Norviah/bot/commit/0cf7f97296e96765ba6e486a8a0584ce8d2b68b7)</code>
 
 ### Bug Fixes
 
-- **structs**: remove the prisma reference from modules <code>[fcfedfb](https://github.com/Norviah/bot/commit/fcfedfb8df0c2d974b31ca6d0e6149dc4e12afae)</code>
-
-	For some reason, when printing the Prisma client to console, the
-	terminal hangs indefinitely. As all modules have a reference to the
-	Prisma client, the terminal hangs when printing any module.
-	
-	Removing the client reference from modules fixes this issue.
-
-- **structs**: correctly type options for the logger class <code>[0bc8656](https://github.com/Norviah/bot/commit/0bc865668618d2d92d619e64a9fc3d9cd67e22df)</code>
-
-- **structs/BaseCommand**: ensure default permissions for commands are everyone by passing `null` than `undefined` <code>[daec95e](https://github.com/Norviah/bot/commit/daec95ec4f4449e7153b7468b8ec96a9a158f9ff)</code>
+- **structs/BaseCommand**: ensure default permissions for commands are everyone by passing `null` than `undefined` <code>[0254409](https://github.com/Norviah/bot/commit/0254409b61a472a9c554d29fa07c5552e51d9df8)</code>
 
 	When generating a payload for a command, if no default permissions are
 	set, `undefined` will instead set the default permissions to
 	`Administrator`. By instead passing \`null\` when a command has no default permissions,
 	Discord then correctly infer default permissions as everyone.
 
-- **structs/BaseCommand**: ensure all messages sent when an error occurs is an ephemeral message <code>[8327ed9](https://github.com/Norviah/bot/commit/8327ed9b9b265ae96256501844da8564b73c90bc)</code>
+- **structs/BaseCommand**: ensure all messages sent when an error occurs is an ephemeral message <code>[e1a1f80](https://github.com/Norviah/bot/commit/e1a1f807da456e47627af7cdc89a84ab171c0ff8)</code>
 
-- **structs/BaseCommand**: ensure the response when an error occurs is ephemeral <code>[6d6be26](https://github.com/Norviah/bot/commit/6d6be26a5942cac932bd8f85cb8e3fb47f6811e9)</code>
+- **structs/BaseCommand**: ensure the response when an error occurs is ephemeral <code>[0f4b242](https://github.com/Norviah/bot/commit/0f4b242048e86fa1380a1b7d7baeb70206933087)</code>
 
-- **structs/Client**: ensure the client logs in before returning in `Client.start` <code>[25e3bda](https://github.com/Norviah/bot/commit/25e3bda329524877b9b09053952d1e9babe24299)</code>
+- **structs/Client**: ensure the client logs in before returning in `Client.start` <code>[9b8c392](https://github.com/Norviah/bot/commit/9b8c392ee8a0de8c6cdafd08787964f2b995f3db)</code>
 
-- **structs/Logger**: ensure that errors are saved in the `errors` root directory <code>[f8bd85a](https://github.com/Norviah/bot/commit/f8bd85adc327fc7e67a123d5c0e74e249dc68d00)</code>
+- **structs/Logger**: ensure that errors are saved in the `errors` root directory <code>[b466ba0](https://github.com/Norviah/bot/commit/b466ba00aa81acb2413cbc2a83872c98c907a379)</code>
+
+- **structs/Logger**: correctly infer the type for options <code>[6e270d1](https://github.com/Norviah/bot/commit/6e270d112a6cbbaffcaf32005271e6b3f3c5dbd9)</code>
+
+- **structs/Module**: remove the prisma reference <code>[4170426](https://github.com/Norviah/bot/commit/41704267e0399e71101d770078186c3062080edd)</code>
+
+	When printing the Prisma client to console, the terminal hangs
+	indefinitely. As modules have a reference to the Prisma client, the
+	terminal hangs when printing a module to the console.
+	
+	Removing the client property from modules fixes this issue.
 
 ### Features
 
-- implement the client's command handler <code>[6f6efba](https://github.com/Norviah/bot/commit/6f6efba23e62e4fa0794c90b2f77d4960f70fa55)</code>
+- implement the client's command handler <code>[3662112](https://github.com/Norviah/bot/commit/3662112ec31af435ecccf4cc6a6054a9d318cfa0)</code>
 
-- implement a structure to contain useful methods for modules <code>[a024a5d](https://github.com/Norviah/bot/commit/a024a5dc59fa24e9a802dc6c67dc889f6720c574)</code>
+- implement a structure to contain useful methods for modules <code>[e53e263](https://github.com/Norviah/bot/commit/e53e263fe770c5c0ee10a7a5d261ab33a14c7300)</code>
 
-- implement a cli to help manage aspects of the client <code>[b7b76fe](https://github.com/Norviah/bot/commit/b7b76fe2ce89f87ad52dc1cc7939470d9c7f0e17)</code>
+- implement a cli to help manage aspects of the client <code>[d36a8eb](https://github.com/Norviah/bot/commit/d36a8eb9a543b90abd96538b34f16362fe6b5dc7)</code>
 
-- implement the base structure for commands <code>[02978e8](https://github.com/Norviah/bot/commit/02978e893b874897d1030b697905dbc4d46ad54a)</code>
+- implement the base structure for commands <code>[f6d9548](https://github.com/Norviah/bot/commit/f6d9548204fb64312492d3e113354e67ed938cff)</code>
 
-- add base listeners <code>[abd01f8](https://github.com/Norviah/bot/commit/abd01f8b8920a1d6dc0c8f045ecab1c5b0ace06b)</code>
+- add base listeners <code>[17667ff](https://github.com/Norviah/bot/commit/17667ff290aca85dd6c4f6e96c795a02fb309018)</code>
 
-- implement the base structure for listeners <code>[cb08218](https://github.com/Norviah/bot/commit/cb0821865a03506e0f03f0922563702acf93085f)</code>
+- implement the base structure for listeners <code>[5d7fa70](https://github.com/Norviah/bot/commit/5d7fa7026b822840f8dd56d29c6cf31a2d03f79f)</code>
 
-- implement the base structure for modules and handlers <code>[da06d65](https://github.com/Norviah/bot/commit/da06d6531f103568517999e48703dd2860730edc)</code>
+- implement the base structure for modules and handlers <code>[85d668a](https://github.com/Norviah/bot/commit/85d668ae22c2165d8a3f3b139ce5dd1af38ca3e8)</code>
 
 - implement a custom error class <code>[82d8d5f](https://github.com/Norviah/bot/commit/82d8d5f47694773987e3c758c37e72b906a1f009)</code>
 
-- **cli**: ensure the client is logged out after executing a command <code>[5d37387](https://github.com/Norviah/bot/commit/5d37387ce86f19d5cd88c4732561c8988d507d36)</code>
+- **cli**: ensure the client is logged out after executing a command <code>[b5a8848](https://github.com/Norviah/bot/commit/b5a88485291e499cea779b0677b8f5c4afdbdef5)</code>
 
-- **prisma**: define initial schema <code>[aebb243](https://github.com/Norviah/bot/commit/aebb2431601ccbb175b82e2d6d30546ac7c63e9f)</code>
+- **prisma**: define initial schema <code>[645687f](https://github.com/Norviah/bot/commit/645687f5516aec7e695c34c1829f1d8b5d4c27c9)</code>
 
-- **structs**: implement a structure to provide methods for reading system files <code>[b764a55](https://github.com/Norviah/bot/commit/b764a55892f1752266017bba5ea1ab0a452bb772)</code>
+- **structs**: implement a structure to provide methods for reading system files <code>[db10c6c](https://github.com/Norviah/bot/commit/db10c6cf58ab1fb2e8b9f687fe927b5dc67df0fe)</code>
 
-- **structs**: ensure a module has been passed a proper handler when initialized <code>[8a8cf3b](https://github.com/Norviah/bot/commit/8a8cf3bafef2d16cd358afc88ee72109c554b5db)</code>
+- **structs/Logger**: implement a method for debugging purposes <code>[b61b3fe](https://github.com/Norviah/bot/commit/b61b3fea3edc0cc34bd951b783660a8f83166d0b)</code>
 
-- **structs**: implement a default title when logging for debugging purposes <code>[1f225fb](https://github.com/Norviah/bot/commit/1f225fb6db1d17a8228df0d149e60cd5a9558244)</code>
+- **structs/Module**: ensure a valid handler is passed when initialized <code>[1e9a552](https://github.com/Norviah/bot/commit/1e9a552388939fb215638635932bb192759684ee)</code>
 
-- **structs**: implement a method in `Logger` for debugging purposes <code>[aa4d3e4](https://github.com/Norviah/bot/commit/aa4d3e4bf51fbe4b7566411e56bf0e16e23364ba)</code>
+- **structs/ModuleUtil**: implement a method to determine who sent an interaction <code>[ba6b0ca](https://github.com/Norviah/bot/commit/ba6b0ca312ee52baee5dad20dc63103ddbabaf92)</code>
 
-- **structs/ModuleUtil**: implement a method to determine who sent an interaction <code>[8294586](https://github.com/Norviah/bot/commit/8294586180c343cb6ffe5095ae6a323ab2ad6a25)</code>
+- **structs/ModuleUtil**: implement a method to join strings separated by a word <code>[c1d985f](https://github.com/Norviah/bot/commit/c1d985f6828b91ce8c51b1e9c977c4f42fb7f804)</code>
 
-- **structs/ModuleUtil**: implement a method to join strings separated by a word <code>[f337663](https://github.com/Norviah/bot/commit/f337663d8fb5ceb4faf690cd2a46cb9418b69c3a)</code>
+- **types/ts**: implement a type to construct a type where all properties are explicitly required <code>[48f245a](https://github.com/Norviah/bot/commit/48f245a5677ef9c7a8bf2893037d7a9d0ce90060)</code>
 
 ### Build System
 
-- **typedoc**: delete the output directory before writing output <code>[520ef34](https://github.com/Norviah/bot/commit/520ef345bfe63679587020075131b64c85c9b244)</code>
+- **typedoc**: delete the output directory before writing output <code>[8e93bba](https://github.com/Norviah/bot/commit/8e93bba800de477d08b2a33d741c03877d590507)</code>
 
-- **typedoc**: have the start page be the documentation <code>[867d656](https://github.com/Norviah/bot/commit/867d6562e563e7473ac5ad9f3e074145aedb641f)</code>
+- **typedoc**: have the start page be the documentation <code>[2795169](https://github.com/Norviah/bot/commit/27951690a8efc2e4c108e74b368b95a742a11690)</code>
 
-- **typedoc**: include types when generating documentation <code>[8ddfa0b](https://github.com/Norviah/bot/commit/8ddfa0b5b1bd821c9c87a6c8f3954d84d6221719)</code>
-
-### types
-
-- **ts**: implement a type to construct a type where all properties are explicitly required <code>[013a352](https://github.com/Norviah/bot/commit/013a3520cecc7b9a33710077e75ade7eb2c3bde7)</code>
+- **typedoc**: include types when generating documentation <code>[e41996d](https://github.com/Norviah/bot/commit/e41996dd9416e3cf1251d2a6d39b1d5e58743619)</code>
 
 ## v0.1.0 (2023-08-31)
 
