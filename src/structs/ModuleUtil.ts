@@ -1,6 +1,6 @@
 import { ChannelType } from 'discord.js';
 
-import type { Interaction } from 'discord.js';
+import type { BaseInteraction } from 'discord.js';
 import type { Module } from '@/structs/Module';
 
 export class ModuleUtil {
@@ -24,7 +24,7 @@ export class ModuleUtil {
    * @param interaction The interaction to look at.
    * @returns A string representing who sent the interaction.
    */
-  public who(interaction: Interaction): string {
+  public who(interaction: BaseInteraction): string {
     return `${interaction.user.tag} [${interaction.user.id}]`;
   }
 
@@ -46,7 +46,7 @@ export class ModuleUtil {
    * // => My Server#general [1234567890]
    * ```
    */
-  public where(interaction: Interaction): string {
+  public where(interaction: BaseInteraction): string {
     if (!interaction.guild || interaction.channel?.type === ChannelType.DM) {
       return `DMs`;
     }

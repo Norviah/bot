@@ -2,7 +2,7 @@ import { Listener } from '@/structs/Listener';
 
 import type { BaseCommand } from '@/structs/commands/BaseCommand';
 import type { InteractionResponse } from '@/types/discord/InteractionResponse';
-import type { ApplicationCommandType, BaseInteraction, ChatInputCommandInteraction, MessageContextMenuCommandInteraction, UserContextMenuCommandInteraction } from 'discord.js';
+import type { ApplicationCommandType, BaseInteraction, CommandInteraction } from 'discord.js';
 
 /**
  * The listener to bind to the `interactionCreate` event from the Discord
@@ -34,21 +34,6 @@ export default class InteractionCreate extends Listener {
   public category: string = 'client';
 
   /**
-   * Ensures the provided interaction represents a command interaction.
-   *
-   * The `interactionCreate` event for the client emits whenever an interaction
-   * is created in general, whether it be for a command or not. As this listener
-   * aims to be a command handler, this method ensures that the provided
-   * interaction is a command interaction.
-   *
-   * @param interaction The interaction which was created.
-   * @returns Whether if the interaction is a command interaction.
-   */
-  public validate(interaction: BaseInteraction): interaction is ChatInputCommandInteraction | UserContextMenuCommandInteraction | MessageContextMenuCommandInteraction {
-    return interaction.isChatInputCommand() || interaction.isUserContextMenuCommand() || interaction.isMessageContextMenuCommand();
-  }
-
-  /**
    * Executes the provided command.
    *
    * Once the listener executes and finds the respective command, this method is
@@ -58,7 +43,7 @@ export default class InteractionCreate extends Listener {
    * @param interaction The interaction that invoked the command.
    * @param command The command to execute.
    */
-  public async run(interaction: ChatInputCommandInteraction | UserContextMenuCommandInteraction | MessageContextMenuCommandInteraction, command: BaseCommand<ApplicationCommandType>): Promise<void> {
+  public async run(interaction: CommandInteraction, command: BaseCommand<ApplicationCommandType>): Promise<void> {
     // Before we can execute the command, we'll first need to ensure that the
     // client has the required permissions to execute the command. Commands may
     // implement things such as embed messages or reactions, which require
@@ -119,7 +104,7 @@ export default class InteractionCreate extends Listener {
    * @param interaction The interaction which was created.
    */
   public async exec(interaction: BaseInteraction): Promise<void> {
-    if (!this.validate(interaction)) {
+    if (!interaction.isCommand()) {
       return;
     }
 

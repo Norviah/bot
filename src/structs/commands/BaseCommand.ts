@@ -1,10 +1,9 @@
 import { Module } from '@/structs/Module';
 import { ApplicationCommandType, PermissionsBitField } from 'discord.js';
 
-import type { CommandInteraction } from '@/types/discord/CommandInteraction';
 import type { InteractionResponse } from '@/types/discord/InteractionResponse';
 import type { Explicit } from '@/types/ts/Explicit';
-import type { BaseApplicationCommandData, LocalizationMap, PermissionFlags, Snowflake } from 'discord.js';
+import type { BaseApplicationCommandData, CommandInteraction, LocalizationMap, PermissionFlags, Snowflake } from 'discord.js';
 
 /**
  * The base structure for commands.
