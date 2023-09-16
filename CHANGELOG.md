@@ -1,5 +1,41 @@
 ## Unreleased
 
+### Features
+
+- implement a structure to construct embed messages <code>[61c54cf](https://github.com/Norviah/bot/commit/61c54cfff879119beaa36582805271e1860e80d4)</code>
+
+- implement the client's command handler <code>[3662112](https://github.com/Norviah/bot/commit/3662112ec31af435ecccf4cc6a6054a9d318cfa0)</code>
+
+- implement a structure to contain useful methods for modules <code>[e53e263](https://github.com/Norviah/bot/commit/e53e263fe770c5c0ee10a7a5d261ab33a14c7300)</code>
+
+- implement a cli to help manage aspects of the client <code>[d36a8eb](https://github.com/Norviah/bot/commit/d36a8eb9a543b90abd96538b34f16362fe6b5dc7)</code>
+
+- implement the base structure for commands <code>[f6d9548](https://github.com/Norviah/bot/commit/f6d9548204fb64312492d3e113354e67ed938cff)</code>
+
+- add base listeners <code>[17667ff](https://github.com/Norviah/bot/commit/17667ff290aca85dd6c4f6e96c795a02fb309018)</code>
+
+- implement the base structure for listeners <code>[5d7fa70](https://github.com/Norviah/bot/commit/5d7fa7026b822840f8dd56d29c6cf31a2d03f79f)</code>
+
+- implement the base structure for modules and handlers <code>[85d668a](https://github.com/Norviah/bot/commit/85d668ae22c2165d8a3f3b139ce5dd1af38ca3e8)</code>
+
+- implement a custom error class <code>[82d8d5f](https://github.com/Norviah/bot/commit/82d8d5f47694773987e3c758c37e72b906a1f009)</code>
+
+- **cli**: ensure the client is logged out after executing a command <code>[b5a8848](https://github.com/Norviah/bot/commit/b5a88485291e499cea779b0677b8f5c4afdbdef5)</code>
+
+- **prisma**: define initial schema <code>[645687f](https://github.com/Norviah/bot/commit/645687f5516aec7e695c34c1829f1d8b5d4c27c9)</code>
+
+- **structs**: implement a structure to provide methods for reading system files <code>[db10c6c](https://github.com/Norviah/bot/commit/db10c6cf58ab1fb2e8b9f687fe927b5dc67df0fe)</code>
+
+- **structs/Logger**: implement a method for debugging purposes <code>[b61b3fe](https://github.com/Norviah/bot/commit/b61b3fea3edc0cc34bd951b783660a8f83166d0b)</code>
+
+- **structs/Module**: ensure a valid handler is passed when initialized <code>[1e9a552](https://github.com/Norviah/bot/commit/1e9a552388939fb215638635932bb192759684ee)</code>
+
+- **structs/ModuleUtil**: implement a method to determine who sent an interaction <code>[ba6b0ca](https://github.com/Norviah/bot/commit/ba6b0ca312ee52baee5dad20dc63103ddbabaf92)</code>
+
+- **structs/ModuleUtil**: implement a method to join strings separated by a word <code>[c1d985f](https://github.com/Norviah/bot/commit/c1d985f6828b91ce8c51b1e9c977c4f42fb7f804)</code>
+
+- **types/ts**: implement a type to construct a type where all properties are explicitly required <code>[48f245a](https://github.com/Norviah/bot/commit/48f245a5677ef9c7a8bf2893037d7a9d0ce90060)</code>
+
 ### Refactor
 
 - use discord.js' built in type for referring valid command interactions <code>[0b78497](https://github.com/Norviah/bot/commit/0b78497651ee91c9cec6927b3a6b5b5b5adbc286)</code>
@@ -42,40 +78,6 @@
 	terminal hangs when printing a module to the console.
 	
 	Removing the client property from modules fixes this issue.
-
-### Features
-
-- implement the client's command handler <code>[3662112](https://github.com/Norviah/bot/commit/3662112ec31af435ecccf4cc6a6054a9d318cfa0)</code>
-
-- implement a structure to contain useful methods for modules <code>[e53e263](https://github.com/Norviah/bot/commit/e53e263fe770c5c0ee10a7a5d261ab33a14c7300)</code>
-
-- implement a cli to help manage aspects of the client <code>[d36a8eb](https://github.com/Norviah/bot/commit/d36a8eb9a543b90abd96538b34f16362fe6b5dc7)</code>
-
-- implement the base structure for commands <code>[f6d9548](https://github.com/Norviah/bot/commit/f6d9548204fb64312492d3e113354e67ed938cff)</code>
-
-- add base listeners <code>[17667ff](https://github.com/Norviah/bot/commit/17667ff290aca85dd6c4f6e96c795a02fb309018)</code>
-
-- implement the base structure for listeners <code>[5d7fa70](https://github.com/Norviah/bot/commit/5d7fa7026b822840f8dd56d29c6cf31a2d03f79f)</code>
-
-- implement the base structure for modules and handlers <code>[85d668a](https://github.com/Norviah/bot/commit/85d668ae22c2165d8a3f3b139ce5dd1af38ca3e8)</code>
-
-- implement a custom error class <code>[82d8d5f](https://github.com/Norviah/bot/commit/82d8d5f47694773987e3c758c37e72b906a1f009)</code>
-
-- **cli**: ensure the client is logged out after executing a command <code>[b5a8848](https://github.com/Norviah/bot/commit/b5a88485291e499cea779b0677b8f5c4afdbdef5)</code>
-
-- **prisma**: define initial schema <code>[645687f](https://github.com/Norviah/bot/commit/645687f5516aec7e695c34c1829f1d8b5d4c27c9)</code>
-
-- **structs**: implement a structure to provide methods for reading system files <code>[db10c6c](https://github.com/Norviah/bot/commit/db10c6cf58ab1fb2e8b9f687fe927b5dc67df0fe)</code>
-
-- **structs/Logger**: implement a method for debugging purposes <code>[b61b3fe](https://github.com/Norviah/bot/commit/b61b3fea3edc0cc34bd951b783660a8f83166d0b)</code>
-
-- **structs/Module**: ensure a valid handler is passed when initialized <code>[1e9a552](https://github.com/Norviah/bot/commit/1e9a552388939fb215638635932bb192759684ee)</code>
-
-- **structs/ModuleUtil**: implement a method to determine who sent an interaction <code>[ba6b0ca](https://github.com/Norviah/bot/commit/ba6b0ca312ee52baee5dad20dc63103ddbabaf92)</code>
-
-- **structs/ModuleUtil**: implement a method to join strings separated by a word <code>[c1d985f](https://github.com/Norviah/bot/commit/c1d985f6828b91ce8c51b1e9c977c4f42fb7f804)</code>
-
-- **types/ts**: implement a type to construct a type where all properties are explicitly required <code>[48f245a](https://github.com/Norviah/bot/commit/48f245a5677ef9c7a8bf2893037d7a9d0ce90060)</code>
 
 ### Build System
 
