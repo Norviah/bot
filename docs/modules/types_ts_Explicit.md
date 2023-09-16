@@ -60,4 +60,4 @@ const person: Explicit<Person> = {
 
 #### Defined in
 
-[src/types/ts/Explicit.ts:41](https://github.com/Norviah/bot/blob/20927fc/src/types/ts/Explicit.ts#L41)
+[src/types/ts/Explicit.ts:41](https://github.com/Norviah/bot/blob/61c54cf/src/types/ts/Explicit.ts#L41)

@@ -47,4 +47,4 @@ The contents of the JSON file.
 
 #### Defined in
 
-[src/structs/Read.ts:21](https://github.com/Norviah/bot/blob/20927fc/src/structs/Read.ts#L21)
+[src/structs/Read.ts:21](https://github.com/Norviah/bot/blob/61c54cf/src/structs/Read.ts#L21)
