@@ -75,5 +75,6 @@
   "includeNonConventionalCommits": true,
   "tag": "v{{after}}",
   "releaseSubject": "chore(release): {{tag}}",
-  "changelogSubject": "docs(changelog): {{tag}}"
+  "changelogSubject": "docs(changelog): {{tag}}",
+  "commitOrder": "asc"
 }
