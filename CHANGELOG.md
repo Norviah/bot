@@ -1,5 +1,17 @@
 ## Unreleased
 
+### Build System
+
+- **typedoc**: include zod schemas within the documentation <code>[f27fbb7](https://github.com/Norviah/bot/commit/f27fbb7c5018830340bfc6754f5c4820d0fb5cde)</code>
+
+- **bump**: sort commits in ascending order <code>[ff2f53a](https://github.com/Norviah/bot/commit/ff2f53af63a0e8be911bb9aa77f05002cb29a303)</code>
+
+- **typedoc**: delete the output directory before writing output <code>[8e93bba](https://github.com/Norviah/bot/commit/8e93bba800de477d08b2a33d741c03877d590507)</code>
+
+- **typedoc**: have the start page be the documentation <code>[2795169](https://github.com/Norviah/bot/commit/27951690a8efc2e4c108e74b368b95a742a11690)</code>
+
+- **typedoc**: include types when generating documentation <code>[e41996d](https://github.com/Norviah/bot/commit/e41996dd9416e3cf1251d2a6d39b1d5e58743619)</code>
+
 ### Refactor
 
 - **structs/BaseCommand**: force the `onError` method to return a response to ensure one is sent <code>[7e53875](https://github.com/Norviah/bot/commit/7e5387553f3fb9fc3abad14fe4fcf99afc533e7c)</code>
@@ -55,16 +67,6 @@
 - **structs/Logger**: implement a method for debugging purposes <code>[b61b3fe](https://github.com/Norviah/bot/commit/b61b3fea3edc0cc34bd951b783660a8f83166d0b)</code>
 
 - implement a custom error class <code>[82d8d5f](https://github.com/Norviah/bot/commit/82d8d5f47694773987e3c758c37e72b906a1f009)</code>
-
-### Build System
-
-- **bump**: sort commits in ascending order <code>[ff2f53a](https://github.com/Norviah/bot/commit/ff2f53af63a0e8be911bb9aa77f05002cb29a303)</code>
-
-- **typedoc**: delete the output directory before writing output <code>[8e93bba](https://github.com/Norviah/bot/commit/8e93bba800de477d08b2a33d741c03877d590507)</code>
-
-- **typedoc**: have the start page be the documentation <code>[2795169](https://github.com/Norviah/bot/commit/27951690a8efc2e4c108e74b368b95a742a11690)</code>
-
-- **typedoc**: include types when generating documentation <code>[e41996d](https://github.com/Norviah/bot/commit/e41996dd9416e3cf1251d2a6d39b1d5e58743619)</code>
 
 ### Bug Fixes
 
