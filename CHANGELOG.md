@@ -2,6 +2,8 @@
 
 ### Features
 
+- **structs/BaseCommand**: implement helper methods to determine the type of command <code>[2fe11d0](https://github.com/Norviah/bot/commit/2fe11d0d192018c79761a8f90ff46f885e65e799)</code>
+
 - implement a structure to construct embed messages <code>[61c54cf](https://github.com/Norviah/bot/commit/61c54cfff879119beaa36582805271e1860e80d4)</code>
 
 - implement the client's command handler <code>[3662112](https://github.com/Norviah/bot/commit/3662112ec31af435ecccf4cc6a6054a9d318cfa0)</code>
@@ -35,6 +37,16 @@
 - **structs/Logger**: implement a method for debugging purposes <code>[b61b3fe](https://github.com/Norviah/bot/commit/b61b3fea3edc0cc34bd951b783660a8f83166d0b)</code>
 
 - implement a custom error class <code>[82d8d5f](https://github.com/Norviah/bot/commit/82d8d5f47694773987e3c758c37e72b906a1f009)</code>
+
+### Build System
+
+- **bump**: sort commits in ascending order <code>[ff2f53a](https://github.com/Norviah/bot/commit/ff2f53af63a0e8be911bb9aa77f05002cb29a303)</code>
+
+- **typedoc**: delete the output directory before writing output <code>[8e93bba](https://github.com/Norviah/bot/commit/8e93bba800de477d08b2a33d741c03877d590507)</code>
+
+- **typedoc**: have the start page be the documentation <code>[2795169](https://github.com/Norviah/bot/commit/27951690a8efc2e4c108e74b368b95a742a11690)</code>
+
+- **typedoc**: include types when generating documentation <code>[e41996d](https://github.com/Norviah/bot/commit/e41996dd9416e3cf1251d2a6d39b1d5e58743619)</code>
 
 ### Refactor
 
@@ -78,14 +90,6 @@
 	Removing the client property from modules fixes this issue.
 
 - **structs/Logger**: correctly infer the type for options <code>[6e270d1](https://github.com/Norviah/bot/commit/6e270d112a6cbbaffcaf32005271e6b3f3c5dbd9)</code>
-
-### Build System
-
-- **typedoc**: delete the output directory before writing output <code>[8e93bba](https://github.com/Norviah/bot/commit/8e93bba800de477d08b2a33d741c03877d590507)</code>
-
-- **typedoc**: have the start page be the documentation <code>[2795169](https://github.com/Norviah/bot/commit/27951690a8efc2e4c108e74b368b95a742a11690)</code>
-
-- **typedoc**: include types when generating documentation <code>[e41996d](https://github.com/Norviah/bot/commit/e41996dd9416e3cf1251d2a6d39b1d5e58743619)</code>
 
 ## v0.1.0 (2023-08-31)
 
