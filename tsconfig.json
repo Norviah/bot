@@ -6,7 +6,7 @@
   "compilerOptions": {
     "declaration": false,
     "removeComments": true,
-    "module": "commonjs",
+    "module": "node16",
     "outDir": "build",
     "strict": true,
     "moduleDetection": "force",
