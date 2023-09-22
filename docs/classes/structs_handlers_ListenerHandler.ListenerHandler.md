@@ -59,7 +59,7 @@ Initializes a new `ListenerHandler` instance.
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:41](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/ListenerHandler.ts#L41)
+[src/structs/handlers/ListenerHandler.ts:41](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/ListenerHandler.ts#L41)
 
 ## Properties
 
@@ -77,7 +77,7 @@ A reference to the instantiated Discord client.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:45](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L45)
+[src/structs/handlers/Handler.ts:45](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L45)
 
 ___
 
@@ -96,7 +96,7 @@ listeners to import, recursively looking in subdirectories.
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:19](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/ListenerHandler.ts#L19)
+[src/structs/handlers/ListenerHandler.ts:19](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/ListenerHandler.ts#L19)
 
 ___
 
@@ -112,7 +112,7 @@ emitters to look for.
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:33](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/ListenerHandler.ts#L33)
+[src/structs/handlers/ListenerHandler.ts:33](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/ListenerHandler.ts#L33)
 
 ___
 
@@ -131,7 +131,7 @@ within a collection for future reference.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:53](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L53)
+[src/structs/handlers/Handler.ts:53](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L53)
 
 ___
 
@@ -147,7 +147,7 @@ The reference to the abstract class that the handler manages.
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:24](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/ListenerHandler.ts#L24)
+[src/structs/handlers/ListenerHandler.ts:24](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/ListenerHandler.ts#L24)
 
 ## Methods
 
@@ -182,7 +182,7 @@ The initialized module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:77](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L77)
+[src/structs/handlers/Handler.ts:77](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L77)
 
 ___
 
@@ -217,7 +217,7 @@ Whether if the object is a valid module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:163](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L163)
+[src/structs/handlers/Handler.ts:163](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L163)
 
 ___
 
@@ -248,7 +248,7 @@ The registered listener.
 
 #### Defined in
 
-[src/structs/handlers/ListenerHandler.ts:60](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/ListenerHandler.ts#L60)
+[src/structs/handlers/ListenerHandler.ts:60](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/ListenerHandler.ts#L60)
 
 ___
 
@@ -278,4 +278,4 @@ collection of modules.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:101](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L101)
+[src/structs/handlers/Handler.ts:101](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L101)

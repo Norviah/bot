@@ -80,7 +80,7 @@ Initializes a new `Module` instance.
 
 #### Defined in
 
-[src/structs/Module.ts:69](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L69)
+[src/structs/Module.ts:69](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Module.ts#L69)
 
 ## Properties
 
@@ -104,7 +104,7 @@ purpose, such as administration commands or music commands.
 
 #### Defined in
 
-[src/structs/Module.ts:36](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L36)
+[src/structs/Module.ts:36](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Module.ts#L36)
 
 ___
 
@@ -127,7 +127,7 @@ not be executed.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:90](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L90)
+[src/structs/commands/BaseCommand.ts:90](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L90)
 
 ___
 
@@ -146,7 +146,7 @@ thorough description of the command and its functionality.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:40](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L40)
+[src/structs/commands/BaseCommand.ts:40](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L40)
 
 ___
 
@@ -166,7 +166,7 @@ https://discord.com/developers/docs/interactions/application-commands#localizati
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:32](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/SlashCommand.ts#L32)
+[src/structs/commands/SlashCommand.ts:32](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/SlashCommand.ts#L32)
 
 ___
 
@@ -185,7 +185,7 @@ for guild-specific commands.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:98](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L98)
+[src/structs/commands/BaseCommand.ts:98](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L98)
 
 ___
 
@@ -208,7 +208,7 @@ https://discord.com/developers/docs/interactions/slash-commands#registering-a-co
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:118](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L118)
+[src/structs/commands/BaseCommand.ts:118](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L118)
 
 ___
 
@@ -227,7 +227,7 @@ module to access the Discord client and other modules within the handler.
 
 #### Defined in
 
-[src/structs/Module.ts:62](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L62)
+[src/structs/Module.ts:62](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Module.ts#L62)
 
 ___
 
@@ -250,7 +250,7 @@ https://github.com/norviah/logger
 
 #### Defined in
 
-[src/structs/Module.ts:46](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L46)
+[src/structs/Module.ts:46](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Module.ts#L46)
 
 ___
 
@@ -269,7 +269,7 @@ possible error messages.
 
 #### Defined in
 
-[src/structs/Module.ts:23](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L23)
+[src/structs/Module.ts:23](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Module.ts#L23)
 
 ___
 
@@ -293,7 +293,7 @@ https://discord.com/developers/docs/interactions/application-commands#localizati
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:61](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L61)
+[src/structs/commands/BaseCommand.ts:61](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L61)
 
 ___
 
@@ -316,7 +316,7 @@ https://discord.com/developers/docs/interactions/application-commands#agerestric
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:108](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L108)
+[src/structs/commands/BaseCommand.ts:108](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L108)
 
 ___
 
@@ -340,7 +340,7 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:58](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/SlashCommand.ts#L58)
+[src/structs/commands/SlashCommand.ts:58](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/SlashCommand.ts#L58)
 
 ___
 
@@ -370,7 +370,7 @@ dev-only which use actions such as `eval`.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:78](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L78)
+[src/structs/commands/BaseCommand.ts:78](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L78)
 
 ___
 
@@ -394,7 +394,7 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:43](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/SlashCommand.ts#L43)
+[src/structs/commands/SlashCommand.ts:43](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/SlashCommand.ts#L43)
 
 ___
 
@@ -413,7 +413,7 @@ by the module.
 
 #### Defined in
 
-[src/structs/Module.ts:54](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L54)
+[src/structs/Module.ts:54](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Module.ts#L54)
 
 ## Methods
 
@@ -444,7 +444,7 @@ The response to send to the interaction.
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:69](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/SlashCommand.ts#L69)
+[src/structs/commands/SlashCommand.ts:69](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/SlashCommand.ts#L69)
 
 ___
 
@@ -469,7 +469,7 @@ further initialize the module once imported.
 
 #### Defined in
 
-[src/structs/Module.ts:85](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L85)
+[src/structs/Module.ts:85](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Module.ts#L85)
 
 ___
 
@@ -491,7 +491,7 @@ Whether if the command is a context command.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:197](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L197)
+[src/structs/commands/BaseCommand.ts:192](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L192)
 
 ___
 
@@ -513,7 +513,7 @@ Whether if the command is a message context command.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:215](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L215)
+[src/structs/commands/BaseCommand.ts:210](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L210)
 
 ___
 
@@ -535,7 +535,7 @@ Whether if the command is a slash command.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:188](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L188)
+[src/structs/commands/BaseCommand.ts:183](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L183)
 
 ___
 
@@ -557,19 +557,19 @@ Whether if the command is a user context command.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:206](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L206)
+[src/structs/commands/BaseCommand.ts:201](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/BaseCommand.ts#L201)
 
 ___
 
 ### onError
 
-▸ **onError**(`interaction`, `error`): `Promise`<`void`\>
+▸ **onError**(`interaction`, `error`): `Promise`<[`InteractionResponse`](../modules/types_discord_InteractionResponse.md#interactionresponse)\>
 
 Invoked if the command throws an error during execution.
 
 During the execution of the command, if an error is thrown, this method is
-invoked. This method is responsible for handling the error and responding
-to the interaction.
+then called. This method should be implemented to handle the error and
+generate a response, which will be sent to the user.
 
 #### Parameters
 
@@ -580,7 +580,9 @@ to the interaction.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<[`InteractionResponse`](../modules/types_discord_InteractionResponse.md#interactionresponse)\>
+
+The response to send to the interaction.
 
 #### Overrides
 
@@ -588,7 +590,7 @@ to the interaction.
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:81](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/SlashCommand.ts#L81)
+[src/structs/commands/SlashCommand.ts:82](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/SlashCommand.ts#L82)
 
 ___
 
@@ -618,4 +620,4 @@ https://discord.com/developers/docs/interactions/slash-commands#application-comm
 
 #### Defined in
 
-[src/structs/commands/SlashCommand.ts:95](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/SlashCommand.ts#L95)
+[src/structs/commands/SlashCommand.ts:96](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/commands/SlashCommand.ts#L96)

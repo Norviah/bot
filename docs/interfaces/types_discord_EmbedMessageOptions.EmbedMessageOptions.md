@@ -66,7 +66,7 @@ APIEmbed.color
 
 #### Defined in
 
-[src/types/discord/EmbedMessageOptions.ts:19](https://github.com/Norviah/bot/blob/2fe11d0/src/types/discord/EmbedMessageOptions.ts#L19)
+[src/types/discord/EmbedMessageOptions.ts:19](https://github.com/Norviah/bot/blob/78f7ec8/src/types/discord/EmbedMessageOptions.ts#L19)
 
 ___
 
@@ -82,7 +82,7 @@ APIEmbed.description
 
 #### Defined in
 
-[src/types/discord/EmbedMessageOptions.ts:14](https://github.com/Norviah/bot/blob/2fe11d0/src/types/discord/EmbedMessageOptions.ts#L14)
+[src/types/discord/EmbedMessageOptions.ts:14](https://github.com/Norviah/bot/blob/78f7ec8/src/types/discord/EmbedMessageOptions.ts#L14)
 
 ___
 
@@ -97,7 +97,7 @@ entity will be specified within the embed message.
 
 #### Defined in
 
-[src/types/discord/EmbedMessageOptions.ts:27](https://github.com/Norviah/bot/blob/2fe11d0/src/types/discord/EmbedMessageOptions.ts#L27)
+[src/types/discord/EmbedMessageOptions.ts:27](https://github.com/Norviah/bot/blob/78f7ec8/src/types/discord/EmbedMessageOptions.ts#L27)
 
 ___
 

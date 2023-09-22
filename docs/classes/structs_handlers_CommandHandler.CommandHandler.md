@@ -57,7 +57,7 @@ Initializes a new `Handler` instance.
 
 #### Defined in
 
-[src/structs/handlers/CommandHandler.ts:29](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/CommandHandler.ts#L29)
+[src/structs/handlers/CommandHandler.ts:29](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/CommandHandler.ts#L29)
 
 ## Properties
 
@@ -75,7 +75,7 @@ A reference to the instantiated Discord client.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:45](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L45)
+[src/structs/handlers/Handler.ts:45](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L45)
 
 ___
 
@@ -94,7 +94,7 @@ commands to import, recursively looking in subdirectories.
 
 #### Defined in
 
-[src/structs/handlers/CommandHandler.ts:17](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/CommandHandler.ts#L17)
+[src/structs/handlers/CommandHandler.ts:17](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/CommandHandler.ts#L17)
 
 ___
 
@@ -113,7 +113,7 @@ within a collection for future reference.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:53](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L53)
+[src/structs/handlers/Handler.ts:53](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L53)
 
 ___
 
@@ -129,7 +129,7 @@ The reference to the abstract class that the handler manages.
 
 #### Defined in
 
-[src/structs/handlers/CommandHandler.ts:22](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/CommandHandler.ts#L22)
+[src/structs/handlers/CommandHandler.ts:22](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/CommandHandler.ts#L22)
 
 ## Methods
 
@@ -164,7 +164,7 @@ The initialized module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:77](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L77)
+[src/structs/handlers/Handler.ts:77](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L77)
 
 ___
 
@@ -199,7 +199,7 @@ Whether if the object is a valid module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:163](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L163)
+[src/structs/handlers/Handler.ts:163](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L163)
 
 ___
 
@@ -230,7 +230,7 @@ The registered module.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:131](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L131)
+[src/structs/handlers/Handler.ts:131](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L131)
 
 ___
 
@@ -260,4 +260,4 @@ collection of modules.
 
 #### Defined in
 
-[src/structs/handlers/Handler.ts:101](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/handlers/Handler.ts#L101)
+[src/structs/handlers/Handler.ts:101](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/handlers/Handler.ts#L101)

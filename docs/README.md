@@ -6,6 +6,9 @@ Bot
 
 ### Modules
 
+- [schemas](modules/schemas.md)
+- [schemas/config](modules/schemas_config.md)
+- [schemas/snowflake](modules/schemas_snowflake.md)
 - [structs/Client](modules/structs_Client.md)
 - [structs/ClientError](modules/structs_ClientError.md)
 - [structs/Color](modules/structs_Color.md)

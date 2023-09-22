@@ -18,4 +18,4 @@ Valid types for responding to an interaction.
 
 #### Defined in
 
-[src/types/discord/InteractionResponse.ts:6](https://github.com/Norviah/bot/blob/2fe11d0/src/types/discord/InteractionResponse.ts#L6)
+[src/types/discord/InteractionResponse.ts:6](https://github.com/Norviah/bot/blob/78f7ec8/src/types/discord/InteractionResponse.ts#L6)

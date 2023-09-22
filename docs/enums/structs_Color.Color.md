@@ -38,7 +38,7 @@ https://www.nordtheme.com/docs/colors-and-palettes
 
 #### Defined in
 
-[src/structs/Color.ts:24](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Color.ts#L24)
+[src/structs/Color.ts:24](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Color.ts#L24)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[src/structs/Color.ts:29](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Color.ts#L29)
+[src/structs/Color.ts:29](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Color.ts#L29)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[src/structs/Color.ts:54](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Color.ts#L54)
+[src/structs/Color.ts:54](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Color.ts#L54)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/structs/Color.ts:34](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Color.ts#L34)
+[src/structs/Color.ts:34](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Color.ts#L34)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/structs/Color.ts:49](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Color.ts#L49)
+[src/structs/Color.ts:49](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Color.ts#L49)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/structs/Color.ts:44](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Color.ts#L44)
+[src/structs/Color.ts:44](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Color.ts#L44)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[src/structs/Color.ts:19](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Color.ts#L19)
+[src/structs/Color.ts:19](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Color.ts#L19)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[src/structs/Color.ts:14](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Color.ts#L14)
+[src/structs/Color.ts:14](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Color.ts#L14)
 
 ___
 
@@ -134,4 +134,4 @@ ___
 
 #### Defined in
 
-[src/structs/Color.ts:39](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Color.ts#L39)
+[src/structs/Color.ts:39](https://github.com/Norviah/bot/blob/78f7ec8/src/structs/Color.ts#L39)
