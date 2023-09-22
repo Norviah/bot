@@ -43,14 +43,15 @@ export abstract class ContextCommand<T extends ApplicationCommandType.Message | 
    * Invoked if the command throws an error during execution.
    *
    * During the execution of the command, if an error is thrown, this method is
-   * invoked. This method is responsible for handling the error and responding
-   * to the interaction.
+   * then called. This method should be implemented to handle the error and
+   * generate a response, which will be sent to the user.
    *
    * @param interaction The interaction that invoked the command.
    * @param error The error that was thrown.
+   * @returns The response to send to the interaction.
    */
-  public async onError(interaction: T extends ApplicationCommandType.Message ? MessageContextMenuCommandInteraction : UserContextMenuCommandInteraction, error: Error): Promise<void> {
-    await super.onError(interaction, error);
+  public async onError(interaction: T extends ApplicationCommandType.Message ? MessageContextMenuCommandInteraction : UserContextMenuCommandInteraction, error: Error): Promise<InteractionResponse> {
+    return await super.onError(interaction, error);
   }
 
   /**

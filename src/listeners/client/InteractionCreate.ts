@@ -90,7 +90,13 @@ export default class InteractionCreate extends Listener {
 
       // We'll then hand off the error to the command's error handler, which
       // will handle the error accordingly.
-      await command.onError(interaction, error as Error);
+      const response: InteractionResponse = await command.onError(interaction, error as Error);
+
+      if (interaction.replied) {
+        await interaction.followUp(response);
+      } else {
+        await interaction[interaction.deferred ? 'editReply' : 'reply'](response);
+      }
     }
   }
 

@@ -142,20 +142,15 @@ export abstract class BaseCommand<T extends ApplicationCommandType> extends Modu
    * Invoked if the command throws an error during execution.
    *
    * During the execution of the command, if an error is thrown, this method is
-   * invoked. This method is responsible for handling the error and responding
-   * to the interaction.
+   * then called. This method should be implemented to handle the error and
+   * generate a response, which will be sent to the user.
    *
    * @param interaction The interaction that invoked the command.
    * @param error The error that was thrown.
+   * @returns The response to send to the interaction.
    */
-  public async onError(interaction: CommandInteraction, error: Error): Promise<void> {
-    const content: string = 'An error occurred while running the command, please try again in a bit.';
-
-    if (interaction.replied) {
-      await interaction.followUp({ content, ephemeral: true });
-    } else {
-      await interaction[interaction.deferred ? 'editReply' : 'reply']({ content, ephemeral: true });
-    }
+  public async onError(interaction: CommandInteraction, error: Error): Promise<InteractionResponse> {
+    return { content: 'An error occurred while running the command, please try again in a bit.', ephemeral: true };
   }
 
   /**
