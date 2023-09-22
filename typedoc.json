@@ -5,10 +5,12 @@
   "readme": "none",
   "cleanOutputDir": true,
   "plugin": [
-    "typedoc-plugin-markdown"
+    "typedoc-plugin-markdown",
+    "typedoc-plugin-zod"
   ],
   "entryPoints": [
     "./src/structs/**/*.ts",
-    "./src/types/**/*.ts"
+    "./src/types/**/*.ts",
+    "./src/schemas/**/*.ts"
   ]
 }

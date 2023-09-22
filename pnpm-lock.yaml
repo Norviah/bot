@@ -85,6 +85,9 @@ devDependencies:
   typedoc-plugin-markdown:
     specifier: ^3.15.4
     version: 3.15.4(typedoc@0.24.8)
+  typedoc-plugin-zod:
+    specifier: ^1.1.0
+    version: 1.1.0(typedoc@0.24.8)
   typescript:
     specifier: ^5.1.6
     version: 5.1.6
@@ -4862,6 +4865,14 @@ packages:
       typedoc: '>=0.24.0'
     dependencies:
       handlebars: 4.7.8
+      typedoc: 0.24.8(typescript@5.1.6)
+    dev: true
+
+  /typedoc-plugin-zod@1.1.0(typedoc@0.24.8):
+    resolution: {integrity: sha512-LaQdkYyVVL8CX+4R0GJuOyDa1meiG3M85FiBTPvlikCGaRkTNGSEBZTbx3gQHAsNQ5NWJpLvYJQB6gMhcO8bWw==}
+    peerDependencies:
+      typedoc: 0.23.x || 0.24.x || 0.25.x
+    dependencies:
       typedoc: 0.24.8(typescript@5.1.6)
     dev: true
 
