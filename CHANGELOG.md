@@ -1,5 +1,23 @@
 ## Unreleased
 
+### Refactor
+
+- **structs/BaseCommand**: force the `onError` method to return a response to ensure one is sent <code>[7e53875](https://github.com/Norviah/bot/commit/7e5387553f3fb9fc3abad14fe4fcf99afc533e7c)</code>
+
+- use discord.js' built in type for referring valid command interactions <code>[0b78497](https://github.com/Norviah/bot/commit/0b78497651ee91c9cec6927b3a6b5b5b5adbc286)</code>
+
+- **cli**: set the client reference as an export <code>[238befe](https://github.com/Norviah/bot/commit/238befe0116ae78d70540e3423874b48249baa3f)</code>
+
+- move the config file to a json file <code>[9da4a9c](https://github.com/Norviah/bot/commit/9da4a9c1d07eb5a64b8a5ae7a5f990c92c235ce3)</code>
+
+- **cli/structs**: move the `client` property to the base command class <code>[bcf8d88](https://github.com/Norviah/bot/commit/bcf8d88a210cb26f1fc415c694d5b627f7634006)</code>
+
+- **structs/Client**: expose the `Ready` generic argument <code>[9a8a64e](https://github.com/Norviah/bot/commit/9a8a64e42ae9a704851eded16b943f2d9994b9d5)</code>
+
+- **structs/Logger**: implement a default title when logging for debugging purposes <code>[0cf7f97](https://github.com/Norviah/bot/commit/0cf7f97296e96765ba6e486a8a0584ce8d2b68b7)</code>
+
+- move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
+
 ### Features
 
 - **structs/BaseCommand**: implement helper methods to determine the type of command <code>[2fe11d0](https://github.com/Norviah/bot/commit/2fe11d0d192018c79761a8f90ff46f885e65e799)</code>
@@ -47,22 +65,6 @@
 - **typedoc**: have the start page be the documentation <code>[2795169](https://github.com/Norviah/bot/commit/27951690a8efc2e4c108e74b368b95a742a11690)</code>
 
 - **typedoc**: include types when generating documentation <code>[e41996d](https://github.com/Norviah/bot/commit/e41996dd9416e3cf1251d2a6d39b1d5e58743619)</code>
-
-### Refactor
-
-- use discord.js' built in type for referring valid command interactions <code>[0b78497](https://github.com/Norviah/bot/commit/0b78497651ee91c9cec6927b3a6b5b5b5adbc286)</code>
-
-- **cli**: set the client reference as an export <code>[238befe](https://github.com/Norviah/bot/commit/238befe0116ae78d70540e3423874b48249baa3f)</code>
-
-- move the config file to a json file <code>[9da4a9c](https://github.com/Norviah/bot/commit/9da4a9c1d07eb5a64b8a5ae7a5f990c92c235ce3)</code>
-
-- **cli/structs**: move the `client` property to the base command class <code>[bcf8d88](https://github.com/Norviah/bot/commit/bcf8d88a210cb26f1fc415c694d5b627f7634006)</code>
-
-- **structs/Client**: expose the `Ready` generic argument <code>[9a8a64e](https://github.com/Norviah/bot/commit/9a8a64e42ae9a704851eded16b943f2d9994b9d5)</code>
-
-- **structs/Logger**: implement a default title when logging for debugging purposes <code>[0cf7f97](https://github.com/Norviah/bot/commit/0cf7f97296e96765ba6e486a8a0584ce8d2b68b7)</code>
-
-- move the logic for importing the config into a separate file <code>[da9f181](https://github.com/Norviah/bot/commit/da9f181b565e9696d37dc8e4399c532eb8c8c929)</code>
 
 ### Bug Fixes
 
