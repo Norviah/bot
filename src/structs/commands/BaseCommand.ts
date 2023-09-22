@@ -1,6 +1,8 @@
 import { Module } from '@/structs/Module';
 import { ApplicationCommandType, PermissionsBitField } from 'discord.js';
 
+import type { SlashCommand } from '@/structs/commands/SlashCommand';
+import type { ContextCommand } from '@/structs/commands/ContextCommand';
 import type { InteractionResponse } from '@/types/discord/InteractionResponse';
 import type { Explicit } from '@/types/ts/Explicit';
 import type { BaseApplicationCommandData, CommandInteraction, LocalizationMap, PermissionFlags, Snowflake } from 'discord.js';
@@ -176,5 +178,41 @@ export abstract class BaseCommand<T extends ApplicationCommandType> extends Modu
     };
 
     return payload;
+  }
+
+  /**
+   * Indicates whether if the command is a slash command.
+   *
+   * @returns Whether if the command is a slash command.
+   */
+  public isSlashCommand(): this is SlashCommand {
+    return this.type === undefined || this.type === ApplicationCommandType.ChatInput;
+  }
+
+  /**
+   * Indicates whether if the command is a context command.
+   *
+   * @returns Whether if the command is a context command.
+   */
+  public isContextCommand(): this is ContextCommand<ApplicationCommandType.User> | ContextCommand<ApplicationCommandType.Message> {
+    return this.type === ApplicationCommandType.User || this.type === ApplicationCommandType.Message;
+  }
+
+  /**
+   * Indicates whether if the command is a user context command.
+   *
+   * @returns Whether if the command is a user context command.
+   */
+  public isUserContextCommand(): this is ContextCommand<ApplicationCommandType.User> {
+    return this.type === ApplicationCommandType.User;
+  }
+
+  /**
+   * Indicates whether if the command is a message context command.
+   *
+   * @returns Whether if the command is a message context command.
+   */
+  public isMessageContextCommand(): this is ContextCommand<ApplicationCommandType.Message> {
+    return this.type === ApplicationCommandType.Message;
   }
 }

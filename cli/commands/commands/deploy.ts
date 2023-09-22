@@ -112,6 +112,10 @@ export default class Deploy extends Command<typeof Deploy, true> {
     };
 
     for (const command of Array.from(this.client.handlers.commands.modules.values())) {
+      if (!command.isSlashCommand() && !command.isContextCommand()) {
+        continue;
+      }
+
       // Commands have the `guilds` property to specify the desired guild to
       // deploy the command to. Before we aknowledge this property, we'll first
       // check if the command was executed for development purposes.

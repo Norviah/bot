@@ -2,8 +2,6 @@ import { BaseCommand } from '@/structs/commands/BaseCommand';
 import { Handler } from '@/structs/handlers/Handler';
 
 import type { Client } from '@/structs/Client';
-import type { ContextCommand } from '@/structs/commands/ContextCommand';
-import type { SlashCommand } from '@/structs/commands/SlashCommand';
 import type { ApplicationCommandType } from 'discord.js';
 import type { AbstractClass } from 'type-fest';
 
@@ -22,11 +20,6 @@ export class CommandHandler extends Handler<BaseCommand<ApplicationCommandType>>
    * The reference to the abstract class that the handler manages.
    */
   public readonly reference: AbstractClass<BaseCommand<ApplicationCommandType>> = BaseCommand;
-
-  /**
-   * All initialized commands.
-   */
-  public modules!: Map<string, SlashCommand | ContextCommand<ApplicationCommandType.Message | ApplicationCommandType.User>>;
 
   /**
    * Initializes a new `Handler` instance.
