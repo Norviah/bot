@@ -76,7 +76,7 @@ EmbedBuilder.constructor
 
 #### Defined in
 
-[src/structs/EmbedMessage.ts:26](https://github.com/Norviah/bot/blob/61c54cf/src/structs/EmbedMessage.ts#L26)
+[src/structs/EmbedMessage.ts:26](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/EmbedMessage.ts#L26)
 
 ## Properties
 

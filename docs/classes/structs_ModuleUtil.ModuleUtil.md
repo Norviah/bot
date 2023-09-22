@@ -36,7 +36,7 @@ Initializes a new `ModuleUtil` instance.
 
 #### Defined in
 
-[src/structs/ModuleUtil.ts:17](https://github.com/Norviah/bot/blob/61c54cf/src/structs/ModuleUtil.ts#L17)
+[src/structs/ModuleUtil.ts:17](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/ModuleUtil.ts#L17)
 
 ## Properties
 
@@ -48,7 +48,7 @@ A reference to the module that owns this util.
 
 #### Defined in
 
-[src/structs/ModuleUtil.ts:10](https://github.com/Norviah/bot/blob/61c54cf/src/structs/ModuleUtil.ts#L10)
+[src/structs/ModuleUtil.ts:10](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/ModuleUtil.ts#L10)
 
 ## Methods
 
@@ -91,7 +91,7 @@ util.join(['a'], 'or');
 
 #### Defined in
 
-[src/structs/ModuleUtil.ts:81](https://github.com/Norviah/bot/blob/61c54cf/src/structs/ModuleUtil.ts#L81)
+[src/structs/ModuleUtil.ts:81](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/ModuleUtil.ts#L81)
 
 ___
 
@@ -129,7 +129,7 @@ util.where(interaction);
 
 #### Defined in
 
-[src/structs/ModuleUtil.ts:49](https://github.com/Norviah/bot/blob/61c54cf/src/structs/ModuleUtil.ts#L49)
+[src/structs/ModuleUtil.ts:49](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/ModuleUtil.ts#L49)
 
 ___
 
@@ -153,4 +153,4 @@ A string representing who sent the interaction.
 
 #### Defined in
 
-[src/structs/ModuleUtil.ts:27](https://github.com/Norviah/bot/blob/61c54cf/src/structs/ModuleUtil.ts#L27)
+[src/structs/ModuleUtil.ts:27](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/ModuleUtil.ts#L27)

@@ -52,6 +52,10 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 
 - [exec](structs_commands_ContextCommand.ContextCommand.md#exec)
 - [initialize](structs_commands_ContextCommand.ContextCommand.md#initialize)
+- [isContextCommand](structs_commands_ContextCommand.ContextCommand.md#iscontextcommand)
+- [isMessageContextCommand](structs_commands_ContextCommand.ContextCommand.md#ismessagecontextcommand)
+- [isSlashCommand](structs_commands_ContextCommand.ContextCommand.md#isslashcommand)
+- [isUserContextCommand](structs_commands_ContextCommand.ContextCommand.md#isusercontextcommand)
 - [onError](structs_commands_ContextCommand.ContextCommand.md#onerror)
 - [toJSON](structs_commands_ContextCommand.ContextCommand.md#tojson)
 
@@ -81,7 +85,7 @@ Initializes a new `Module` instance.
 
 #### Defined in
 
-[src/structs/Module.ts:69](https://github.com/Norviah/bot/blob/61c54cf/src/structs/Module.ts#L69)
+[src/structs/Module.ts:69](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L69)
 
 ## Properties
 
@@ -105,7 +109,7 @@ purpose, such as administration commands or music commands.
 
 #### Defined in
 
-[src/structs/Module.ts:36](https://github.com/Norviah/bot/blob/61c54cf/src/structs/Module.ts#L36)
+[src/structs/Module.ts:36](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L36)
 
 ___
 
@@ -128,7 +132,7 @@ not be executed.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:88](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/BaseCommand.ts#L88)
+[src/structs/commands/BaseCommand.ts:90](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L90)
 
 ___
 
@@ -147,7 +151,7 @@ thorough description of the command and its functionality.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:38](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/BaseCommand.ts#L38)
+[src/structs/commands/BaseCommand.ts:40](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L40)
 
 ___
 
@@ -166,7 +170,7 @@ for guild-specific commands.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:96](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/BaseCommand.ts#L96)
+[src/structs/commands/BaseCommand.ts:98](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L98)
 
 ___
 
@@ -189,7 +193,7 @@ https://discord.com/developers/docs/interactions/slash-commands#registering-a-co
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:116](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/BaseCommand.ts#L116)
+[src/structs/commands/BaseCommand.ts:118](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L118)
 
 ___
 
@@ -208,7 +212,7 @@ module to access the Discord client and other modules within the handler.
 
 #### Defined in
 
-[src/structs/Module.ts:62](https://github.com/Norviah/bot/blob/61c54cf/src/structs/Module.ts#L62)
+[src/structs/Module.ts:62](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L62)
 
 ___
 
@@ -231,7 +235,7 @@ https://github.com/norviah/logger
 
 #### Defined in
 
-[src/structs/Module.ts:46](https://github.com/Norviah/bot/blob/61c54cf/src/structs/Module.ts#L46)
+[src/structs/Module.ts:46](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L46)
 
 ___
 
@@ -250,7 +254,7 @@ possible error messages.
 
 #### Defined in
 
-[src/structs/Module.ts:23](https://github.com/Norviah/bot/blob/61c54cf/src/structs/Module.ts#L23)
+[src/structs/Module.ts:23](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L23)
 
 ___
 
@@ -274,7 +278,7 @@ https://discord.com/developers/docs/interactions/application-commands#localizati
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:59](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/BaseCommand.ts#L59)
+[src/structs/commands/BaseCommand.ts:61](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L61)
 
 ___
 
@@ -297,7 +301,7 @@ https://discord.com/developers/docs/interactions/application-commands#agerestric
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:106](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/BaseCommand.ts#L106)
+[src/structs/commands/BaseCommand.ts:108](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L108)
 
 ___
 
@@ -327,7 +331,7 @@ dev-only which use actions such as `eval`.
 
 #### Defined in
 
-[src/structs/commands/BaseCommand.ts:76](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/BaseCommand.ts#L76)
+[src/structs/commands/BaseCommand.ts:78](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L78)
 
 ___
 
@@ -351,7 +355,7 @@ https://discord.com/developers/docs/interactions/application-commands#applicatio
 
 #### Defined in
 
-[src/structs/commands/ContextCommand.ts:28](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/ContextCommand.ts#L28)
+[src/structs/commands/ContextCommand.ts:28](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/ContextCommand.ts#L28)
 
 ___
 
@@ -370,7 +374,7 @@ by the module.
 
 #### Defined in
 
-[src/structs/Module.ts:54](https://github.com/Norviah/bot/blob/61c54cf/src/structs/Module.ts#L54)
+[src/structs/Module.ts:54](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L54)
 
 ## Methods
 
@@ -402,7 +406,7 @@ The response to send to the interaction.
 
 #### Defined in
 
-[src/structs/commands/ContextCommand.ts:40](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/ContextCommand.ts#L40)
+[src/structs/commands/ContextCommand.ts:40](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/ContextCommand.ts#L40)
 
 ___
 
@@ -427,7 +431,95 @@ further initialize the module once imported.
 
 #### Defined in
 
-[src/structs/Module.ts:85](https://github.com/Norviah/bot/blob/61c54cf/src/structs/Module.ts#L85)
+[src/structs/Module.ts:85](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/Module.ts#L85)
+
+___
+
+### isContextCommand
+
+▸ **isContextCommand**(): this is ContextCommand<User\> \| ContextCommand<Message\>
+
+Indicates whether if the command is a context command.
+
+#### Returns
+
+this is ContextCommand<User\> \| ContextCommand<Message\>
+
+Whether if the command is a context command.
+
+#### Inherited from
+
+[BaseCommand](structs_commands_BaseCommand.BaseCommand.md).[isContextCommand](structs_commands_BaseCommand.BaseCommand.md#iscontextcommand)
+
+#### Defined in
+
+[src/structs/commands/BaseCommand.ts:197](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L197)
+
+___
+
+### isMessageContextCommand
+
+▸ **isMessageContextCommand**(): this is ContextCommand<Message\>
+
+Indicates whether if the command is a message context command.
+
+#### Returns
+
+this is ContextCommand<Message\>
+
+Whether if the command is a message context command.
+
+#### Inherited from
+
+[BaseCommand](structs_commands_BaseCommand.BaseCommand.md).[isMessageContextCommand](structs_commands_BaseCommand.BaseCommand.md#ismessagecontextcommand)
+
+#### Defined in
+
+[src/structs/commands/BaseCommand.ts:215](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L215)
+
+___
+
+### isSlashCommand
+
+▸ **isSlashCommand**(): this is SlashCommand
+
+Indicates whether if the command is a slash command.
+
+#### Returns
+
+this is SlashCommand
+
+Whether if the command is a slash command.
+
+#### Inherited from
+
+[BaseCommand](structs_commands_BaseCommand.BaseCommand.md).[isSlashCommand](structs_commands_BaseCommand.BaseCommand.md#isslashcommand)
+
+#### Defined in
+
+[src/structs/commands/BaseCommand.ts:188](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L188)
+
+___
+
+### isUserContextCommand
+
+▸ **isUserContextCommand**(): this is ContextCommand<User\>
+
+Indicates whether if the command is a user context command.
+
+#### Returns
+
+this is ContextCommand<User\>
+
+Whether if the command is a user context command.
+
+#### Inherited from
+
+[BaseCommand](structs_commands_BaseCommand.BaseCommand.md).[isUserContextCommand](structs_commands_BaseCommand.BaseCommand.md#isusercontextcommand)
+
+#### Defined in
+
+[src/structs/commands/BaseCommand.ts:206](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/BaseCommand.ts#L206)
 
 ___
 
@@ -458,7 +550,7 @@ to the interaction.
 
 #### Defined in
 
-[src/structs/commands/ContextCommand.ts:52](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/ContextCommand.ts#L52)
+[src/structs/commands/ContextCommand.ts:52](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/ContextCommand.ts#L52)
 
 ___
 
@@ -488,4 +580,4 @@ https://discord.com/developers/docs/interactions/slash-commands#application-comm
 
 #### Defined in
 
-[src/structs/commands/ContextCommand.ts:66](https://github.com/Norviah/bot/blob/61c54cf/src/structs/commands/ContextCommand.ts#L66)
+[src/structs/commands/ContextCommand.ts:66](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/commands/ContextCommand.ts#L66)

@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[src/structs/ClientError.ts:53](https://github.com/Norviah/bot/blob/61c54cf/src/structs/ClientError.ts#L53)
+[src/structs/ClientError.ts:53](https://github.com/Norviah/bot/blob/2fe11d0/src/structs/ClientError.ts#L53)
