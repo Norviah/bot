@@ -17,6 +17,7 @@
     "prisma:migrate": "npx prisma migrate dev --schema ./prisma/schema.prisma",
     "prisma:studio": "pnpm prisma studio",
     "start": "pnpm run exec -- src/index.ts",
+    "start:ignore": "pnpm run exec -T -- src/index.ts",
     "start:watch": "./node_modules/nodemon/bin/nodemon.js"
   },
   "homepage": "https://github.com/norviah/bot#readme",
