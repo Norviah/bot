@@ -88,7 +88,7 @@ export abstract class Listener extends Module {
    * This property references the handler that manages the module, allowing the
    * module to access the handler's properties and methods.
    */
-  public handler!: ListenerHandler;
+  public declare handler: ListenerHandler;
 
   /**
    * The listener's execution method.

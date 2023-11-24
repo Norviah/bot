@@ -38,7 +38,7 @@ export abstract class BaseCommand<T extends ApplicationCommandType> extends Modu
    * This property references the handler that manages the module, allowing the
    * module to access the handler's properties and methods.
    */
-  public handler!: CommandHandler;
+  public declare handler: CommandHandler;
 
   /**
    * The command's description.
