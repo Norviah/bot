@@ -59,7 +59,7 @@ export abstract class Module {
    * This property references the handler that manages the module, allowing the
    * module to access the Discord client and other modules within the handler.
    */
-  public readonly handler: Handler<typeof this>;
+  public readonly handler: Handler<Module>;
 
   /**
    * Initializes a new `Module` instance.
@@ -71,7 +71,7 @@ export abstract class Module {
       throw new ClientError(ErrorCodes.INVALID_HANDLER, { module: this.constructor.name, handler: handler.constructor.name });
     }
 
-    this.handler = handler as Handler<typeof this>;
+    this.handler = handler;
   }
 
   /**
