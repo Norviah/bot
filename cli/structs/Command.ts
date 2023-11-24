@@ -48,7 +48,7 @@ export abstract class Command<T extends typeof BaseCommand, ClientApplication ex
    * ensured to be logged in and ready before the command is executed.
    */
   public get client(): Client<ClientApplication> {
-    return client as Client<boolean>;
+    return client as Client<ClientApplication>;
   }
 
   /**
