@@ -1,5 +1,5 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
+  "extends": "./node_modules/@tsconfig/node21/tsconfig.json",
   "ts-node": {
     "files": true
   },
