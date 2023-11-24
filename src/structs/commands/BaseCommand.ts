@@ -1,8 +1,9 @@
 import { Module } from '@/structs/Module';
 import { ApplicationCommandType, PermissionsBitField } from 'discord.js';
 
-import type { SlashCommand } from '@/structs/commands/SlashCommand';
 import type { ContextCommand } from '@/structs/commands/ContextCommand';
+import type { SlashCommand } from '@/structs/commands/SlashCommand';
+import type { CommandHandler } from '@/structs/handlers/CommandHandler';
 import type { InteractionResponse } from '@/types/discord/InteractionResponse';
 import type { Explicit } from '@/types/ts/Explicit';
 import type { BaseApplicationCommandData, CommandInteraction, LocalizationMap, PermissionFlags, Snowflake } from 'discord.js';
@@ -31,6 +32,14 @@ import type { BaseApplicationCommandData, CommandInteraction, LocalizationMap, P
  * @template T The type of command.
  */
 export abstract class BaseCommand<T extends ApplicationCommandType> extends Module {
+  /**
+   * A reference to the handler that manages this module.
+   *
+   * This property references the handler that manages the module, allowing the
+   * module to access the handler's properties and methods.
+   */
+  public handler!: CommandHandler;
+
   /**
    * The command's description.
    *

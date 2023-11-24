@@ -1,4 +1,5 @@
 import { Module } from '@/structs/Module';
+import type { ListenerHandler } from '@/structs/handlers/ListenerHandler';
 
 /**
  * The base structure for listeners.
@@ -80,6 +81,14 @@ export abstract class Listener extends Module {
    * @see https://nodejs.org/api/events.html#handling-events-only-once
    */
   public readonly type: 'on' | 'once' = 'on';
+
+  /**
+   * A reference to the handler that manages this module.
+   *
+   * This property references the handler that manages the module, allowing the
+   * module to access the handler's properties and methods.
+   */
+  public handler!: ListenerHandler;
 
   /**
    * The listener's execution method.
