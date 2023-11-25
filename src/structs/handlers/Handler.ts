@@ -53,6 +53,14 @@ export abstract class Handler<T extends Module> {
   public readonly modules: Map<string, T> = new Map();
 
   /**
+   * The collection of modules that the handler manages, mapped by category.
+   *
+   * This container references the same instances as the `modules` container,
+   * however, the modules are mapped by category, allowing for easier access.
+   */
+  public readonly categories: Map<string, T[]> = new Map();
+
+  /**
    * Initializes a new `Handler` instance.
    *
    * @param client The instantiated Discord client.
@@ -141,6 +149,12 @@ export abstract class Handler<T extends Module> {
     // As we've ensured that the module consists of a unique name, we can store
     // it within the handler's collection.
     this.modules.set(module.name, module);
+
+    // We then want to store the module within the handler's collection of
+    // modules mapped by category, allowing for easier access.
+    const categories: T[] = this.categories.get(module.category.toLowerCase()) || [];
+
+    this.categories.set(module.category.toLowerCase(), [...categories, module]);
 
     logger.debug(`registered module: ${module.name}`, { title: this.constructor.name });
 
